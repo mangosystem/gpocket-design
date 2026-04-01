@@ -1,0 +1,52 @@
+:root {
+  /* ===========================
+     gPocket 3.0 디자인 색상 변수
+     이 파일만 수정하면 전체 화면에 반영됩니다.
+     =========================== */
+
+  /* 브랜드 */
+  --color-brand: #1A91DA;
+  --color-brand-dark: #0B69A3;
+  --color-brand-alt: #169DDB;
+
+  /* 파란 계열 */
+  --color-blue: #2563EB;
+  --color-blue-dark: #1D4ED8;
+  --color-blue-medium: #60A5FA;
+  --color-blue-light: #93C5FD;
+  --color-blue-lighter: #BFDBFE;
+
+  /* 상태 */
+  --color-danger: #EF4444;
+  --color-success: #27AB83;
+  --color-success-dark: #147D64;
+  --color-green: #059669;
+  --color-warning: #F59E0B;
+  --color-amber-dark: #B45309;
+  --color-amber-darker: #92400E;
+
+  /* 기타 */
+  --color-purple: #7C3AED;
+  --color-purple-dark: #6D28D9;
+  --color-yellow: #FCD34D;
+
+  /* 텍스트 */
+  --color-text-darkest: #0F172A;
+  --color-text-heading: #1E293B;
+  --color-text-main: #334155;
+  --color-text-tertiary: #475569;
+  --color-text-sub: #64748B;
+  --color-text-muted: #94A3B8;
+
+  /* 테두리/배경 */
+  --color-border: #E2E8F0;
+  --color-border-light: #CBD5E1;
+  --color-bg-subtle: #F1F5F9;
+  --color-bg-lightest: #F8FAFC;
+
+  /* 지도 배경 */
+  --color-map-bg-blue: #dbeafe;
+  --color-map-bg-sky: #e0f2fe;
+  --color-map-bg-green: #ecfdf5;
+  --color-map-bg-green-light: #f0fdf4;
+}
