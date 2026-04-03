@@ -4,49 +4,97 @@
      이 파일만 수정하면 전체 화면에 반영됩니다.
      =========================== */
 
-  /* 브랜드 */
-  --color-brand: #1A91DA;
-  --color-brand-dark: #0B69A3;
-  --color-brand-alt: #169DDB;
+  /* ─────────────────────────────
+     앱 UI — Primary (브랜드 파랑)
+     버튼, 지도 마커, 토글, 활성 탭
+     ───────────────────────────── */
+  --c-primary:         #1A91DA;   /* 버튼 bg, 마커, 토글 on */
+  --c-primary-dark:    #0B69A3;   /* 버튼 hover, 진한 배경 */
+  --c-primary-darker:  #0A558C;   /* 텍스트 강조, pressed */
+  --c-primary-deep:    #0B4372;
+  --c-primary-deepest: #0A3055;
+  --c-primary-mid:     #3EAAE0;   /* 아이콘 색, 링크 */
+  --c-primary-pale:    #7CC4EA;
+  --c-primary-medium:  #A7D8F0;   /* 중간 배경 */
+  --c-primary-light:   #D1EEFC;   /* 배지 bg, 카드 구역 */
+  --c-primary-subtle:  #EBF8FF;   /* 아이콘 컨테이너 bg, subtle */
 
-  /* 파란 계열 */
-  --color-blue: #2563EB;
-  --color-blue-dark: #1D4ED8;
-  --color-blue-medium: #60A5FA;
-  --color-blue-light: #93C5FD;
-  --color-blue-lighter: #BFDBFE;
+  /* ─────────────────────────────
+     앱 UI — Success (초록)
+     확인 버튼, 저장, 완료 상태
+     ───────────────────────────── */
+  --c-success:         #27AB83;   /* 확인/저장 버튼 bg */
+  --c-success-mid:     #3EBD93;   /* hover */
+  --c-success-dark:    #147D64;   /* 텍스트, pressed */
+  --c-success-deep:    #0C6B58;
+  --c-success-deepest: #014D40;
+  --c-success-text:    #199473;   /* 배지 텍스트 */
+  --c-success-text-dk: #147D64;   /* 강조 텍스트 */
+  --c-success-pale:    #65D6AD;
+  --c-success-medium:  #8EEDC7;   /* 중간 배경 */
+  --c-success-light:   #C6F7E2;   /* 배지 bg */
+  --c-success-subtle:  #EFFCF6;   /* subtle bg */
+
+  /* ─────────────────────────────
+     앱 UI — Slate (회색 텍스트/배경)
+     ───────────────────────────── */
+  --c-slate-950: #020617;
+  --c-slate-900: #0F172A;
+  --c-slate-800: #1E293B;
+  --c-slate-700: #334155;
+  --c-slate-600: #475569;
+  --c-slate-500: #64748B;
+  --c-slate-400: #94A3B8;
+  --c-slate-300: #CBD5E1;
+  --c-slate-200: #E2E8F0;
+  --c-slate-100: #F1F5F9;
+  --c-slate-50:  #F8FAFC;
+
+  /* ─────────────────────────────
+     캔버스 / 목업 레이아웃 색상
+     ───────────────────────────── */
+
+  /* 텍스트 */
+  --color-text-darkest:  var(--c-slate-900);
+  --color-text-heading:  var(--c-slate-800);
+  --color-text-main:     var(--c-slate-700);
+  --color-text-tertiary: var(--c-slate-600);
+  --color-text-sub:      var(--c-slate-500);
+  --color-text-muted:    var(--c-slate-400);
+
+  /* 테두리/배경 */
+  --color-border:       var(--c-slate-200);
+  --color-border-light: var(--c-slate-300);
+  --color-bg-subtle:    var(--c-slate-100);
+  --color-bg-lightest:  var(--c-slate-50);
+
+  /* 브랜드 단일 참조 */
+  --color-brand:      var(--c-primary);
+  --color-brand-dark: var(--c-primary-dark);
+  --color-brand-alt:  #169DDB;
 
   /* 상태 */
-  --color-danger: #EF4444;
-  --color-success: #27AB83;
-  --color-success-dark: #147D64;
-  --color-green: #059669;
-  --color-warning: #F59E0B;
-  --color-amber-dark: #B45309;
+  --color-danger:       #EF4444;
+  --color-success:      var(--c-success);
+  --color-success-dark: var(--c-success-dark);
+  --color-green:        #059669;
+  --color-warning:      #F59E0B;
+  --color-amber-dark:   #B45309;
   --color-amber-darker: #92400E;
 
   /* 기타 */
-  --color-purple: #7C3AED;
+  --color-blue:        #2563EB;
+  --color-blue-dark:   #1D4ED8;
+  --color-blue-medium: #60A5FA;
+  --color-blue-light:  #93C5FD;
+  --color-blue-lighter:#BFDBFE;
+  --color-purple:      #7C3AED;
   --color-purple-dark: #6D28D9;
-  --color-yellow: #FCD34D;
-
-  /* 텍스트 */
-  --color-text-darkest: #0F172A;
-  --color-text-heading: #1E293B;
-  --color-text-main: #334155;
-  --color-text-tertiary: #475569;
-  --color-text-sub: #64748B;
-  --color-text-muted: #94A3B8;
-
-  /* 테두리/배경 */
-  --color-border: #E2E8F0;
-  --color-border-light: #CBD5E1;
-  --color-bg-subtle: #F1F5F9;
-  --color-bg-lightest: #F8FAFC;
+  --color-yellow:      #FCD34D;
 
   /* 지도 배경 */
-  --color-map-bg-blue: #dbeafe;
-  --color-map-bg-sky: #e0f2fe;
-  --color-map-bg-green: #ecfdf5;
+  --color-map-bg-blue:        #dbeafe;
+  --color-map-bg-sky:         #e0f2fe;
+  --color-map-bg-green:       #ecfdf5;
   --color-map-bg-green-light: #f0fdf4;
 }
