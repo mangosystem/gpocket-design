@@ -199,7 +199,7 @@ tailwind.config = {
 <div id="canvas-viewport" style="width:100%;height:calc(100vh - 200px);overflow:hidden;position:relative;border:1px solid var(--color-border);border-radius:16px;background:var(--color-bg-subtle);cursor:grab;">
 <div id="canvas" style="position:absolute;transform-origin:0 0;">
 
-<svg id="arrows" style="position:absolute;top:0;left:0;width:6000px;height:7000px;pointer-events:none;">
+<svg id="arrows" style="position:absolute;top:0;left:0;width:6000px;height:11000px;pointer-events:none;">
   <defs>
     <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
       <polygon points="0 0, 10 3.5, 0 7" fill="var(--color-text-muted)"/>
@@ -470,6 +470,46 @@ tailwind.config = {
   <path d="M3195,1894 L3195,2540 Q3195,2570 3165,2570 L1395,2570 Q1365,2570 1365,2600 L1365,3080"
         stroke="var(--color-text-muted)" stroke-width="1.5" stroke-dasharray="5,4" fill="none" marker-end="url(#arrowhead)"/>
   <text x="2280" y="2560" font-size="11" fill="var(--color-text-muted)" text-anchor="middle">타입별 상세</text>
+
+  <!-- ============================================================
+       섹션 바운더리: Dataset 서브플로우
+       27.DatasetManage(2400,3150) + 28.DatasetAdd(3000,3150)
+       ============================================================ -->
+  <rect x="2350" y="3080" width="1100" height="940"
+        rx="14" fill="rgba(23,101,167,0.03)" stroke="var(--color-brand)"
+        stroke-width="1.5" stroke-dasharray="8,5"/>
+  <text x="2370" y="3068" font-size="14" font-weight="700"
+        fill="var(--color-brand)" font-family="Pretendard, sans-serif">Dataset 관리</text>
+
+  <!-- ============================================================
+       섹션 바운더리: Dataset 상세 (Info + Edit)
+       29.DatasetInfo(0,4200) + 30.DatasetEdit(600,4200)
+       ============================================================ -->
+  <rect x="-50" y="4130" width="1100" height="940"
+        rx="14" fill="rgba(23,101,167,0.03)" stroke="var(--color-brand)"
+        stroke-width="1.5" stroke-dasharray="8,5"/>
+  <text x="-30" y="4118" font-size="14" font-weight="700"
+        fill="var(--color-brand)" font-family="Pretendard, sans-serif">Dataset 상세 (Info / Edit)</text>
+
+  <!-- ============================================================
+       섹션 바운더리: 프로젝트 + 레이어 관리
+       31.ProjectEdit(1200,4200) + 32.ReferenceLayer(1800,4200)
+       ============================================================ -->
+  <rect x="1150" y="4130" width="1100" height="940"
+        rx="14" fill="rgba(39,171,131,0.03)" stroke="var(--color-success)"
+        stroke-width="1.5" stroke-dasharray="8,5"/>
+  <text x="1170" y="4118" font-size="14" font-weight="700"
+        fill="var(--color-success-text)" font-family="Pretendard, sans-serif">프로젝트 편집 / 참조 레이어</text>
+
+  <!-- ============================================================
+       섹션 바운더리: 오프라인 영역 선택
+       33.SelectArea(1200,5250)
+       ============================================================ -->
+  <rect x="1150" y="5180" width="500" height="940"
+        rx="14" fill="rgba(245,158,11,0.03)" stroke="var(--color-warning)"
+        stroke-width="1.5" stroke-dasharray="8,5"/>
+  <text x="1170" y="5168" font-size="14" font-weight="700"
+        fill="var(--color-amber-dark)" font-family="Pretendard, sans-serif">오프라인 영역 선택</text>
 
 </svg>
 
@@ -1789,6 +1829,12 @@ tailwind.config = {
           <div class="w-6"></div>
         </div>
         <p class="text-xs text-slate-400 text-center">저장된 GeoPackage 파일</p>
+        <!-- Project Filter -->
+        <div class="mt-3 flex items-center gap-2 px-3 py-2 bg-slate-50 rounded-xl border border-slate-100">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--color-text-muted)" stroke-width="2"><polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"/></svg>
+          <span class="text-xs text-slate-600 font-medium flex-1">하천 유역 현장조사</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--color-text-muted)" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+        </div>
       </div>
 
       <div class="px-5 pt-4 space-y-3">
@@ -1881,7 +1927,7 @@ tailwind.config = {
     </div>
   </div>
 
-  <div class="screen-label-bottom">Offline GPKG<span>오프라인 데이터 목록</span></div>
+  <div class="screen-label-bottom">Offline GPKG<span>오프라인 데이터 · 프로젝트 필터</span></div>
 </div>
 
 <!-- ==================== 8. ATTRIBUTE FORM (BOTTOM SHEET) ==================== -->
@@ -1939,8 +1985,8 @@ tailwind.config = {
               </div>
             </div>
             <div>
-              <label class="text-xs font-semibold text-slate-500 uppercase tracking-wider">이름</label>
-              <input type="text" value="강남소방서" class="mt-1.5 w-full border border-slate-200 rounded-xl px-4 py-2.5 text-sm text-slate-800 outline-none" />
+              <label class="text-xs font-semibold text-slate-500 uppercase tracking-wider">이름 <span class="text-red-400">*</span></label>
+              <input type="text" value="강남소방서" class="mt-1.5 w-full border-2 border-brand-400 rounded-xl px-4 py-2.5 text-sm text-slate-800 outline-none" />
             </div>
             <div>
               <label class="text-xs font-semibold text-slate-500 uppercase tracking-wider">주소</label>
@@ -1956,6 +2002,10 @@ tailwind.config = {
             <div>
               <label class="text-xs font-semibold text-slate-500 uppercase tracking-wider">비고</label>
               <textarea class="mt-1.5 w-full border border-slate-200 rounded-xl px-4 py-2.5 text-sm text-slate-800 outline-none resize-none" rows="2" placeholder="메모를 입력하세요..."></textarea>
+              <div class="flex items-center gap-1 mt-1">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="var(--color-text-muted)" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+                <span class="text-xs text-slate-400">선택 입력</span>
+              </div>
             </div>
           </div>
           <!-- Sticky bottom -->
@@ -1970,7 +2020,7 @@ tailwind.config = {
       <div class="home-indicator" style="background:rgba(0,0,0,0.15)"></div>
     </div>
   </div>
-  <div class="screen-label-bottom">Attribute Form<span>속성 편집 (바텀시트, 맵 보임)</span></div>
+  <div class="screen-label-bottom">Attribute Form<span>속성 편집 · 사진 업로드 + 필드 밸리데이션</span></div>
 </div>
 
 <!-- ==================== FS-A. FEATURE SELECTED — POINT ==================== -->
@@ -3214,76 +3264,66 @@ tailwind.config = {
             초대
           </button>
         </div>
-        <!-- Tabs -->
+        <!-- Tabs — 신청자 탭 활성 -->
         <div class="flex gap-1 bg-slate-100 rounded-xl p-1">
-          <div class="flex-1 text-center py-2 rounded-lg bg-white text-sm font-semibold text-brand-600 shadow-sm">멤버 (5)</div>
-          <div class="flex-1 text-center py-2 rounded-lg text-sm text-slate-500">신청자 (2)</div>
+          <div class="flex-1 text-center py-2 rounded-lg text-sm text-slate-500">멤버 (5)</div>
+          <div class="flex-1 text-center py-2 rounded-lg bg-white text-sm font-semibold text-brand-600 shadow-sm">신청자 (2)</div>
         </div>
       </div>
 
       <div class="px-5 pt-4 space-y-2">
-        <div class="bg-white rounded-2xl p-4 border border-slate-100 flex items-center gap-3">
-          <div class="w-11 h-11 rounded-full bg-brand-200 flex items-center justify-center text-sm font-bold text-brand-700">K</div>
-          <div class="flex-1">
-            <div class="font-semibold text-slate-800 text-sm">김혁진</div>
-            <div class="text-xs text-slate-400">kstarmango@gmail.com</div>
+        <!-- Applicant 1 -->
+        <div class="bg-white rounded-2xl p-4 border border-slate-100">
+          <div class="flex items-center gap-3 mb-3">
+            <div class="w-11 h-11 rounded-full bg-sky-200 flex items-center justify-center text-sm font-bold text-sky-700">C</div>
+            <div class="flex-1">
+              <div class="font-semibold text-slate-800 text-sm">최영훈</div>
+              <div class="text-xs text-slate-400">choi.yh@company.com</div>
+            </div>
+            <span class="px-2 py-0.5 bg-amber-50 text-amber-600 text-xs rounded-full font-medium">대기중</span>
           </div>
-          <span class="px-2.5 py-1 bg-brand-50 text-brand-600 text-xs rounded-lg font-medium">Owner</span>
-        </div>
-
-        <div class="bg-white rounded-2xl p-4 border border-slate-100 flex items-center gap-3">
-          <div class="w-11 h-11 rounded-full bg-accent-200 flex items-center justify-center text-sm font-bold text-accent-700">P</div>
-          <div class="flex-1">
-            <div class="font-semibold text-slate-800 text-sm">박지수</div>
-            <div class="text-xs text-slate-400">park.js@company.com</div>
-          </div>
-          <div class="flex items-center gap-2">
-            <span class="px-2.5 py-1 bg-slate-100 text-slate-500 text-xs rounded-lg font-medium">Editor</span>
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-text-muted)" stroke-width="2"><circle cx="12" cy="12" r="1"/><circle cx="12" cy="5" r="1"/><circle cx="12" cy="19" r="1"/></svg>
-          </div>
-        </div>
-
-        <div class="bg-white rounded-2xl p-4 border border-slate-100 flex items-center gap-3">
-          <div class="w-11 h-11 rounded-full bg-amber-200 flex items-center justify-center text-sm font-bold text-amber-700">J</div>
-          <div class="flex-1">
-            <div class="font-semibold text-slate-800 text-sm">정민호</div>
-            <div class="text-xs text-slate-400">jung.mh@company.com</div>
-          </div>
-          <div class="flex items-center gap-2">
-            <span class="px-2.5 py-1 bg-slate-100 text-slate-500 text-xs rounded-lg font-medium">Editor</span>
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-text-muted)" stroke-width="2"><circle cx="12" cy="12" r="1"/><circle cx="12" cy="5" r="1"/><circle cx="12" cy="19" r="1"/></svg>
+          <div class="text-xs text-slate-500 mb-3 bg-slate-50 rounded-lg p-2.5">하천 조사 프로젝트에 참여 희망합니다. 수질 분석 경험이 있습니다.</div>
+          <div class="flex gap-2">
+            <button class="flex-1 py-2.5 text-sm font-medium text-white bg-gradient-to-r from-brand-500 to-brand-700 rounded-xl flex items-center justify-center gap-1">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              승인
+            </button>
+            <button class="flex-1 py-2.5 text-sm font-medium text-slate-500 bg-slate-100 rounded-xl flex items-center justify-center gap-1">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+              거절
+            </button>
           </div>
         </div>
 
-        <div class="bg-white rounded-2xl p-4 border border-slate-100 flex items-center gap-3">
-          <div class="w-11 h-11 rounded-full bg-rose-200 flex items-center justify-center text-sm font-bold text-rose-700">L</div>
-          <div class="flex-1">
-            <div class="font-semibold text-slate-800 text-sm">이서연</div>
-            <div class="text-xs text-slate-400">lee.sy@company.com</div>
+        <!-- Applicant 2 -->
+        <div class="bg-white rounded-2xl p-4 border border-slate-100">
+          <div class="flex items-center gap-3 mb-3">
+            <div class="w-11 h-11 rounded-full bg-emerald-200 flex items-center justify-center text-sm font-bold text-emerald-700">A</div>
+            <div class="flex-1">
+              <div class="font-semibold text-slate-800 text-sm">안소희</div>
+              <div class="text-xs text-slate-400">ahn.sh@university.ac.kr</div>
+            </div>
+            <span class="px-2 py-0.5 bg-amber-50 text-amber-600 text-xs rounded-full font-medium">대기중</span>
           </div>
-          <div class="flex items-center gap-2">
-            <span class="px-2.5 py-1 bg-slate-100 text-slate-500 text-xs rounded-lg font-medium">Viewer</span>
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-text-muted)" stroke-width="2"><circle cx="12" cy="12" r="1"/><circle cx="12" cy="5" r="1"/><circle cx="12" cy="19" r="1"/></svg>
+          <div class="text-xs text-slate-500 mb-3 bg-slate-50 rounded-lg p-2.5">GIS 전공 대학원생입니다. 현장조사 데이터 수집에 참여하고 싶습니다.</div>
+          <div class="flex gap-2">
+            <button class="flex-1 py-2.5 text-sm font-medium text-white bg-gradient-to-r from-brand-500 to-brand-700 rounded-xl flex items-center justify-center gap-1">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              승인
+            </button>
+            <button class="flex-1 py-2.5 text-sm font-medium text-slate-500 bg-slate-100 rounded-xl flex items-center justify-center gap-1">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+              거절
+            </button>
           </div>
         </div>
 
-        <div class="bg-white rounded-2xl p-4 border border-slate-100 flex items-center gap-3">
-          <div class="w-11 h-11 rounded-full bg-violet-200 flex items-center justify-center text-sm font-bold text-violet-700">H</div>
-          <div class="flex-1">
-            <div class="font-semibold text-slate-800 text-sm">한수진</div>
-            <div class="text-xs text-slate-400">han.sj@company.com</div>
-          </div>
-          <div class="flex items-center gap-2">
-            <span class="px-2.5 py-1 bg-slate-100 text-slate-500 text-xs rounded-lg font-medium">Editor</span>
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-text-muted)" stroke-width="2"><circle cx="12" cy="12" r="1"/><circle cx="12" cy="5" r="1"/><circle cx="12" cy="19" r="1"/></svg>
-          </div>
-        </div>
       </div>
       <div class="home-indicator" style="background:rgba(0,0,0,0.15)"></div>
     </div>
   </div>
 
-  <div class="screen-label-bottom">Member Manage<span>멤버 관리</span></div>
+  <div class="screen-label-bottom">Member Manage<span>멤버 관리 · 신청자 승인/거절</span></div>
 </div>
 
 <!-- ==================== 20. MY PAGE ==================== -->
@@ -3611,10 +3651,26 @@ tailwind.config = {
             </div>
           </div>
 
-          <!-- Photos -->
-          <div class="flex gap-2 mt-4">
-            <div class="w-16 h-16 rounded-lg bg-gradient-to-br from-slate-200 to-slate-300"></div>
-            <div class="w-16 h-16 rounded-lg bg-gradient-to-br from-blue-100 to-blue-200"></div>
+          <!-- Photos Gallery -->
+          <div class="mt-4">
+            <div class="flex items-center justify-between mb-2">
+              <span class="text-xs font-semibold text-slate-500">사진 (4)</span>
+              <span class="text-xs text-brand-500 font-medium">전체보기</span>
+            </div>
+            <div class="flex gap-2">
+              <div class="w-16 h-16 rounded-xl bg-gradient-to-br from-slate-200 to-slate-300 relative overflow-hidden">
+                <div class="absolute inset-0 flex items-end p-1"><span class="text-white text-xs font-medium drop-shadow">1</span></div>
+              </div>
+              <div class="w-16 h-16 rounded-xl bg-gradient-to-br from-blue-100 to-blue-200 relative overflow-hidden">
+                <div class="absolute inset-0 flex items-end p-1"><span class="text-white text-xs font-medium drop-shadow">2</span></div>
+              </div>
+              <div class="w-16 h-16 rounded-xl bg-gradient-to-br from-emerald-100 to-emerald-200 relative overflow-hidden">
+                <div class="absolute inset-0 flex items-end p-1"><span class="text-white text-xs font-medium drop-shadow">3</span></div>
+              </div>
+              <div class="w-16 h-16 rounded-xl bg-slate-100 flex items-center justify-center relative">
+                <span class="text-sm font-bold text-slate-400">+1</span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -3622,7 +3678,7 @@ tailwind.config = {
     </div>
   </div>
 
-  <div class="screen-label-bottom">Feature Info<span>피처 정보 팝업</span></div>
+  <div class="screen-label-bottom">Feature Info<span>피처 정보 · 속성 테이블 + 사진 갤러리</span></div>
 </div>
 
 <!-- ==================== 23. SEARCH PROJECT ==================== -->
@@ -3897,11 +3953,575 @@ tailwind.config = {
   <div class="screen-label-bottom">Dialog & Toast<span>확인 다이얼로그 / 토스트 / 오프라인 배너</span></div>
 </div>
 
+<!-- ==================== 28. DATASET ADD ==================== -->
+<div class="relative" style="position:absolute;left:3000px;top:3150px;">
+  <div class="screen-label">28. Dataset Add</div>
+  <div class="phone">
+    <div class="notch"></div>
+    <div class="w-full h-full bg-slate-50 relative overflow-hidden">
+      <div class="status-bar text-slate-800"><span>9:41</span><div class="flex gap-1.5 items-center opacity-60"><svg width="16" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12.55a11 11 0 0 1 14.08 0"/></svg><svg width="16" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="6" width="18" height="12" rx="2"/></svg></div></div>
+
+      <!-- Header -->
+      <div class="bg-white px-5 pt-2 pb-4 border-b border-slate-100">
+        <div class="flex items-center justify-between">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--color-text-main)" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+          <h1 class="text-lg font-bold text-slate-900">데이터셋 추가</h1>
+          <div class="w-6"></div>
+        </div>
+      </div>
+
+      <div class="px-5 pt-4 space-y-4 overflow-y-auto" style="height:calc(100% - 54px - 56px - 80px);">
+
+        <!-- Title -->
+        <div class="bg-white rounded-2xl p-4 border border-slate-100">
+          <label class="text-xs font-semibold text-slate-400 uppercase tracking-wider">제목</label>
+          <div class="mt-2 border-b-2 border-brand-400 pb-2">
+            <span class="text-sm text-slate-800">하천 조사 구역</span>
+          </div>
+        </div>
+
+        <!-- Description -->
+        <div class="bg-white rounded-2xl p-4 border border-slate-100">
+          <label class="text-xs font-semibold text-slate-400 uppercase tracking-wider">설명</label>
+          <div class="mt-2 rounded-xl border border-slate-200 p-3 min-h-[80px]">
+            <span class="text-sm text-slate-600">하천 유역 현장 조사를 위한 구역 데이터셋입니다.</span>
+          </div>
+        </div>
+
+        <!-- Privacy Type -->
+        <div class="bg-white rounded-2xl p-4 border border-slate-100 flex items-center justify-between">
+          <div class="flex items-center gap-2">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--color-text-muted)" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+            <span class="text-sm font-medium text-slate-700">유형</span>
+          </div>
+          <div class="flex items-center gap-1.5 px-3 py-1.5 bg-brand-50 rounded-lg border border-brand-200">
+            <span class="text-sm font-medium text-brand-600">PUBLIC</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--color-brand)" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </div>
+        </div>
+
+        <!-- Geometry Type -->
+        <div class="bg-white rounded-2xl p-4 border border-slate-100 flex items-center justify-between">
+          <div class="flex items-center gap-2">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--color-text-muted)" stroke-width="2"><polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6"/></svg>
+            <span class="text-sm font-medium text-slate-700">지오메트리 타입</span>
+          </div>
+          <div class="flex items-center gap-1.5 px-3 py-1.5 bg-brand-50 rounded-lg border border-brand-200">
+            <span class="text-sm font-medium text-brand-600">POLYGON</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--color-brand)" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </div>
+        </div>
+
+        <!-- Image Include -->
+        <div class="bg-white rounded-2xl p-4 border border-slate-100 flex items-center justify-between">
+          <div class="flex items-center gap-2">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--color-text-muted)" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+            <span class="text-sm font-medium text-slate-700">이미지 포함</span>
+          </div>
+          <div class="w-11 h-6 bg-brand-500 rounded-full relative">
+            <div class="absolute right-0.5 top-0.5 w-5 h-5 bg-white rounded-full shadow"></div>
+          </div>
+        </div>
+
+        <!-- Columns Section -->
+        <div class="bg-white rounded-2xl p-4 border border-slate-100">
+          <div class="flex items-center justify-between mb-3">
+            <span class="text-xs font-semibold text-slate-400 uppercase tracking-wider">컬럼 (3)</span>
+          </div>
+
+          <div class="space-y-2">
+            <!-- Column 1 -->
+            <div class="flex items-center gap-3 p-3 bg-slate-50 rounded-xl border border-slate-100">
+              <div class="flex-1">
+                <div class="text-sm text-slate-700 font-medium">name</div>
+                <div class="text-xs text-slate-400">String</div>
+              </div>
+              <span class="px-2 py-0.5 bg-red-50 text-red-500 text-xs rounded font-medium">필수</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--color-brand)" stroke-width="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--color-danger)" stroke-width="2"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>
+            </div>
+
+            <!-- Column 2 -->
+            <div class="flex items-center gap-3 p-3 bg-slate-50 rounded-xl border border-slate-100">
+              <div class="flex-1">
+                <div class="text-sm text-slate-700 font-medium">type</div>
+                <div class="text-xs text-slate-400">String · 선택형</div>
+              </div>
+              <span class="px-2 py-0.5 bg-brand-50 text-brand-500 text-xs rounded font-medium">Select</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--color-brand)" stroke-width="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--color-danger)" stroke-width="2"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>
+            </div>
+
+            <!-- Column 3 -->
+            <div class="flex items-center gap-3 p-3 bg-slate-50 rounded-xl border border-slate-100">
+              <div class="flex-1">
+                <div class="text-sm text-slate-700 font-medium">capacity</div>
+                <div class="text-xs text-slate-400">Integer · 숫자형</div>
+              </div>
+              <span class="px-2 py-0.5 bg-violet-50 text-violet-500 text-xs rounded font-medium">Number</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--color-brand)" stroke-width="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--color-danger)" stroke-width="2"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>
+            </div>
+          </div>
+
+          <!-- Add Column Button -->
+          <button class="mt-3 w-full py-2.5 text-sm font-medium text-brand-600 bg-white rounded-xl border-2 border-dashed border-brand-300 flex items-center justify-center gap-1.5">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            컬럼 추가
+          </button>
+        </div>
+
+      </div>
+
+      <!-- Bottom Submit -->
+      <div class="absolute bottom-0 left-0 right-0 px-5 pb-8 pt-3 bg-white border-t border-slate-100">
+        <button class="w-full py-3.5 bg-gradient-to-r from-brand-500 to-brand-700 text-white text-sm font-bold rounded-2xl shadow-lg shadow-brand-500/25">
+          추가
+        </button>
+      </div>
+      <div class="home-indicator" style="background:rgba(0,0,0,0.15)"></div>
+    </div>
+  </div>
+  <div class="screen-label-bottom">Dataset Add<span>데이터셋 추가 · 제목/설명/타입/컬럼</span></div>
+</div>
+
+<!-- ==================== 29. DATASET INFO ==================== -->
+<div class="relative" style="position:absolute;left:0px;top:4200px;">
+  <div class="screen-label">29. Dataset Info</div>
+  <div class="phone">
+    <div class="notch"></div>
+    <div class="w-full h-full bg-slate-50 relative overflow-hidden">
+      <div class="status-bar text-slate-800"><span>9:41</span><div class="flex gap-1.5 items-center opacity-60"><svg width="16" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12.55a11 11 0 0 1 14.08 0"/></svg><svg width="16" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="6" width="18" height="12" rx="2"/></svg></div></div>
+
+      <!-- Header -->
+      <div class="bg-white px-5 pt-2 pb-4 border-b border-slate-100">
+        <div class="flex items-center justify-between">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--color-text-main)" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+          <h1 class="text-lg font-bold text-slate-900">데이터셋 정보</h1>
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--color-brand)" stroke-width="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+        </div>
+      </div>
+
+      <div class="px-5 pt-4 space-y-4">
+
+        <!-- Title & Description Card -->
+        <div class="bg-white rounded-2xl p-4 border border-slate-100">
+          <div class="flex items-center gap-2 mb-1">
+            <div class="w-8 h-8 rounded-lg bg-brand-50 flex items-center justify-center">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-brand)" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/></svg>
+            </div>
+            <div>
+              <div class="font-bold text-slate-800 text-base">하천조사 구역</div>
+              <div class="text-xs text-slate-400">Polygon</div>
+            </div>
+          </div>
+          <div class="mt-3 pt-3 border-t border-slate-100">
+            <p class="text-sm text-slate-500 leading-relaxed">하천 유역 현장 조사를 위한 구역 데이터셋입니다.</p>
+          </div>
+        </div>
+
+        <!-- Privacy Type Card -->
+        <div class="bg-white rounded-2xl p-4 border border-slate-100 flex items-center gap-3">
+          <div class="w-10 h-10 rounded-xl bg-slate-100 flex items-center justify-center">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-text-muted)" stroke-width="1.8"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+          </div>
+          <div class="flex-1">
+            <div class="text-xs text-slate-400">유형</div>
+            <div class="text-sm font-semibold text-slate-700">PUBLIC</div>
+          </div>
+          <span class="px-2.5 py-1 bg-accent-100 text-accent-700 text-xs rounded-full font-medium">공개</span>
+        </div>
+
+        <!-- Geometry Type Card -->
+        <div class="bg-white rounded-2xl p-4 border border-slate-100 flex items-center gap-3">
+          <div class="w-10 h-10 rounded-xl bg-slate-100 flex items-center justify-center">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-text-muted)" stroke-width="1.8"><polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6"/></svg>
+          </div>
+          <div class="flex-1">
+            <div class="text-xs text-slate-400">지오메트리 타입</div>
+            <div class="text-sm font-semibold text-slate-700">POLYGON</div>
+          </div>
+        </div>
+
+        <!-- Column List Card -->
+        <div class="bg-white rounded-2xl border border-slate-100 overflow-hidden">
+          <div class="p-4 flex items-center gap-2 border-b border-slate-100">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--color-text-muted)" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+            <span class="text-sm font-semibold text-slate-700">컬럼 목록</span>
+            <span class="ml-auto text-xs text-slate-400">5개</span>
+          </div>
+
+          <!-- Table Header -->
+          <div class="flex bg-slate-50 px-4 py-2 border-b border-slate-100">
+            <span class="w-20 text-xs font-semibold text-slate-400">유형</span>
+            <span class="flex-1 text-xs font-semibold text-slate-400">이름</span>
+          </div>
+
+          <!-- Table Rows -->
+          <div class="divide-y divide-slate-50">
+            <div class="flex px-4 py-3 items-center">
+              <span class="w-20 text-xs text-brand-500 font-medium">String</span>
+              <span class="flex-1 text-sm text-slate-700">name</span>
+              <span class="px-2 py-0.5 bg-red-50 text-red-500 text-xs rounded font-medium">필수</span>
+            </div>
+            <div class="flex px-4 py-3 items-center">
+              <span class="w-20 text-xs text-brand-500 font-medium">String</span>
+              <span class="flex-1 text-sm text-slate-700">type</span>
+              <span class="px-2 py-0.5 bg-brand-50 text-brand-500 text-xs rounded font-medium">Select</span>
+            </div>
+            <div class="flex px-4 py-3 items-center">
+              <span class="w-20 text-xs text-brand-500 font-medium">String</span>
+              <span class="flex-1 text-sm text-slate-700">address</span>
+            </div>
+            <div class="flex px-4 py-3 items-center">
+              <span class="w-20 text-xs text-violet-500 font-medium">Integer</span>
+              <span class="flex-1 text-sm text-slate-700">capacity</span>
+              <span class="px-2 py-0.5 bg-violet-50 text-violet-500 text-xs rounded font-medium">Number</span>
+            </div>
+            <div class="flex px-4 py-3 items-center">
+              <span class="w-20 text-xs text-emerald-500 font-medium">String</span>
+              <span class="flex-1 text-sm text-slate-700">photo</span>
+              <span class="px-2 py-0.5 bg-emerald-50 text-emerald-500 text-xs rounded font-medium">Image</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="home-indicator" style="background:rgba(0,0,0,0.15)"></div>
+    </div>
+  </div>
+  <div class="screen-label-bottom">Dataset Info<span>데이터셋 상세 정보 · 읽기 전용</span></div>
+</div>
+
+<!-- ==================== 30. DATASET EDIT ==================== -->
+<div class="relative" style="position:absolute;left:600px;top:4200px;">
+  <div class="screen-label">30. Dataset Edit</div>
+  <div class="phone">
+    <div class="notch"></div>
+    <div class="w-full h-full bg-slate-50 relative overflow-hidden">
+      <div class="status-bar text-slate-800"><span>9:41</span><div class="flex gap-1.5 items-center opacity-60"><svg width="16" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12.55a11 11 0 0 1 14.08 0"/></svg><svg width="16" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="6" width="18" height="12" rx="2"/></svg></div></div>
+
+      <!-- Header -->
+      <div class="bg-white px-5 pt-2 pb-4 border-b border-slate-100">
+        <div class="flex items-center justify-between">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--color-text-main)" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+          <h1 class="text-lg font-bold text-slate-900">데이터셋 편집</h1>
+          <div class="w-6"></div>
+        </div>
+      </div>
+
+      <div class="px-5 pt-4 space-y-4" style="height:calc(100% - 54px - 56px - 80px); overflow-y:auto;">
+
+        <!-- Title -->
+        <div class="bg-white rounded-2xl p-4 border border-slate-100">
+          <label class="text-xs font-semibold text-slate-400 uppercase tracking-wider">제목</label>
+          <div class="mt-2 border-b-2 border-brand-400 pb-2">
+            <span class="text-sm text-slate-800">하천조사 구역</span>
+          </div>
+        </div>
+
+        <!-- Description -->
+        <div class="bg-white rounded-2xl p-4 border border-slate-100">
+          <label class="text-xs font-semibold text-slate-400 uppercase tracking-wider">설명</label>
+          <div class="mt-2 rounded-xl border border-brand-400 p-3 min-h-[80px]">
+            <span class="text-sm text-slate-600">하천 유역 현장 조사를 위한 구역 데이터셋입니다.</span>
+            <div class="h-3"></div>
+            <div class="w-0.5 h-4 bg-brand-500 animate-pulse inline-block"></div>
+          </div>
+        </div>
+
+        <!-- Privacy Type with Description -->
+        <div class="bg-white rounded-2xl p-4 border border-slate-100">
+          <div class="flex items-center justify-between mb-3">
+            <div class="flex items-center gap-2">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--color-text-muted)" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+              <span class="text-sm font-medium text-slate-700">유형</span>
+            </div>
+            <div class="flex items-center gap-1.5 px-3 py-1.5 bg-brand-50 rounded-lg border border-brand-200">
+              <span class="text-sm font-medium text-brand-600">PUBLIC</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--color-brand)" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+            </div>
+          </div>
+          <div class="bg-slate-50 rounded-xl p-3">
+            <p class="text-xs text-slate-500 leading-relaxed">모든 사용자가 조회할 수 있으며, 검색 결과에 노출됩니다. 프로젝트 멤버만 편집할 수 있습니다.</p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Bottom Save -->
+      <div class="absolute bottom-0 left-0 right-0 px-5 pb-8 pt-3 bg-white border-t border-slate-100">
+        <button class="w-full py-3.5 bg-gradient-to-r from-brand-500 to-brand-700 text-white text-sm font-bold rounded-2xl shadow-lg shadow-brand-500/25">
+          저장
+        </button>
+      </div>
+      <div class="home-indicator" style="background:rgba(0,0,0,0.15)"></div>
+    </div>
+  </div>
+  <div class="screen-label-bottom">Dataset Edit<span>데이터셋 편집 · 제목/설명/유형 수정</span></div>
+</div>
+
+<!-- ==================== 31. PROJECT EDIT ==================== -->
+<div class="relative" style="position:absolute;left:1200px;top:4200px;">
+  <div class="screen-label">31. Project Edit</div>
+  <div class="phone">
+    <div class="notch"></div>
+    <div class="w-full h-full bg-slate-50 relative overflow-hidden">
+      <div class="status-bar text-slate-800"><span>9:41</span><div class="flex gap-1.5 items-center opacity-60"><svg width="16" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12.55a11 11 0 0 1 14.08 0"/></svg><svg width="16" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="6" width="18" height="12" rx="2"/></svg></div></div>
+
+      <!-- Header -->
+      <div class="bg-white px-5 pt-2 pb-4 border-b border-slate-100">
+        <div class="flex items-center justify-between">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--color-text-main)" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+          <h1 class="text-lg font-bold text-slate-900">프로젝트 편집</h1>
+          <div class="w-6"></div>
+        </div>
+      </div>
+
+      <div class="px-5 pt-4 space-y-4" style="height:calc(100% - 54px - 56px - 80px); overflow-y:auto;">
+
+        <!-- Title -->
+        <div class="bg-white rounded-2xl p-4 border border-slate-100">
+          <label class="text-xs font-semibold text-slate-400 uppercase tracking-wider">제목</label>
+          <div class="mt-2 border-b-2 border-brand-400 pb-2">
+            <span class="text-sm text-slate-800">하천 유역 현장조사</span>
+          </div>
+        </div>
+
+        <!-- Description -->
+        <div class="bg-white rounded-2xl p-4 border border-slate-100">
+          <label class="text-xs font-semibold text-slate-400 uppercase tracking-wider">설명</label>
+          <div class="mt-2 rounded-xl border border-brand-400 p-3 min-h-[80px]">
+            <span class="text-sm text-slate-600">2026년 상반기 하천 유역 조사 프로젝트</span>
+            <div class="h-3"></div>
+            <div class="w-0.5 h-4 bg-brand-500 animate-pulse inline-block"></div>
+          </div>
+        </div>
+
+        <!-- Privacy Type with Description -->
+        <div class="bg-white rounded-2xl p-4 border border-slate-100">
+          <div class="flex items-center justify-between mb-3">
+            <div class="flex items-center gap-2">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--color-text-muted)" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+              <span class="text-sm font-medium text-slate-700">유형</span>
+            </div>
+            <div class="flex items-center gap-1.5 px-3 py-1.5 bg-brand-50 rounded-lg border border-brand-200">
+              <span class="text-sm font-medium text-brand-600">PUBLIC</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--color-brand)" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+            </div>
+          </div>
+          <div class="bg-slate-50 rounded-xl p-3">
+            <p class="text-xs text-slate-500 leading-relaxed">모든 사용자가 조회할 수 있으며, 검색 결과에 노출됩니다. 프로젝트 멤버만 편집할 수 있습니다.</p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Bottom Save -->
+      <div class="absolute bottom-0 left-0 right-0 px-5 pb-8 pt-3 bg-white border-t border-slate-100">
+        <button class="w-full py-3.5 bg-gradient-to-r from-brand-500 to-brand-700 text-white text-sm font-bold rounded-2xl shadow-lg shadow-brand-500/25">
+          저장
+        </button>
+      </div>
+      <div class="home-indicator" style="background:rgba(0,0,0,0.15)"></div>
+    </div>
+  </div>
+  <div class="screen-label-bottom">Project Edit<span>프로젝트 편집 · 제목/설명/유형 수정</span></div>
+</div>
+
+<!-- ==================== 32. REFERENCE LAYER ==================== -->
+<div class="relative" style="position:absolute;left:1800px;top:4200px;">
+  <div class="screen-label">32. Reference Layer</div>
+  <div class="phone">
+    <div class="notch"></div>
+    <div class="w-full h-full bg-slate-50 relative overflow-hidden">
+      <div class="status-bar text-slate-800"><span>9:41</span><div class="flex gap-1.5 items-center opacity-60"><svg width="16" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12.55a11 11 0 0 1 14.08 0"/></svg><svg width="16" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="6" width="18" height="12" rx="2"/></svg></div></div>
+
+      <!-- Header -->
+      <div class="bg-white px-5 pt-2 pb-4 border-b border-slate-100">
+        <div class="flex items-center justify-between">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--color-text-main)" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+          <h1 class="text-lg font-bold text-slate-900">참조 레이어</h1>
+          <div class="w-6"></div>
+        </div>
+      </div>
+
+      <div class="px-5 pt-4 space-y-4">
+
+        <!-- Dataset Layers (Expanded) -->
+        <div class="bg-white rounded-2xl border border-slate-100 overflow-hidden shadow-sm">
+          <div class="p-4 flex items-center justify-between border-b border-slate-100">
+            <div class="flex items-center gap-2">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--color-brand)" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+              <span class="text-sm font-bold text-brand-600">데이터셋</span>
+            </div>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-text-muted)" stroke-width="2"><polyline points="18 15 12 9 6 15"/></svg>
+          </div>
+
+          <!-- Dataset Layer Items -->
+          <div class="divide-y divide-slate-50">
+            <div class="px-4 py-3 flex items-center gap-3">
+              <div class="w-8 h-8 rounded-lg bg-brand-50 flex items-center justify-center">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-brand)" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/></svg>
+              </div>
+              <div class="flex-1 min-w-0">
+                <div class="text-sm font-medium text-slate-700 truncate">하천조사 구역</div>
+                <div class="text-xs text-slate-400">Polygon</div>
+              </div>
+              <div class="w-11 h-6 bg-brand-500 rounded-full relative flex-shrink-0">
+                <div class="absolute right-0.5 top-0.5 w-5 h-5 bg-white rounded-full shadow"></div>
+              </div>
+            </div>
+
+            <div class="px-4 py-3 flex items-center gap-3">
+              <div class="w-8 h-8 rounded-lg bg-slate-100 flex items-center justify-center">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-text-muted)" stroke-width="2"><circle cx="12" cy="12" r="4"/></svg>
+              </div>
+              <div class="flex-1 min-w-0">
+                <div class="text-sm font-medium text-slate-700 truncate">수질 측정소</div>
+                <div class="text-xs text-slate-400">Point</div>
+              </div>
+              <div class="w-11 h-6 bg-slate-200 rounded-full relative flex-shrink-0">
+                <div class="absolute left-0.5 top-0.5 w-5 h-5 bg-white rounded-full shadow"></div>
+              </div>
+            </div>
+
+            <div class="px-4 py-3 flex items-center gap-3">
+              <div class="w-8 h-8 rounded-lg bg-brand-50 flex items-center justify-center">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-brand)" stroke-width="2"><line x1="5" y1="19" x2="19" y2="5"/></svg>
+              </div>
+              <div class="flex-1 min-w-0">
+                <div class="text-sm font-medium text-slate-700 truncate">하천 구간</div>
+                <div class="text-xs text-slate-400">LineString</div>
+              </div>
+              <div class="w-11 h-6 bg-brand-500 rounded-full relative flex-shrink-0">
+                <div class="absolute right-0.5 top-0.5 w-5 h-5 bg-white rounded-full shadow"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Reference Layers (Collapsed) -->
+        <div class="bg-white rounded-2xl border border-slate-100 overflow-hidden shadow-sm">
+          <div class="p-4 flex items-center justify-between">
+            <div class="flex items-center gap-2">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--color-text-muted)" stroke-width="2"><polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6"/></svg>
+              <span class="text-sm font-bold text-slate-600">레이어</span>
+            </div>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-text-muted)" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </div>
+        </div>
+
+        <!-- Empty hint for collapsed -->
+        <div class="flex items-center justify-center gap-2 py-6">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-text-muted)" stroke-width="1.5"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          <span class="text-xs text-slate-400">토글로 지도에 표시할 레이어를 선택하세요</span>
+        </div>
+
+      </div>
+      <div class="home-indicator" style="background:rgba(0,0,0,0.15)"></div>
+    </div>
+  </div>
+  <div class="screen-label-bottom">Reference Layer<span>참조 레이어 · 데이터셋/레이어 토글</span></div>
+</div>
+
+<!-- ==================== 33. SELECT AREA ==================== -->
+<div class="relative" style="position:absolute;left:1200px;top:5250px;">
+  <div class="screen-label">33. Select Area</div>
+  <div class="phone">
+    <div class="notch"></div>
+    <div class="w-full h-full relative overflow-hidden">
+      <div class="status-bar text-white" style="z-index:40"><span>9:41</span><div class="flex gap-1.5 items-center opacity-60"><svg width="16" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12.55a11 11 0 0 1 14.08 0"/></svg><svg width="16" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="6" width="18" height="12" rx="2"/></svg></div></div>
+
+      <!-- Map Background -->
+      <div class="absolute inset-0 map-placeholder">
+        <div class="map-road-main" style="left:60px;top:180px;width:280px;height:3px;transform:rotate(-8deg)"></div>
+        <div class="map-road" style="left:120px;top:260px;width:200px;height:2px;transform:rotate(15deg)"></div>
+        <div class="map-road" style="left:80px;top:350px;width:150px;height:2px;transform:rotate(-5deg)"></div>
+        <div class="map-label" style="left:160px;top:220px">대전광역시</div>
+        <div class="map-label" style="left:230px;top:310px">유성구</div>
+
+        <!-- Selection Rectangle -->
+        <div class="absolute" style="left:60px;top:200px;width:240px;height:180px;border:3px solid var(--c-primary);background:rgba(var(--c-primary-rgb,23,101,167),0.12);border-radius:4px;">
+          <!-- Corner handles -->
+          <div class="absolute -top-1.5 -left-1.5 w-3 h-3 bg-brand-500 rounded-sm"></div>
+          <div class="absolute -top-1.5 -right-1.5 w-3 h-3 bg-brand-500 rounded-sm"></div>
+          <div class="absolute -bottom-1.5 -left-1.5 w-3 h-3 bg-brand-500 rounded-sm"></div>
+          <div class="absolute -bottom-1.5 -right-1.5 w-3 h-3 bg-brand-500 rounded-sm"></div>
+        </div>
+      </div>
+
+      <!-- Top Bar overlay -->
+      <div class="absolute top-12 left-4 right-4 z-30">
+        <div class="glass rounded-2xl px-4 py-3 flex items-center gap-3 shadow-lg">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-text-main)" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+          <span class="text-sm font-bold text-slate-800 flex-1">영역 설정</span>
+          <span class="px-2.5 py-1 bg-brand-50 text-brand-600 text-xs rounded-full font-semibold border border-brand-200">선택됨</span>
+        </div>
+      </div>
+
+      <!-- Bottom DraggableSheet -->
+      <div class="absolute bottom-0 left-0 right-0 z-30">
+        <div class="bg-white rounded-t-3xl shadow-2xl" style="box-shadow:0 -10px 40px rgba(0,0,0,0.12)">
+          <!-- Handle -->
+          <div class="flex justify-center pt-3 pb-2">
+            <div class="w-10 h-1 bg-slate-300 rounded-full"></div>
+          </div>
+
+          <div class="px-5 pb-3">
+            <!-- Header -->
+            <div class="flex items-center gap-2 mb-3">
+              <div class="w-7 h-7 rounded-lg bg-brand-50 flex items-center justify-center">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--color-brand)" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              </div>
+              <span class="text-sm font-bold text-slate-800">선택된 영역</span>
+            </div>
+
+            <!-- Coordinates Grid -->
+            <div class="grid grid-cols-4 gap-2 mb-3">
+              <div class="bg-slate-50 rounded-xl p-2 text-center">
+                <div class="text-xs text-slate-400 mb-0.5">남</div>
+                <div class="text-xs font-mono font-semibold text-slate-700">36.35°</div>
+              </div>
+              <div class="bg-slate-50 rounded-xl p-2 text-center">
+                <div class="text-xs text-slate-400 mb-0.5">서</div>
+                <div class="text-xs font-mono font-semibold text-slate-700">127.33°</div>
+              </div>
+              <div class="bg-slate-50 rounded-xl p-2 text-center">
+                <div class="text-xs text-slate-400 mb-0.5">북</div>
+                <div class="text-xs font-mono font-semibold text-slate-700">36.39°</div>
+              </div>
+              <div class="bg-slate-50 rounded-xl p-2 text-center">
+                <div class="text-xs text-slate-400 mb-0.5">동</div>
+                <div class="text-xs font-mono font-semibold text-slate-700">127.42°</div>
+              </div>
+            </div>
+
+            <!-- Info -->
+            <div class="flex items-start gap-2 px-3 py-2.5 bg-amber-50 rounded-xl border border-amber-200 mb-4">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#d97706" stroke-width="2" class="mt-0.5 flex-shrink-0"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+              <span class="text-xs text-amber-700 leading-relaxed">실제 저장되는 영역은 선택 영역과 차이가 있을 수 있습니다.</span>
+            </div>
+
+            <!-- Buttons -->
+            <div class="flex gap-3">
+              <button class="flex-1 py-3 text-sm font-medium text-slate-500 bg-white rounded-2xl border border-slate-200">취소</button>
+              <button class="flex-[2] py-3 text-sm font-bold text-white bg-gradient-to-r from-brand-500 to-brand-700 rounded-2xl shadow-lg shadow-brand-500/25">확인</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="home-indicator" style="background:rgba(0,0,0,0.15)"></div>
+    </div>
+  </div>
+  <div class="screen-label-bottom">Select Area<span>오프라인 영역 선택 · 지도 드래그</span></div>
+</div>
+
 </div></div><!-- end canvas -->
 
 <!-- Footer -->
 <div class="max-w-7xl mx-auto mt-8 px-12 text-slate-400 text-sm">
-  <p>gPocket 3.0 Renewal &middot; 37 Screens &middot; Design by Claude Code</p>
+  <p>gPocket 3.0 Renewal &middot; 43 Screens &middot; Design by Claude Code</p>
 </div>
 
 <script>
