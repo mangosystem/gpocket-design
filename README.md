@@ -22,7 +22,7 @@ gPocket 모바일 GIS 앱의 리뉴얼 디자인 목업입니다. (36개 화면)
 
 ```css
 /* 브랜드 색상 */
---color-brand: #1A91DA;        /* 메인 브랜드 파란색 */
+--color-brand: #2d69ff;        /* 메인 브랜드 파란색 */
 --color-brand-dark: #0B69A3;   /* 브랜드 진한 파란색 */
 
 /* 상태 색상 */
