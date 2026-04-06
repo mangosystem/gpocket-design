@@ -1,0 +1,6 @@
+# 스크린샷 생성물
+preview.png
+
+# npm (screenshot 도구)
+tools/node_modules/
+tools/package-lock.json
