@@ -244,36 +244,36 @@ tailwind.config = {
        BOUNDARY BOXES — 행별 섹션 구분
        ================================================================ -->
 
-  <!-- Row 0: 인증 & 프로젝트 진입 (x=0..4590, y=0..844) -->
+  <!-- Row 0: 인증 & 프로젝트 (1-8, x=0..4590) -->
   <rect x="-30" y="-30" width="4680" height="904"
         rx="16" fill="rgba(15,23,42,0.02)" stroke="var(--color-text-muted)"
         stroke-width="1.5" stroke-dasharray="10,6"/>
   <text x="-14" y="-38" font-size="13" font-weight="700"
         fill="var(--color-text-sub)" font-family="Pretendard, sans-serif">Row 0 — 인증 &amp; 프로젝트</text>
 
-  <!-- Row 1: 데이터셋 & 팀 관리 (x=0..4590, y=1050..1894) -->
+  <!-- Row 1: 데이터셋 & 팀 (9-16, x=0..4590) -->
   <rect x="-30" y="1020" width="4680" height="904"
         rx="16" fill="rgba(23,101,167,0.02)" stroke="var(--color-brand)"
         stroke-width="1.5" stroke-dasharray="10,6"/>
   <text x="-14" y="1012" font-size="13" font-weight="700"
         fill="var(--color-brand)" font-family="Pretendard, sans-serif">Row 1 — 데이터셋 &amp; 팀</text>
 
-  <!-- Row 2: 지도 & 편집 (x=0..5190, y=2100..2944) -->
-  <rect x="-30" y="2070" width="5280" height="904"
+  <!-- Row 2: 지도 & 편집 (17-26, x=0..5790) -->
+  <rect x="-30" y="2070" width="5880" height="904"
         rx="16" fill="rgba(23,101,167,0.02)" stroke="var(--color-brand)"
         stroke-width="1.5" stroke-dasharray="10,6"/>
   <text x="-14" y="2062" font-size="13" font-weight="700"
         fill="var(--color-brand)" font-family="Pretendard, sans-serif">Row 2 — 지도 &amp; 편집</text>
 
-  <!-- Row 3: 드로어 & 레이어 (x=0..7190, y=3150..3994) -->
-  <rect x="-30" y="3120" width="7280" height="904"
+  <!-- Row 3: 드로어 & 레이어 (27-37, x=0..6390) -->
+  <rect x="-30" y="3120" width="6480" height="904"
         rx="16" fill="rgba(39,171,131,0.02)" stroke="var(--color-success)"
         stroke-width="1.5" stroke-dasharray="10,6"/>
   <text x="-14" y="3112" font-size="13" font-weight="700"
         fill="var(--color-success-text)" font-family="Pretendard, sans-serif">Row 3 — 드로어 &amp; 레이어</text>
 
-  <!-- Row 4: 오프라인 & 서버 (x=0..4590, y=4200..5044) -->
-  <rect x="-30" y="4170" width="4680" height="904"
+  <!-- Row 4: 오프라인 & 서버 (38-46, x=0..5190) -->
+  <rect x="-30" y="4170" width="5280" height="904"
         rx="16" fill="rgba(245,158,11,0.03)" stroke="var(--color-warning)"
         stroke-width="1.5" stroke-dasharray="10,6"/>
   <text x="-14" y="4162" font-size="13" font-weight="700"
@@ -281,106 +281,112 @@ tailwind.config = {
 
   <!-- ================================================================
        SUB-BOUNDARY BOXES — 기능별 세부 그룹
-       (행 바운더리보다 안쪽, 실선 + 반투명 fill)
        ================================================================ -->
 
-  <!-- Row 0: 인증 서브그룹 — Home / Login / Register -->
+  <!-- Row 0: 인증 — 1.Home / 2.Login / 3.Register -->
   <rect x="-14" y="-14" width="1618" height="872"
         rx="12" fill="rgba(15,23,42,0.03)" stroke="var(--color-text-muted)"
         stroke-width="1.2" opacity="0.7"/>
   <text x="-2" y="-18" font-size="11" font-weight="600"
         fill="var(--color-text-muted)" font-family="Pretendard, sans-serif">인증</text>
 
-  <!-- Row 0: 프로젝트 서브그룹 — ProjList / SearchJoin / ProjCreate / ProjDetail / ProjEdit -->
+  <!-- Row 0: 프로젝트 — 4.ProjList / 5.SearchJoin / 6.ProjCreate / 7.ProjDetail / 8.ProjEdit -->
   <rect x="1786" y="-14" width="2818" height="872"
         rx="12" fill="rgba(15,23,42,0.03)" stroke="var(--color-text-muted)"
         stroke-width="1.2" opacity="0.7"/>
   <text x="1798" y="-18" font-size="11" font-weight="600"
         fill="var(--color-text-muted)" font-family="Pretendard, sans-serif">프로젝트</text>
 
-  <!-- Row 1: 데이터셋 서브그룹 — DatasetMgmt / Add / Info / Edit / Col -->
+  <!-- Row 1: 데이터셋 — 9-13 -->
   <rect x="-14" y="1036" width="2818" height="872"
         rx="12" fill="rgba(23,101,167,0.03)" stroke="var(--color-brand)"
         stroke-width="1.2" opacity="0.7"/>
   <text x="-2" y="1030" font-size="11" font-weight="600"
         fill="var(--color-brand)" font-family="Pretendard, sans-serif">데이터셋</text>
 
-  <!-- Row 1: 팀 관리 서브그룹 — MemberMgmt / MyPage / ProjMembership -->
+  <!-- Row 1: 팀 관리 — 14.MemberMgmt / 15.MyPage / 16.ProjMembership -->
   <rect x="2986" y="1036" width="1618" height="872"
         rx="12" fill="rgba(23,101,167,0.03)" stroke="var(--color-brand)"
         stroke-width="1.2" opacity="0.7"/>
   <text x="2998" y="1030" font-size="11" font-weight="600"
         fill="var(--color-brand)" font-family="Pretendard, sans-serif">팀 관리</text>
 
-  <!-- Row 2: 지도 뷰 서브그룹 — MapView -->
+  <!-- Row 2: 지도 뷰 — 17.MapView -->
   <rect x="-14" y="2086" width="418" height="872"
         rx="12" fill="rgba(23,101,167,0.03)" stroke="var(--color-brand)"
         stroke-width="1.2" opacity="0.7"/>
   <text x="-2" y="2080" font-size="11" font-weight="600"
         fill="var(--color-brand)" font-family="Pretendard, sans-serif">지도 뷰</text>
 
-  <!-- Row 2: 편집 흐름 서브그룹 — EditSession / FeatSelected / AddGeo / AttrForm / VertexEdit / DelConfirm -->
-  <rect x="586" y="2086" width="3418" height="872"
+  <!-- Row 2: 편집 흐름 — 18.EditLayerSelect ~ 24.DelConfirm (x=600..4590) -->
+  <rect x="586" y="2086" width="4018" height="872"
         rx="12" fill="rgba(23,101,167,0.03)" stroke="var(--color-brand)"
         stroke-width="1.2" opacity="0.7"/>
   <text x="598" y="2080" font-size="11" font-weight="600"
         fill="var(--color-brand)" font-family="Pretendard, sans-serif">편집 흐름</text>
 
-  <!-- Row 2: 피처 정보 서브그룹 — FeatureInfo / EditHistory -->
-  <rect x="4186" y="2086" width="1018" height="872"
+  <!-- Row 2: 피처 정보 — 25.FeatInfo / 26.EditHistory (x=4800..5790) -->
+  <rect x="4786" y="2086" width="1018" height="872"
         rx="12" fill="rgba(23,101,167,0.03)" stroke="var(--color-brand)"
         stroke-width="1.2" opacity="0.7"/>
-  <text x="4198" y="2080" font-size="11" font-weight="600"
+  <text x="4798" y="2080" font-size="11" font-weight="600"
         fill="var(--color-brand)" font-family="Pretendard, sans-serif">피처 정보</text>
 
-  <!-- Row 3: 드로어 서브그룹 — DrawerP / DrawerE / DrawerO -->
+  <!-- Row 3: 드로어 — 27-29 (x=0..1590) -->
   <rect x="-14" y="3136" width="1618" height="872"
         rx="12" fill="rgba(39,171,131,0.03)" stroke="var(--color-success)"
         stroke-width="1.2" opacity="0.7"/>
   <text x="-2" y="3130" font-size="11" font-weight="600"
         fill="var(--color-success-text)" font-family="Pretendard, sans-serif">드로어</text>
 
-  <!-- Row 3: 레이어 관리 서브그룹 — LayerMgmt / RefLayer / LayerSelector -->
-  <rect x="1786" y="3136" width="1618" height="872"
+  <!-- Row 3: 레이어 관리 — 30.LayerMgmt / 31.RefLayer (x=1800..2790) -->
+  <rect x="1786" y="3136" width="1018" height="872"
         rx="12" fill="rgba(39,171,131,0.03)" stroke="var(--color-success)"
         stroke-width="1.2" opacity="0.7"/>
   <text x="1798" y="3130" font-size="11" font-weight="600"
         fill="var(--color-success-text)" font-family="Pretendard, sans-serif">레이어 관리</text>
 
-  <!-- Row 3: 도구 서브그룹 — CQL / GPS / Bookmark -->
-  <rect x="3586" y="3136" width="1618" height="872"
+  <!-- Row 3: 도구 — 32.CQL / 33.GPS / 34.Bookmark (x=3000..4590) -->
+  <rect x="2986" y="3136" width="1618" height="872"
         rx="12" fill="rgba(39,171,131,0.03)" stroke="var(--color-success)"
         stroke-width="1.2" opacity="0.7"/>
-  <text x="3598" y="3130" font-size="11" font-weight="600"
+  <text x="2998" y="3130" font-size="11" font-weight="600"
         fill="var(--color-success-text)" font-family="Pretendard, sans-serif">도구 (CQL / GPS / 북마크)</text>
 
-  <!-- Row 3: FS 타입별 서브섹션 — FS-A / FS-B / FS-C -->
-  <rect x="5386" y="3136" width="1618" height="872"
+  <!-- Row 3: 피처 선택 — 35.FS-A / 36.FS-B / 37.FS-C (x=4800..6390) -->
+  <rect x="4786" y="3136" width="1618" height="872"
         rx="12" fill="rgba(15,23,42,0.02)" stroke="var(--color-text-muted)"
         stroke-width="1.2" opacity="0.7"/>
-  <text x="5398" y="3130" font-size="11" font-weight="600"
+  <text x="4798" y="3130" font-size="11" font-weight="600"
         fill="var(--color-text-sub)" font-family="Pretendard, sans-serif">피처 선택 (타입별)</text>
 
-  <!-- Row 4: 서버 서브그룹 — ServerMgmt / AddServer -->
+  <!-- Row 4: 서버 — 38.ServerMgmt / 39.AddServer (x=0..990) -->
   <rect x="-14" y="4186" width="1018" height="872"
         rx="12" fill="rgba(245,158,11,0.04)" stroke="var(--color-warning)"
         stroke-width="1.2" opacity="0.7"/>
   <text x="-2" y="4180" font-size="11" font-weight="600"
         fill="var(--color-amber-dark)" font-family="Pretendard, sans-serif">서버</text>
 
-  <!-- Row 4: 오프라인 서브그룹 — OffGPKG / GPKGCreate / SyncOffline / SelectArea -->
+  <!-- Row 4: 오프라인 — 40-43 (x=1200..3390) -->
   <rect x="1186" y="4186" width="2218" height="872"
         rx="12" fill="rgba(245,158,11,0.04)" stroke="var(--color-warning)"
         stroke-width="1.2" opacity="0.7"/>
   <text x="1198" y="4180" font-size="11" font-weight="600"
         fill="var(--color-amber-dark)" font-family="Pretendard, sans-serif">오프라인</text>
 
-  <!-- Row 4: 시스템 UI 서브그룹 — EmptyStates / ConfirmDialog -->
+  <!-- Row 4: 시스템 UI — 44.Empty / 45.Dialog (x=3600..4590) -->
   <rect x="3586" y="4186" width="1018" height="872"
         rx="12" fill="rgba(15,23,42,0.03)" stroke="var(--color-text-muted)"
         stroke-width="1.2" opacity="0.7"/>
   <text x="3598" y="4180" font-size="11" font-weight="600"
         fill="var(--color-text-sub)" font-family="Pretendard, sans-serif">시스템 UI</text>
+
+  <!-- Row 4: 오프라인 지도 — 46.OfflineMapView (x=4800..5190) -->
+  <rect x="4786" y="4186" width="418" height="872"
+        rx="12" fill="rgba(245,158,11,0.04)" stroke="var(--color-warning)"
+        stroke-width="1.2" opacity="0.7"/>
+  <text x="4798" y="4180" font-size="11" font-weight="600"
+        fill="var(--color-amber-dark)" font-family="Pretendard, sans-serif">오프라인 지도</text>
 
   <!-- ================================================================
        ARROWS — 화면 흐름 (회색=주 네비 / 파랑=편집 / 초록=추가 / 빨강=삭제 / 노랑=오프라인)
@@ -889,7 +895,7 @@ tailwind.config = {
 
 <!-- ==================== 18. EDIT LAYER SELECT ==================== -->
 <div class="relative" style="position:absolute;left:600px;top:2100px;">
-  <div class="screen-label">19. Edit Layer Select</div>
+  <div class="screen-label">18. Edit Layer Select</div>
   <div class="phone">
     <div class="notch"></div>
     <div class="w-full h-full bg-slate-50 relative overflow-hidden">
@@ -2021,7 +2027,7 @@ tailwind.config = {
 
 <!-- ==================== 7. OFFLINE / GPKG ==================== -->
 <div class="relative" style="position:absolute;left:1200px;top:4200px;">
-  <div class="screen-label">41. Offline GPKG</div>
+  <div class="screen-label">40. Offline GPKG</div>
   <div class="phone">
     <div class="notch"></div>
     <div class="w-full h-full bg-slate-50 relative overflow-hidden">
@@ -2247,8 +2253,8 @@ tailwind.config = {
 </div>
 
 <!-- ==================== FS-A. FEATURE SELECTED — POINT ==================== -->
-<div class="relative" style="position:absolute;left:5400px;top:3150px;">
-  <div class="screen-label">36. FS-A (Point)</div>
+<div class="relative" style="position:absolute;left:4800px;top:3150px;">
+  <div class="screen-label">35. FS-A (Point)</div>
   <div class="phone">
     <div class="notch"></div>
     <div class="w-full h-full relative overflow-hidden">
@@ -2357,8 +2363,8 @@ tailwind.config = {
 </div>
 
 <!-- ==================== FS-B. FEATURE SELECTED — LINE ==================== -->
-<div class="relative" style="position:absolute;left:6000px;top:3150px;">
-  <div class="screen-label">37. FS-B (Line)</div>
+<div class="relative" style="position:absolute;left:5400px;top:3150px;">
+  <div class="screen-label">36. FS-B (Line)</div>
   <div class="phone">
     <div class="notch"></div>
     <div class="w-full h-full relative overflow-hidden">
@@ -2456,8 +2462,8 @@ tailwind.config = {
 </div>
 
 <!-- ==================== FS-C. FEATURE SELECTED — POLYGON ==================== -->
-<div class="relative" style="position:absolute;left:6600px;top:3150px;">
-  <div class="screen-label">38. FS-C (Polygon)</div>
+<div class="relative" style="position:absolute;left:6000px;top:3150px;">
+  <div class="screen-label">37. FS-C (Polygon)</div>
   <div class="phone">
     <div class="notch"></div>
     <div class="w-full h-full relative overflow-hidden">
@@ -2647,7 +2653,7 @@ tailwind.config = {
 
 <!-- ==================== 9. SERVER MANAGE ==================== -->
 <div class="relative" style="position:absolute;left:0px;top:4200px;">
-  <div class="screen-label">39. Server Manage</div>
+  <div class="screen-label">38. Server Manage</div>
   <div class="phone">
     <div class="notch"></div>
     <div class="w-full h-full bg-white relative overflow-hidden">
@@ -2727,7 +2733,7 @@ tailwind.config = {
 
 <!-- ==================== 10. ADD SERVER ==================== -->
 <div class="relative" style="position:absolute;left:600px;top:4200px;">
-  <div class="screen-label">40. Add Server</div>
+  <div class="screen-label">39. Add Server</div>
   <div class="phone">
     <div class="notch"></div>
     <div class="w-full h-full bg-white relative overflow-hidden">
@@ -2780,8 +2786,8 @@ tailwind.config = {
 </div>
 
 <!-- ==================== 11. BOOKMARK ==================== -->
-<div class="relative" style="position:absolute;left:4800px;top:3150px;">
-  <div class="screen-label">35. Bookmark</div>
+<div class="relative" style="position:absolute;left:4200px;top:3150px;">
+  <div class="screen-label">34. Bookmark</div>
   <div class="phone">
     <div class="notch"></div>
     <div class="w-full h-full bg-slate-50 relative overflow-hidden">
@@ -2861,8 +2867,8 @@ tailwind.config = {
 </div>
 
 <!-- ==================== 12. CQL FILTER ==================== -->
-<div class="relative" style="position:absolute;left:3600px;top:3150px;">
-  <div class="screen-label">33. CQL Filter</div>
+<div class="relative" style="position:absolute;left:3000px;top:3150px;">
+  <div class="screen-label">32. CQL Filter</div>
   <div class="phone">
     <div class="notch"></div>
     <div class="w-full h-full bg-white relative overflow-hidden">
@@ -2967,8 +2973,8 @@ tailwind.config = {
 </div>
 
 <!-- ==================== 13. GPS TRACKING ==================== -->
-<div class="relative" style="position:absolute;left:4200px;top:3150px;">
-  <div class="screen-label">34. GPS Tracking</div>
+<div class="relative" style="position:absolute;left:3600px;top:3150px;">
+  <div class="screen-label">33. GPS Tracking</div>
   <div class="phone">
     <div class="notch"></div>
     <div class="w-full h-full relative overflow-hidden">
@@ -3035,7 +3041,7 @@ tailwind.config = {
 
 <!-- ==================== 14. GPKG CREATE ==================== -->
 <div class="relative" style="position:absolute;left:1800px;top:4200px;">
-  <div class="screen-label">42. GPKG Create</div>
+  <div class="screen-label">41. GPKG Create</div>
   <div class="phone">
     <div class="notch"></div>
     <div class="w-full h-full bg-white relative overflow-hidden">
@@ -3126,7 +3132,7 @@ tailwind.config = {
 
 <!-- ==================== 15. SYNC OFFLINE ==================== -->
 <div class="relative" style="position:absolute;left:2400px;top:4200px;">
-  <div class="screen-label">43. Sync Offline</div>
+  <div class="screen-label">42. Sync Offline</div>
   <div class="phone">
     <div class="notch"></div>
     <div class="w-full h-full bg-white relative overflow-hidden">
@@ -4074,7 +4080,7 @@ tailwind.config = {
 
 <!-- ==================== 25. EMPTY STATES ==================== -->
 <div class="relative" style="position:absolute;left:3600px;top:4200px;">
-  <div class="screen-label">45. Empty / Error States</div>
+  <div class="screen-label">44. Empty / Error States</div>
   <div class="phone">
     <div class="notch"></div>
     <div class="w-full h-full bg-slate-50 relative overflow-hidden">
@@ -4743,7 +4749,7 @@ tailwind.config = {
 
 <!-- ==================== 33. SELECT AREA ==================== -->
 <div class="relative" style="position:absolute;left:3000px;top:4200px;">
-  <div class="screen-label">44. Select Area</div>
+  <div class="screen-label">43. Select Area</div>
   <div class="phone">
     <div class="notch"></div>
     <div class="w-full h-full relative overflow-hidden">
