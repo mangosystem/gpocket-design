@@ -673,8 +673,8 @@ tailwind.config = {
 </div>
 
 <!-- ==================== 2. EDIT SESSION — IDLE ==================== -->
-<div class="relative" style="position:absolute;left:600px;top:2100px;">
-  <div class="screen-label">18. Edit Session</div>
+<div class="relative" style="position:absolute;left:1200px;top:2100px;">
+  <div class="screen-label">19. Edit Session</div>
   <div class="phone">
     <div class="notch"></div>
     <div class="w-full h-full relative overflow-hidden">
@@ -883,9 +883,81 @@ tailwind.config = {
   <div class="screen-label-bottom">Map View<span>지도 보기 (뷰 모드, 편집 전)</span></div>
 </div>
 
+<!-- ==================== 18. EDIT LAYER SELECT ==================== -->
+<div class="relative" style="position:absolute;left:600px;top:2100px;">
+  <div class="screen-label">19. Edit Layer Select</div>
+  <div class="phone">
+    <div class="notch"></div>
+    <div class="w-full h-full bg-slate-50 relative overflow-hidden">
+      <div class="status-bar text-slate-800"><span>9:41</span><div class="flex gap-1.5 items-center opacity-60"><svg width="16" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12.55a11 11 0 0 1 14.08 0"/></svg><svg width="16" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="6" width="18" height="12" rx="2"/></svg></div></div>
+
+      <!-- Header -->
+      <div class="bg-white px-5 pt-2 pb-4 border-b border-slate-100">
+        <div class="flex items-center justify-between">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--color-text-main)" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+          <h1 class="text-lg font-bold text-slate-900">편집 레이어 선택</h1>
+          <div class="w-6"></div>
+        </div>
+      </div>
+
+      <div class="px-5 pt-6 flex flex-col items-center">
+        <!-- Icon -->
+        <div class="w-16 h-16 rounded-2xl bg-brand-50 flex items-center justify-center mb-4">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--color-brand)" stroke-width="1.5"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+        </div>
+        <span class="text-sm text-slate-500 mb-6">편집할 레이어를 선택하세요</span>
+
+        <!-- Layer List -->
+        <div class="w-full bg-white rounded-2xl border border-slate-200 overflow-hidden">
+          <div class="divide-y divide-slate-50">
+            <div class="p-4 flex items-center gap-3 bg-brand-50">
+              <div class="w-8 h-8 rounded-lg bg-brand-100 flex items-center justify-center">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-brand)" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/></svg>
+              </div>
+              <div class="flex-1">
+                <div class="text-sm font-medium text-brand-700">건물</div>
+                <div class="text-xs text-slate-400">Polygon · building</div>
+              </div>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--color-brand)" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+            </div>
+            <div class="p-4 flex items-center gap-3">
+              <div class="w-8 h-8 rounded-lg bg-slate-100 flex items-center justify-center">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-text-muted)" stroke-width="2"><line x1="5" y1="19" x2="19" y2="5"/></svg>
+              </div>
+              <div class="flex-1">
+                <div class="text-sm font-medium text-slate-700">도로</div>
+                <div class="text-xs text-slate-400">LineString · road</div>
+              </div>
+            </div>
+            <div class="p-4 flex items-center gap-3">
+              <div class="w-8 h-8 rounded-lg bg-slate-100 flex items-center justify-center">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-text-muted)" stroke-width="2"><circle cx="12" cy="12" r="4"/></svg>
+              </div>
+              <div class="flex-1">
+                <div class="text-sm font-medium text-slate-700">측정소</div>
+                <div class="text-xs text-slate-400">Point · station</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom Buttons -->
+      <div class="absolute bottom-0 left-0 right-0 px-5 pb-8 pt-3 bg-white border-t border-slate-100">
+        <div class="flex gap-3">
+          <button class="flex-1 py-3 text-sm font-medium text-slate-500 bg-slate-100 rounded-2xl">취소</button>
+          <button class="flex-[2] py-3 text-sm font-bold text-white bg-gradient-to-r from-brand-500 to-brand-700 rounded-2xl shadow-lg shadow-brand-500/25">확인</button>
+        </div>
+      </div>
+      <div class="home-indicator" style="background:rgba(0,0,0,0.15)"></div>
+    </div>
+  </div>
+  <div class="screen-label-bottom">Edit Layer Select<span>편집 레이어 선택</span></div>
+</div>
+
 <!-- ==================== 2b. FEATURE SELECTED ==================== -->
-<div class="relative" style="position:absolute;left:1200px;top:2100px;">
-  <div class="screen-label">19. Feature Selected</div>
+<div class="relative" style="position:absolute;left:1800px;top:2100px;">
+  <div class="screen-label">20. Feature Selected</div>
   <div class="phone">
     <div class="notch"></div>
     <div class="w-full h-full relative overflow-hidden">
@@ -994,8 +1066,8 @@ tailwind.config = {
 </div>
 
 <!-- ==================== 2c. ADDING GEOMETRY ==================== -->
-<div class="relative" style="position:absolute;left:1800px;top:2100px;">
-  <div class="screen-label">20. Add Geometry</div>
+<div class="relative" style="position:absolute;left:2400px;top:2100px;">
+  <div class="screen-label">21. Add Geometry</div>
   <div class="phone">
     <div class="notch"></div>
     <div class="w-full h-full relative overflow-hidden">
@@ -1109,8 +1181,8 @@ tailwind.config = {
 </div>
 
 <!-- ==================== 2d. VERTEX EDITING ==================== -->
-<div class="relative" style="position:absolute;left:3000px;top:2100px;">
-  <div class="screen-label">22. Vertex Edit</div>
+<div class="relative" style="position:absolute;left:3600px;top:2100px;">
+  <div class="screen-label">23. Vertex Edit</div>
   <div class="phone">
     <div class="notch"></div>
     <div class="w-full h-full relative overflow-hidden">
@@ -1218,8 +1290,8 @@ tailwind.config = {
 </div>
 
 <!-- ==================== 2e. DELETE CONFIRMATION ==================== -->
-<div class="relative" style="position:absolute;left:3600px;top:2100px;">
-  <div class="screen-label">23. Delete Confirm</div>
+<div class="relative" style="position:absolute;left:4200px;top:2100px;">
+  <div class="screen-label">24. Delete Confirm</div>
   <div class="phone">
     <div class="notch"></div>
     <div class="w-full h-full relative overflow-hidden">
@@ -1300,7 +1372,7 @@ tailwind.config = {
 
 <!-- ==================== 3a. SIDE MENU (PINOGIO) ==================== -->
 <div class="relative" style="position:absolute;left:0px;top:3150px;">
-  <div class="screen-label">26. Drawer (PINOGIO)</div>
+  <div class="screen-label">27. Drawer (PINOGIO)</div>
   <div class="phone">
     <div class="notch"></div>
     <div class="w-full h-full relative overflow-hidden">
@@ -1385,7 +1457,7 @@ tailwind.config = {
 
 <!-- ==================== 3b. SIDE MENU (Everyone) ==================== -->
 <div class="relative" style="position:absolute;left:600px;top:3150px;">
-  <div class="screen-label">27. Drawer (Everyone)</div>
+  <div class="screen-label">28. Drawer (Everyone)</div>
   <div class="phone">
     <div class="notch"></div>
     <div class="w-full h-full relative overflow-hidden">
@@ -1456,7 +1528,7 @@ tailwind.config = {
 
 <!-- ==================== 3c. SIDE MENU (Offline) ==================== -->
 <div class="relative" style="position:absolute;left:1200px;top:3150px;">
-  <div class="screen-label">28. Drawer (Offline)</div>
+  <div class="screen-label">29. Drawer (Offline)</div>
   <div class="phone">
     <div class="notch"></div>
     <div class="w-full h-full relative overflow-hidden">
@@ -1765,7 +1837,7 @@ tailwind.config = {
 
 <!-- ==================== 6. LAYER MANAGEMENT ==================== -->
 <div class="relative" style="position:absolute;left:1800px;top:3150px;">
-  <div class="screen-label">29. Layer Management</div>
+  <div class="screen-label">30. Layer Management</div>
   <div class="phone">
     <div class="notch"></div>
     <div class="w-full h-full relative overflow-hidden">
@@ -1895,7 +1967,7 @@ tailwind.config = {
 
 <!-- ==================== 7. OFFLINE / GPKG ==================== -->
 <div class="relative" style="position:absolute;left:1200px;top:4200px;">
-  <div class="screen-label">40. Offline GPKG</div>
+  <div class="screen-label">41. Offline GPKG</div>
   <div class="phone">
     <div class="notch"></div>
     <div class="w-full h-full bg-slate-50 relative overflow-hidden">
@@ -2017,8 +2089,8 @@ tailwind.config = {
 </div>
 
 <!-- ==================== 8. ATTRIBUTE FORM (BOTTOM SHEET) ==================== -->
-<div class="relative" style="position:absolute;left:2400px;top:2100px;">
-  <div class="screen-label">21. Attribute Form</div>
+<div class="relative" style="position:absolute;left:3000px;top:2100px;">
+  <div class="screen-label">22. Attribute Form</div>
   <div class="phone">
     <div class="notch"></div>
     <div class="w-full h-full relative overflow-hidden">
@@ -2111,7 +2183,7 @@ tailwind.config = {
 
 <!-- ==================== FS-A. FEATURE SELECTED — POINT ==================== -->
 <div class="relative" style="position:absolute;left:5400px;top:3150px;">
-  <div class="screen-label">35. FS-A (Point)</div>
+  <div class="screen-label">36. FS-A (Point)</div>
   <div class="phone">
     <div class="notch"></div>
     <div class="w-full h-full relative overflow-hidden">
@@ -2221,7 +2293,7 @@ tailwind.config = {
 
 <!-- ==================== FS-B. FEATURE SELECTED — LINE ==================== -->
 <div class="relative" style="position:absolute;left:6000px;top:3150px;">
-  <div class="screen-label">36. FS-B (Line)</div>
+  <div class="screen-label">37. FS-B (Line)</div>
   <div class="phone">
     <div class="notch"></div>
     <div class="w-full h-full relative overflow-hidden">
@@ -2320,7 +2392,7 @@ tailwind.config = {
 
 <!-- ==================== FS-C. FEATURE SELECTED — POLYGON ==================== -->
 <div class="relative" style="position:absolute;left:6600px;top:3150px;">
-  <div class="screen-label">37. FS-C (Polygon)</div>
+  <div class="screen-label">38. FS-C (Polygon)</div>
   <div class="phone">
     <div class="notch"></div>
     <div class="w-full h-full relative overflow-hidden">
@@ -2510,7 +2582,7 @@ tailwind.config = {
 
 <!-- ==================== 9. SERVER MANAGE ==================== -->
 <div class="relative" style="position:absolute;left:0px;top:4200px;">
-  <div class="screen-label">38. Server Manage</div>
+  <div class="screen-label">39. Server Manage</div>
   <div class="phone">
     <div class="notch"></div>
     <div class="w-full h-full bg-white relative overflow-hidden">
@@ -2590,7 +2662,7 @@ tailwind.config = {
 
 <!-- ==================== 10. ADD SERVER ==================== -->
 <div class="relative" style="position:absolute;left:600px;top:4200px;">
-  <div class="screen-label">39. Add Server</div>
+  <div class="screen-label">40. Add Server</div>
   <div class="phone">
     <div class="notch"></div>
     <div class="w-full h-full bg-white relative overflow-hidden">
@@ -2644,7 +2716,7 @@ tailwind.config = {
 
 <!-- ==================== 11. BOOKMARK ==================== -->
 <div class="relative" style="position:absolute;left:4800px;top:3150px;">
-  <div class="screen-label">34. Bookmark</div>
+  <div class="screen-label">35. Bookmark</div>
   <div class="phone">
     <div class="notch"></div>
     <div class="w-full h-full bg-slate-50 relative overflow-hidden">
@@ -2725,7 +2797,7 @@ tailwind.config = {
 
 <!-- ==================== 12. CQL FILTER ==================== -->
 <div class="relative" style="position:absolute;left:3600px;top:3150px;">
-  <div class="screen-label">32. CQL Filter</div>
+  <div class="screen-label">33. CQL Filter</div>
   <div class="phone">
     <div class="notch"></div>
     <div class="w-full h-full bg-white relative overflow-hidden">
@@ -2831,7 +2903,7 @@ tailwind.config = {
 
 <!-- ==================== 13. GPS TRACKING ==================== -->
 <div class="relative" style="position:absolute;left:4200px;top:3150px;">
-  <div class="screen-label">33. GPS Tracking</div>
+  <div class="screen-label">34. GPS Tracking</div>
   <div class="phone">
     <div class="notch"></div>
     <div class="w-full h-full relative overflow-hidden">
@@ -2898,7 +2970,7 @@ tailwind.config = {
 
 <!-- ==================== 14. GPKG CREATE ==================== -->
 <div class="relative" style="position:absolute;left:1800px;top:4200px;">
-  <div class="screen-label">41. GPKG Create</div>
+  <div class="screen-label">42. GPKG Create</div>
   <div class="phone">
     <div class="notch"></div>
     <div class="w-full h-full bg-white relative overflow-hidden">
@@ -2989,7 +3061,7 @@ tailwind.config = {
 
 <!-- ==================== 15. SYNC OFFLINE ==================== -->
 <div class="relative" style="position:absolute;left:2400px;top:4200px;">
-  <div class="screen-label">42. Sync Offline</div>
+  <div class="screen-label">43. Sync Offline</div>
   <div class="phone">
     <div class="notch"></div>
     <div class="w-full h-full bg-white relative overflow-hidden">
@@ -3508,8 +3580,8 @@ tailwind.config = {
 </div>
 
 <!-- ==================== 21. EDIT HISTORY ==================== -->
-<div class="relative" style="position:absolute;left:4800px;top:2100px;">
-  <div class="screen-label">25. Edit History</div>
+<div class="relative" style="position:absolute;left:5400px;top:2100px;">
+  <div class="screen-label">26. Edit History</div>
   <div class="phone">
     <div class="notch"></div>
     <div class="w-full h-full bg-slate-50 relative overflow-hidden">
@@ -3667,8 +3739,8 @@ tailwind.config = {
 </div>
 
 <!-- ==================== 22. FEATURE INFO POPUP ==================== -->
-<div class="relative" style="position:absolute;left:4200px;top:2100px;">
-  <div class="screen-label">24. Feature Info</div>
+<div class="relative" style="position:absolute;left:4800px;top:2100px;">
+  <div class="screen-label">25. Feature Info</div>
   <div class="phone">
     <div class="notch"></div>
     <div class="w-full h-full relative overflow-hidden">
@@ -3937,7 +4009,7 @@ tailwind.config = {
 
 <!-- ==================== 25. EMPTY STATES ==================== -->
 <div class="relative" style="position:absolute;left:3600px;top:4200px;">
-  <div class="screen-label">44. Empty / Error States</div>
+  <div class="screen-label">45. Empty / Error States</div>
   <div class="phone">
     <div class="notch"></div>
     <div class="w-full h-full bg-slate-50 relative overflow-hidden">
@@ -4424,7 +4496,7 @@ tailwind.config = {
 
 <!-- ==================== 32. REFERENCE LAYER ==================== -->
 <div class="relative" style="position:absolute;left:2400px;top:3150px;">
-  <div class="screen-label">30. Reference Layer</div>
+  <div class="screen-label">31. Reference Layer</div>
   <div class="phone">
     <div class="notch"></div>
     <div class="w-full h-full bg-slate-50 relative overflow-hidden">
@@ -4520,7 +4592,7 @@ tailwind.config = {
 
 <!-- ==================== 33. SELECT AREA ==================== -->
 <div class="relative" style="position:absolute;left:3000px;top:4200px;">
-  <div class="screen-label">43. Select Area</div>
+  <div class="screen-label">44. Select Area</div>
   <div class="phone">
     <div class="notch"></div>
     <div class="w-full h-full relative overflow-hidden">
