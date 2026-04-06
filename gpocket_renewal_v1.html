@@ -1131,16 +1131,24 @@ tailwind.config = {
         </svg>
       </div>
       <div class="status-bar text-slate-800 absolute top-0 left-0 right-0"><span class="font-semibold text-sm">9:41</span><div class="flex gap-1.5 items-center opacity-60"><svg width="16" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12.55a11 11 0 0 1 14.08 0"/></svg></div></div>
-      <!-- Top bar -->
-      <div class="absolute top-14 left-4 right-4 z-30 space-y-1.5">
+      <!-- Top bar: edit session bar + vertex edit state -->
+      <div class="absolute top-14 left-4 right-4 z-30 flex flex-col gap-2">
+        <!-- Edit session bar -->
         <div class="bg-white/95 backdrop-blur-sm rounded-xl px-4 py-2.5 flex items-center gap-2 shadow-sm">
-          <div class="w-2 h-2 rounded-full bg-amber-400 pulse-dot"></div>
-          <span class="text-sm font-medium text-slate-700">형상 편집</span>
-          <span class="text-slate-300">&middot;</span>
-          <span class="text-xs text-slate-400">조사 경계</span>
+          <div class="w-2 h-2 rounded-full bg-accent-500 pulse-dot"></div>
+          <span class="text-sm font-medium text-slate-700 flex-1">firestation 편집 중</span>
+          <button class="py-1.5 px-1.5 rounded-lg bg-white/70 border border-slate-200/80 flex items-center justify-center flex-shrink-0">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--color-text-sub)" stroke-width="2.2" stroke-linecap="round"><polyline points="23 4 23 10 17 10"/><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/></svg>
+          </button>
+          <button class="bg-slate-700 text-white text-xs font-medium rounded-lg px-3 py-1.5">편집 종료</button>
         </div>
+        <!-- Vertex edit status -->
         <div class="bg-white/95 backdrop-blur-sm rounded-xl px-4 py-2.5 shadow-sm">
-          <p class="text-xs text-slate-400">꼭짓점 드래그 = 이동 &middot; 탭 = 삭제 &middot; 중간점 드래그 = 삽입</p>
+          <div class="flex items-center gap-2">
+            <div class="w-2 h-2 rounded-full bg-amber-400 pulse-dot"></div>
+            <span class="text-slate-700 text-xs font-medium flex-1">형상 편집</span>
+          </div>
+          <p class="text-xs text-slate-400 mt-1 ml-4">꼭짓점 드래그 = 이동 &middot; 탭 = 삭제 &middot; 중간점 드래그 = 삽입</p>
         </div>
       </div>
       <!-- Compass (standalone circle) -->
