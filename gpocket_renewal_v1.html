@@ -279,12 +279,108 @@ tailwind.config = {
   <text x="-14" y="4162" font-size="13" font-weight="700"
         fill="var(--color-amber-dark)" font-family="Pretendard, sans-serif">Row 4 — 오프라인 &amp; 서버</text>
 
-  <!-- Row 3 내부: FS 타입별 서브섹션 -->
-  <rect x="5350" y="3120" width="1940" height="904"
+  <!-- ================================================================
+       SUB-BOUNDARY BOXES — 기능별 세부 그룹
+       (행 바운더리보다 안쪽, 실선 + 반투명 fill)
+       ================================================================ -->
+
+  <!-- Row 0: 인증 서브그룹 — Home / Login / Register -->
+  <rect x="-14" y="-14" width="1618" height="872"
+        rx="12" fill="rgba(15,23,42,0.03)" stroke="var(--color-text-muted)"
+        stroke-width="1.2" opacity="0.7"/>
+  <text x="-2" y="-18" font-size="11" font-weight="600"
+        fill="var(--color-text-muted)" font-family="Pretendard, sans-serif">인증</text>
+
+  <!-- Row 0: 프로젝트 서브그룹 — ProjList / SearchJoin / ProjCreate / ProjDetail / ProjEdit -->
+  <rect x="1786" y="-14" width="2818" height="872"
+        rx="12" fill="rgba(15,23,42,0.03)" stroke="var(--color-text-muted)"
+        stroke-width="1.2" opacity="0.7"/>
+  <text x="1798" y="-18" font-size="11" font-weight="600"
+        fill="var(--color-text-muted)" font-family="Pretendard, sans-serif">프로젝트</text>
+
+  <!-- Row 1: 데이터셋 서브그룹 — DatasetMgmt / Add / Info / Edit / Col -->
+  <rect x="-14" y="1036" width="2818" height="872"
+        rx="12" fill="rgba(23,101,167,0.03)" stroke="var(--color-brand)"
+        stroke-width="1.2" opacity="0.7"/>
+  <text x="-2" y="1030" font-size="11" font-weight="600"
+        fill="var(--color-brand)" font-family="Pretendard, sans-serif">데이터셋</text>
+
+  <!-- Row 1: 팀 관리 서브그룹 — MemberMgmt / MyPage / ProjMembership -->
+  <rect x="2986" y="1036" width="1618" height="872"
+        rx="12" fill="rgba(23,101,167,0.03)" stroke="var(--color-brand)"
+        stroke-width="1.2" opacity="0.7"/>
+  <text x="2998" y="1030" font-size="11" font-weight="600"
+        fill="var(--color-brand)" font-family="Pretendard, sans-serif">팀 관리</text>
+
+  <!-- Row 2: 지도 뷰 서브그룹 — MapView -->
+  <rect x="-14" y="2086" width="418" height="872"
+        rx="12" fill="rgba(23,101,167,0.03)" stroke="var(--color-brand)"
+        stroke-width="1.2" opacity="0.7"/>
+  <text x="-2" y="2080" font-size="11" font-weight="600"
+        fill="var(--color-brand)" font-family="Pretendard, sans-serif">지도 뷰</text>
+
+  <!-- Row 2: 편집 흐름 서브그룹 — EditSession / FeatSelected / AddGeo / AttrForm / VertexEdit / DelConfirm -->
+  <rect x="586" y="2086" width="3418" height="872"
+        rx="12" fill="rgba(23,101,167,0.03)" stroke="var(--color-brand)"
+        stroke-width="1.2" opacity="0.7"/>
+  <text x="598" y="2080" font-size="11" font-weight="600"
+        fill="var(--color-brand)" font-family="Pretendard, sans-serif">편집 흐름</text>
+
+  <!-- Row 2: 피처 정보 서브그룹 — FeatureInfo / EditHistory -->
+  <rect x="4186" y="2086" width="1018" height="872"
+        rx="12" fill="rgba(23,101,167,0.03)" stroke="var(--color-brand)"
+        stroke-width="1.2" opacity="0.7"/>
+  <text x="4198" y="2080" font-size="11" font-weight="600"
+        fill="var(--color-brand)" font-family="Pretendard, sans-serif">피처 정보</text>
+
+  <!-- Row 3: 드로어 서브그룹 — DrawerP / DrawerE / DrawerO -->
+  <rect x="-14" y="3136" width="1618" height="872"
+        rx="12" fill="rgba(39,171,131,0.03)" stroke="var(--color-success)"
+        stroke-width="1.2" opacity="0.7"/>
+  <text x="-2" y="3130" font-size="11" font-weight="600"
+        fill="var(--color-success-text)" font-family="Pretendard, sans-serif">드로어</text>
+
+  <!-- Row 3: 레이어 관리 서브그룹 — LayerMgmt / RefLayer / LayerSelector -->
+  <rect x="1786" y="3136" width="1618" height="872"
+        rx="12" fill="rgba(39,171,131,0.03)" stroke="var(--color-success)"
+        stroke-width="1.2" opacity="0.7"/>
+  <text x="1798" y="3130" font-size="11" font-weight="600"
+        fill="var(--color-success-text)" font-family="Pretendard, sans-serif">레이어 관리</text>
+
+  <!-- Row 3: 도구 서브그룹 — CQL / GPS / Bookmark -->
+  <rect x="3586" y="3136" width="1618" height="872"
+        rx="12" fill="rgba(39,171,131,0.03)" stroke="var(--color-success)"
+        stroke-width="1.2" opacity="0.7"/>
+  <text x="3598" y="3130" font-size="11" font-weight="600"
+        fill="var(--color-success-text)" font-family="Pretendard, sans-serif">도구 (CQL / GPS / 북마크)</text>
+
+  <!-- Row 3: FS 타입별 서브섹션 — FS-A / FS-B / FS-C -->
+  <rect x="5386" y="3136" width="1618" height="872"
         rx="12" fill="rgba(15,23,42,0.02)" stroke="var(--color-text-muted)"
-        stroke-width="1.5" stroke-dasharray="8,5"/>
-  <text x="5366" y="3112" font-size="12" font-weight="600"
-        fill="var(--color-text-sub)" font-family="Pretendard, sans-serif">피처 선택 상태 (타입별)</text>
+        stroke-width="1.2" opacity="0.7"/>
+  <text x="5398" y="3130" font-size="11" font-weight="600"
+        fill="var(--color-text-sub)" font-family="Pretendard, sans-serif">피처 선택 (타입별)</text>
+
+  <!-- Row 4: 서버 서브그룹 — ServerMgmt / AddServer -->
+  <rect x="-14" y="4186" width="1018" height="872"
+        rx="12" fill="rgba(245,158,11,0.04)" stroke="var(--color-warning)"
+        stroke-width="1.2" opacity="0.7"/>
+  <text x="-2" y="4180" font-size="11" font-weight="600"
+        fill="var(--color-amber-dark)" font-family="Pretendard, sans-serif">서버</text>
+
+  <!-- Row 4: 오프라인 서브그룹 — OffGPKG / GPKGCreate / SyncOffline / SelectArea -->
+  <rect x="1186" y="4186" width="2218" height="872"
+        rx="12" fill="rgba(245,158,11,0.04)" stroke="var(--color-warning)"
+        stroke-width="1.2" opacity="0.7"/>
+  <text x="1198" y="4180" font-size="11" font-weight="600"
+        fill="var(--color-amber-dark)" font-family="Pretendard, sans-serif">오프라인</text>
+
+  <!-- Row 4: 시스템 UI 서브그룹 — EmptyStates / ConfirmDialog -->
+  <rect x="3586" y="4186" width="1018" height="872"
+        rx="12" fill="rgba(15,23,42,0.03)" stroke="var(--color-text-muted)"
+        stroke-width="1.2" opacity="0.7"/>
+  <text x="3598" y="4180" font-size="11" font-weight="600"
+        fill="var(--color-text-sub)" font-family="Pretendard, sans-serif">시스템 UI</text>
 
   <!-- ================================================================
        ARROWS — 화면 흐름 (회색=주 네비 / 파랑=편집 / 초록=추가 / 빨강=삭제 / 노랑=오프라인)
