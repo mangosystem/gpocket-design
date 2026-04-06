@@ -959,14 +959,17 @@ tailwind.config = {
       <div class="absolute bottom-0 left-0 right-0 z-30">
         <div class="bg-white rounded-t-3xl shadow-2xl px-5 pt-4 pb-8">
           <div class="w-10 h-1 rounded-full bg-slate-200 mx-auto mb-4"></div>
-          <div class="flex items-center gap-3 mb-3">
-            <div class="w-10 h-10 rounded-xl bg-brand-50 flex items-center justify-center">
+          <div class="flex items-center gap-2 mb-3">
+            <div class="w-10 h-10 rounded-xl bg-brand-50 flex items-center justify-center flex-shrink-0">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-brand-dark)" stroke-width="1.8"><circle cx="12" cy="12" r="3"/><path d="M12 2v4M12 18v4M2 12h4M18 12h4"/></svg>
             </div>
-            <div class="flex-1">
+            <div class="flex-1 min-w-0">
               <div class="font-semibold text-slate-800">강남소방서</div>
               <div class="text-xs text-slate-400">firestation #42 &middot; Point</div>
             </div>
+            <button class="w-8 h-8 rounded-xl bg-brand-50 flex items-center justify-center flex-shrink-0"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--color-brand-dark)" stroke-width="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg></button>
+            <button class="w-8 h-8 rounded-xl bg-slate-100 flex items-center justify-center flex-shrink-0"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--color-text-main)" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7"/><polyline points="2 17 12 22 22 17"/></svg></button>
+            <button class="w-8 h-8 rounded-xl bg-red-50 flex items-center justify-center flex-shrink-0"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--color-danger)" stroke-width="2"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg></button>
           </div>
           <div class="bg-slate-50 rounded-xl p-3 mb-4 space-y-1.5">
             <div class="flex items-center text-xs"><span class="text-slate-400 w-14">유형</span><span class="text-slate-700">소방서</span></div>
@@ -975,20 +978,6 @@ tailwind.config = {
           <div class="flex gap-2 mb-4">
             <div class="w-14 h-14 rounded-lg bg-gradient-to-br from-slate-200 to-slate-300"></div>
             <div class="w-14 h-14 rounded-lg bg-gradient-to-br from-blue-100 to-blue-200"></div>
-          </div>
-          <div class="flex gap-2">
-            <button class="flex-1 py-3 bg-brand-50 text-brand-700 text-sm font-medium rounded-xl flex items-center justify-center gap-1.5">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
-              속성
-            </button>
-            <button class="flex-1 py-3 bg-slate-100 text-slate-700 text-sm font-medium rounded-xl flex items-center justify-center gap-1.5">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7"/><polyline points="2 17 12 22 22 17"/></svg>
-              형상
-            </button>
-            <button class="flex-1 py-3 bg-red-50 text-red-500 text-sm font-medium rounded-xl flex items-center justify-center gap-1.5">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>
-              삭제
-            </button>
           </div>
         </div>
       </div>
@@ -2187,20 +2176,21 @@ tailwind.config = {
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><polygon points="12,3 14,10 12,9 10,10" fill="var(--color-danger)"/><polygon points="12,21 14,14 12,15 10,14" fill="var(--color-text-muted)"/><text x="12" y="2" text-anchor="middle" font-size="7" fill="var(--color-danger)" font-weight="700">N</text></svg>
         </button>
       </div>
-      <!-- Zoom -->
-      <div class="absolute right-3 z-20 bg-white rounded-2xl shadow-md overflow-hidden" style="top:162px">
-        <button class="w-11 h-11 flex items-center justify-center border-b border-slate-100 text-slate-600 font-bold text-xl">+</button>
-        <button class="w-11 h-11 flex items-center justify-center text-slate-600 font-bold text-xl">−</button>
+      <!-- Layer TOC button -->
+      <div class="absolute right-3 z-20" style="top:162px">
+        <button class="w-11 h-11 bg-white rounded-2xl shadow-md flex items-center justify-center">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-text-main)" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+        </button>
       </div>
       <!-- Bottom Sheet: Point Feature -->
       <div class="absolute bottom-0 left-0 right-0 z-30">
         <div class="bg-white rounded-t-3xl shadow-2xl px-5 pt-4 pb-8">
           <div class="w-10 h-1 rounded-full bg-slate-200 mx-auto mb-4"></div>
-          <div class="flex items-center gap-3 mb-3">
-            <div class="w-10 h-10 rounded-xl bg-blue-50 flex items-center justify-center">
+          <div class="flex items-center gap-2 mb-3">
+            <div class="w-10 h-10 rounded-xl bg-blue-50 flex items-center justify-center flex-shrink-0">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="10" r="3" fill="var(--color-brand)"/><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" fill="var(--color-brand)" opacity="0.18" stroke="var(--color-brand)" stroke-width="1.5"/></svg>
             </div>
-            <div class="flex-1">
+            <div class="flex-1 min-w-0">
               <div class="font-semibold text-slate-800 text-base">측정소 B</div>
               <div class="flex items-center gap-1.5 mt-0.5">
                 <span class="geo-chip geo-chip-point">
@@ -2210,6 +2200,9 @@ tailwind.config = {
                 <span class="text-xs text-slate-400">수질측정소 #02</span>
               </div>
             </div>
+            <button class="w-8 h-8 rounded-xl bg-brand-50 flex items-center justify-center flex-shrink-0"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--color-brand-dark)" stroke-width="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg></button>
+            <button class="w-8 h-8 rounded-xl bg-slate-100 flex items-center justify-center flex-shrink-0"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--color-text-main)" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7"/><polyline points="2 17 12 22 22 17"/></svg></button>
+            <button class="w-8 h-8 rounded-xl bg-red-50 flex items-center justify-center flex-shrink-0"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--color-danger)" stroke-width="2"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg></button>
           </div>
           <div class="border-t border-slate-100 py-2.5 space-y-2">
             <div class="flex justify-between text-sm"><span class="text-slate-400">측정날짜</span><span class="text-slate-800 font-medium">2026-03-15</span></div>
@@ -2219,17 +2212,6 @@ tailwind.config = {
           <div class="flex gap-2 mb-3 border-t border-slate-100 pt-2.5">
             <div class="w-14 h-14 rounded-lg bg-gradient-to-br from-blue-100 to-blue-200 flex items-center justify-center"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--color-blue-light)" stroke-width="1.5"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg></div>
             <div class="w-14 h-14 rounded-lg bg-gradient-to-br from-slate-100 to-slate-200 flex items-center justify-center"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--color-border-light)" stroke-width="1.5"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg></div>
-          </div>
-          <div class="flex gap-2">
-            <button class="flex-1 py-2.5 bg-brand-50 text-brand-700 text-sm font-medium rounded-xl flex items-center justify-center gap-1.5">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>속성
-            </button>
-            <button class="flex-1 py-2.5 bg-slate-100 text-slate-700 text-sm font-medium rounded-xl flex items-center justify-center gap-1.5">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7"/><polyline points="2 17 12 22 22 17"/></svg>형상
-            </button>
-            <button class="flex-1 py-2.5 bg-red-50 text-red-500 text-sm font-medium rounded-xl flex items-center justify-center gap-1.5">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>삭제
-            </button>
           </div>
         </div>
       </div>
@@ -2294,19 +2276,21 @@ tailwind.config = {
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><polygon points="12,3 14,10 12,9 10,10" fill="var(--color-danger)"/><polygon points="12,21 14,14 12,15 10,14" fill="var(--color-text-muted)"/><text x="12" y="2" text-anchor="middle" font-size="7" fill="var(--color-danger)" font-weight="700">N</text></svg>
         </button>
       </div>
-      <div class="absolute right-3 z-20 bg-white rounded-2xl shadow-md overflow-hidden" style="top:162px">
-        <button class="w-11 h-11 flex items-center justify-center border-b border-slate-100 text-slate-600 font-bold text-xl">+</button>
-        <button class="w-11 h-11 flex items-center justify-center text-slate-600 font-bold text-xl">−</button>
+      <!-- Layer TOC button -->
+      <div class="absolute right-3 z-20" style="top:162px">
+        <button class="w-11 h-11 bg-white rounded-2xl shadow-md flex items-center justify-center">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-text-main)" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+        </button>
       </div>
       <!-- Bottom Sheet: Line Feature -->
       <div class="absolute bottom-0 left-0 right-0 z-30">
         <div class="bg-white rounded-t-3xl shadow-2xl px-5 pt-4 pb-8">
           <div class="w-10 h-1 rounded-full bg-slate-200 mx-auto mb-4"></div>
-          <div class="flex items-center gap-3 mb-3">
-            <div class="w-10 h-10 rounded-xl flex items-center justify-center" style="background:#F5F3FF">
+          <div class="flex items-center gap-2 mb-3">
+            <div class="w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0" style="background:#F5F3FF">
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M3 17 C8 12 12 6 21 7" stroke="var(--color-purple)" stroke-width="2.5" stroke-linecap="round"/><circle cx="3" cy="17" r="2" fill="var(--color-purple)"/><circle cx="21" cy="7" r="2" fill="var(--color-purple)"/></svg>
             </div>
-            <div class="flex-1">
+            <div class="flex-1 min-w-0">
               <div class="font-semibold text-slate-800 text-base">하천구간 A</div>
               <div class="flex items-center gap-1.5 mt-0.5">
                 <span class="geo-chip geo-chip-line">
@@ -2316,22 +2300,14 @@ tailwind.config = {
                 <span class="text-xs text-slate-400">하천조사 #07</span>
               </div>
             </div>
+            <button class="w-8 h-8 rounded-xl bg-brand-50 flex items-center justify-center flex-shrink-0"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--color-brand-dark)" stroke-width="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg></button>
+            <button class="w-8 h-8 rounded-xl bg-slate-100 flex items-center justify-center flex-shrink-0"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--color-text-main)" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7"/><polyline points="2 17 12 22 22 17"/></svg></button>
+            <button class="w-8 h-8 rounded-xl bg-red-50 flex items-center justify-center flex-shrink-0"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--color-danger)" stroke-width="2"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg></button>
           </div>
           <div class="border-t border-slate-100 py-2.5 space-y-2">
             <div class="flex justify-between text-sm"><span class="text-slate-400">총 길이</span><span class="text-slate-800 font-medium">287m</span></div>
             <div class="flex justify-between text-sm"><span class="text-slate-400">평균 하폭</span><span class="text-slate-800 font-medium">12.4m</span></div>
             <div class="flex justify-between text-sm"><span class="text-slate-400">측정일</span><span class="text-slate-800 font-medium">2026-03-10</span></div>
-          </div>
-          <div class="flex gap-2 mt-2">
-            <button class="flex-1 py-2.5 bg-brand-50 text-brand-700 text-sm font-medium rounded-xl flex items-center justify-center gap-1.5">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>속성
-            </button>
-            <button class="flex-1 py-2.5 bg-slate-100 text-slate-700 text-sm font-medium rounded-xl flex items-center justify-center gap-1.5">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7"/><polyline points="2 17 12 22 22 17"/></svg>형상
-            </button>
-            <button class="flex-1 py-2.5 bg-red-50 text-red-500 text-sm font-medium rounded-xl flex items-center justify-center gap-1.5">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>삭제
-            </button>
           </div>
         </div>
       </div>
@@ -2400,19 +2376,21 @@ tailwind.config = {
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><polygon points="12,3 14,10 12,9 10,10" fill="var(--color-danger)"/><polygon points="12,21 14,14 12,15 10,14" fill="var(--color-text-muted)"/><text x="12" y="2" text-anchor="middle" font-size="7" fill="var(--color-danger)" font-weight="700">N</text></svg>
         </button>
       </div>
-      <div class="absolute right-3 z-20 bg-white rounded-2xl shadow-md overflow-hidden" style="top:162px">
-        <button class="w-11 h-11 flex items-center justify-center border-b border-slate-100 text-slate-600 font-bold text-xl">+</button>
-        <button class="w-11 h-11 flex items-center justify-center text-slate-600 font-bold text-xl">−</button>
+      <!-- Layer TOC button -->
+      <div class="absolute right-3 z-20" style="top:162px">
+        <button class="w-11 h-11 bg-white rounded-2xl shadow-md flex items-center justify-center">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-text-main)" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+        </button>
       </div>
       <!-- Bottom Sheet: Polygon Feature -->
       <div class="absolute bottom-0 left-0 right-0 z-30">
         <div class="bg-white rounded-t-3xl shadow-2xl px-5 pt-4 pb-8">
           <div class="w-10 h-1 rounded-full bg-slate-200 mx-auto mb-4"></div>
-          <div class="flex items-center gap-3 mb-3">
-            <div class="w-10 h-10 rounded-xl flex items-center justify-center" style="background:var(--color-map-bg-green-light)">
+          <div class="flex items-center gap-2 mb-3">
+            <div class="w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0" style="background:var(--color-map-bg-green-light)">
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><polygon points="12,2 22,8.5 22,15.5 12,22 2,15.5 2,8.5" fill="rgba(5,150,105,0.15)" stroke="var(--color-green)" stroke-width="1.8" stroke-linejoin="round"/></svg>
             </div>
-            <div class="flex-1">
+            <div class="flex-1 min-w-0">
               <div class="font-semibold text-slate-800 text-base">조사구역 01</div>
               <div class="flex items-center gap-1.5 mt-0.5">
                 <span class="geo-chip geo-chip-polygon">
@@ -2422,22 +2400,14 @@ tailwind.config = {
                 <span class="text-xs text-slate-400">조사경계 #01</span>
               </div>
             </div>
+            <button class="w-8 h-8 rounded-xl bg-brand-50 flex items-center justify-center flex-shrink-0"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--color-brand-dark)" stroke-width="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg></button>
+            <button class="w-8 h-8 rounded-xl bg-slate-100 flex items-center justify-center flex-shrink-0"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--color-text-main)" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7"/><polyline points="2 17 12 22 22 17"/></svg></button>
+            <button class="w-8 h-8 rounded-xl bg-red-50 flex items-center justify-center flex-shrink-0"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--color-danger)" stroke-width="2"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg></button>
           </div>
           <div class="border-t border-slate-100 py-2.5 space-y-2">
             <div class="flex justify-between text-sm"><span class="text-slate-400">면적</span><span class="text-slate-800 font-medium">18,420㎡</span></div>
             <div class="flex justify-between text-sm"><span class="text-slate-400">둘레</span><span class="text-slate-800 font-medium">654m</span></div>
             <div class="flex justify-between text-sm"><span class="text-slate-400">담당자</span><span class="text-slate-800 font-medium">김민준</span></div>
-          </div>
-          <div class="flex gap-2 mt-2">
-            <button class="flex-1 py-2.5 bg-brand-50 text-brand-700 text-sm font-medium rounded-xl flex items-center justify-center gap-1.5">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>속성
-            </button>
-            <button class="flex-1 py-2.5 bg-slate-100 text-slate-700 text-sm font-medium rounded-xl flex items-center justify-center gap-1.5">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7"/><polyline points="2 17 12 22 22 17"/></svg>형상
-            </button>
-            <button class="flex-1 py-2.5 bg-red-50 text-red-500 text-sm font-medium rounded-xl flex items-center justify-center gap-1.5">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>삭제
-            </button>
           </div>
         </div>
       </div>
