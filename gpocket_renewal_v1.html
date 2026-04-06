@@ -4199,31 +4199,39 @@ tailwind.config = {
           <div class="absolute left-48 top-0 bottom-0 w-px bg-slate-400"></div>
           <div class="absolute left-72 top-0 bottom-0 w-px bg-slate-400"></div>
         </div>
+        <div class="absolute top-36 left-6 text-xs text-slate-400 font-medium opacity-50">서울특별시 광진구</div>
         <svg class="absolute inset-0 w-full h-full" style="pointer-events:none">
           <path d="M10,170 C60,195 90,235 150,248 C210,261 245,288 295,312 C335,330 365,358 395,378" fill="none" stroke="var(--color-blue-light)" stroke-width="10" stroke-linecap="round" opacity="0.55"/>
-          <polygon points="60,200 180,195 280,310 330,430 200,440 70,350" fill="rgba(39,171,131,0.15)" stroke="var(--color-success)" stroke-width="1.5" opacity="0.6"/>
+          <path d="M10,185 C60,210 90,250 150,263 C210,276 245,303 295,327 C335,345 365,373 395,393" fill="none" stroke="var(--color-blue-lighter)" stroke-width="5" stroke-linecap="round" opacity="0.35"/>
+          <polygon points="60,160 200,155 320,270 370,390 240,400 80,310" fill="rgba(39,171,131,0.13)" stroke="var(--color-success)" stroke-width="1.5"/>
         </svg>
+        <div class="absolute" style="top:212px;left:72px"><div class="w-6 h-6 rounded-full bg-brand-500 border-2 border-white shadow-md flex items-center justify-center"><div class="w-1.5 h-1.5 rounded-full bg-white"></div></div></div>
+        <div class="absolute" style="top:292px;left:192px"><div class="w-6 h-6 rounded-full bg-brand-500 border-2 border-white shadow-md flex items-center justify-center"><div class="w-1.5 h-1.5 rounded-full bg-white"></div></div></div>
+        <div class="absolute" style="top:362px;left:302px"><div class="w-6 h-6 rounded-full bg-brand-500 border-2 border-white shadow-md flex items-center justify-center"><div class="w-1.5 h-1.5 rounded-full bg-white"></div></div></div>
       </div>
       <div class="status-bar text-slate-800 absolute top-0 left-0 right-0"><span class="font-semibold text-sm">9:41</span><div class="flex gap-1.5 items-center opacity-60"><svg width="16" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12.55a11 11 0 0 1 14.08 0"/></svg></div></div>
-
-      <!-- 오프라인 배너 -->
-      <div class="absolute top-10 left-0 right-0 z-20">
-        <div class="mx-4 bg-amber-500 rounded-xl px-4 py-2 flex items-center gap-2 shadow-md">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M1 6s2.5-3 6-3 6 3 6 3"/><path d="M5 10s1.5-1.5 4-1.5 4 1.5 4 1.5"/><circle cx="9" cy="14" r="1" fill="white"/><line x1="1" y1="1" x2="23" y2="23" stroke="white" stroke-width="2"/></svg>
-          <span class="text-white text-xs font-semibold flex-1">오프라인 모드</span>
-          <span class="text-amber-100 text-xs">하천조사_서울_2026</span>
+      <!-- Top bar -->
+      <div class="absolute top-14 left-4 right-4 z-30">
+        <div class="bg-white/95 backdrop-blur-sm rounded-xl px-4 py-2.5 flex items-center gap-2 shadow-sm">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--color-text-main)" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+          <span class="text-sm font-medium text-slate-700 flex-1">하천조사 2026</span>
+          <button class="w-8 h-8 rounded-lg bg-slate-100 flex items-center justify-center">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-text-tertiary)" stroke-width="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+          </button>
+          <button class="w-8 h-8 rounded-lg bg-slate-100 flex items-center justify-center">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-text-tertiary)" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+          </button>
         </div>
       </div>
-
-      <!-- 드로어 버튼 -->
-      <div class="absolute left-3 z-20" style="top:68px">
-        <button class="w-11 h-11 bg-white rounded-2xl shadow-md flex items-center justify-center">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--color-text-main)" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
-        </button>
+      <!-- Scale bar -->
+      <div class="absolute left-4 z-20" style="bottom:82px">
+        <div style="display:inline-block;background:rgba(255,255,255,0.85);backdrop-filter:blur(4px);border-radius:6px;padding:4px 8px;box-shadow:0 1px 3px rgba(0,0,0,0.12)">
+          <svg width="60" height="8" viewBox="0 0 60 8"><line x1="1" y1="4" x2="59" y2="4" stroke="var(--color-text-tertiary)" stroke-width="1.5" stroke-linecap="round"/><line x1="1" y1="1" x2="1" y2="7" stroke="var(--color-text-tertiary)" stroke-width="1.5" stroke-linecap="round"/><line x1="59" y1="1" x2="59" y2="7" stroke="var(--color-text-tertiary)" stroke-width="1.5" stroke-linecap="round"/></svg>
+          <div style="text-align:right;margin-top:2px"><span style="font-size:9px;font-weight:700;color:var(--color-text-tertiary);letter-spacing:0.2px;line-height:1">100m</span></div>
+        </div>
       </div>
-
       <!-- Compass -->
-      <div class="absolute right-3 z-20" style="top:68px">
+      <div class="absolute right-3 z-20" style="top:110px">
         <button class="w-11 h-11 bg-white rounded-full shadow-md flex items-center justify-center">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
             <polygon points="12,3 14,10 12,9 10,10" fill="var(--color-danger)"/>
@@ -4232,28 +4240,29 @@ tailwind.config = {
           </svg>
         </button>
       </div>
-
       <!-- Layer TOC -->
-      <div class="absolute right-3 z-20" style="top:126px">
+      <div class="absolute right-3 z-20" style="top:162px">
         <button class="w-11 h-11 bg-white rounded-2xl shadow-md flex items-center justify-center">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-text-main)" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
         </button>
       </div>
-
-      <!-- 하단 버튼 영역 -->
-      <div class="absolute bottom-0 left-0 right-0 z-30 px-4 pb-8 pt-3" style="background:linear-gradient(to top, rgba(255,255,255,0.95) 70%, transparent)">
-        <div class="flex gap-3">
-          <button class="flex-1 py-3 flex items-center justify-center gap-2 bg-white rounded-2xl shadow-md border border-slate-200">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-text-sub)" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
-            <span class="text-sm font-semibold text-slate-700">작업기록 확인</span>
-          </button>
-          <button class="flex-1 py-3 flex items-center justify-center gap-2 rounded-2xl shadow-md btn-cta btn-cta--primary">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
-            <span class="text-sm font-semibold text-white">편집 추가</span>
-          </button>
+      <!-- GPS -->
+      <div class="absolute right-3 z-20" style="bottom:128px">
+        <button class="w-11 h-11 bg-white rounded-full shadow-md flex items-center justify-center">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-brand)" stroke-width="2"><circle cx="12" cy="12" r="3" fill="var(--color-brand)" stroke="none"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3"/><circle cx="12" cy="12" r="7" stroke-dasharray="4,3"/></svg>
+        </button>
+      </div>
+      <!-- 작업기록 확인 아이콘 버튼 + 편집 FAB -->
+      <div class="absolute bottom-16 right-4 z-30 flex items-end gap-2">
+        <button class="w-11 h-11 bg-white rounded-2xl shadow-md flex flex-col items-center justify-center gap-0.5">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--color-text-sub)" stroke-width="1.8"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+          <span style="font-size:7px;color:var(--color-text-sub);line-height:1">기록</span>
+        </button>
+        <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-brand-500 to-brand-700 shadow-lg shadow-brand-500/30 flex flex-col items-center justify-center">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+          <span style="font-size:9px;color:white;margin-top:1px;">편집</span>
         </div>
       </div>
-
       <div class="home-indicator" style="background:rgba(0,0,0,0.15)"></div>
     </div>
   </div>
