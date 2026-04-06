@@ -227,6 +227,13 @@
 <span class="card-status card-status--pending"><span class="card-status__dot"></span><span>대기중</span></span>
 <span class="card-status card-status--expired"><span class="card-status__dot"></span><span>만료</span></span>
 
+<!-- 변경 유형 뱃지 (공용: white bg + color border/text) -->
+<span class="change-badge change-badge--add">추가</span>
+<span class="change-badge change-badge--mod">수정</span>
+<span class="change-badge change-badge--del">삭제</span>
+<span class="change-badge change-badge--add">NEW</span>
+<span class="change-badge change-badge--del">DEL</span>
+
 <!-- 지오메트리 타입 태그 -->
 <span class="px-2.5 py-1 bg-brand-50 text-brand-600 text-xs rounded-lg font-medium">Point</span>
 <span class="px-2.5 py-1 bg-accent-50 text-accent-600 text-xs rounded-lg font-medium">LineString</span>
@@ -236,6 +243,10 @@
 카드 상태 라벨 규칙:
 - 카드 내 상태는 pill 배경색 대신 `dot + text` 공용 컴포넌트(`card-status`)를 사용
 - 매핑: `active/synced = accent`, `pending = amber`, `inactive/expired = slate`
+
+변경 유형 뱃지 규칙:
+- 변경내역/동기화 목록은 `change-badge` 공용 컴포넌트를 사용
+- 기본은 흰 배경, 의미색은 border/text로만 표현 (`add/mod/del`)
 
 ---
 
@@ -334,6 +345,13 @@ Do not hardcode CTA color with `from-*`, `to-*`, `text-*`, `shadow-*` utility cl
 <button class="... btn-cta btn-cta--positive">전송</button>
 <button class="... btn-cta btn-cta--danger">삭제</button>
 ```
+
+### 15.1 Top Action Rule (Feature Selected)
+
+- 상단 타이틀 우측에 다중 아이콘(2개 이상)을 직접 나열하지 않는다.
+- 기본은 `더보기(⋯)` 단일 버튼 + 하단 Action Sheet 패턴을 사용한다.
+- Action Sheet는 `작업`과 `위험 작업`을 분리한다.
+- `피처 삭제` 같은 파괴적 액션은 `위험 작업` 섹션에 두고 danger 색상을 사용한다.
 
 ---
 

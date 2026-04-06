@@ -153,7 +153,7 @@
   --btn-cta-shadow-color: var(--role-cta-primary-shadow);
 
   color: var(--btn-cta-text-color);
-  background-image: linear-gradient(to right, var(--btn-cta-bg-from), var(--btn-cta-bg-to));
+  background-color: var(--btn-cta-bg-from);
   box-shadow: 0 10px 15px -3px var(--btn-cta-shadow-color), 0 4px 6px -4px var(--btn-cta-shadow-color);
 }
 
@@ -186,4 +186,35 @@
 /* Optional hover intensity for legacy elevated CTA */
 .btn-cta--hover:hover {
   box-shadow: 0 20px 25px -5px var(--btn-cta-shadow-color), 0 8px 10px -6px var(--btn-cta-shadow-color);
+}
+
+/* Change badge (history/sync list) */
+.change-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2px 8px;
+  border-radius: 6px;
+  border: 1px solid var(--sem-slate-300);
+  background: white;
+  color: var(--sem-slate-600);
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
+.change-badge--add {
+  border-color: var(--sem-success-mid);
+  color: var(--sem-success-text);
+}
+
+.change-badge--mod {
+  border-color: var(--sem-warning);
+  color: var(--sem-amber-dark);
+}
+
+.change-badge--del {
+  border-color: var(--sem-danger);
+  color: var(--sem-danger);
 }
