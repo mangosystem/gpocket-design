@@ -889,67 +889,113 @@ tailwind.config = {
   <div class="phone">
     <div class="notch"></div>
     <div class="w-full h-full bg-slate-50 relative overflow-hidden">
-      <div class="status-bar text-slate-800"><span>9:41</span><div class="flex gap-1.5 items-center opacity-60"><svg width="16" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12.55a11 11 0 0 1 14.08 0"/></svg><svg width="16" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="6" width="18" height="12" rx="2"/></svg></div></div>
+      <div class="w-full h-full flex flex-col bg-slate-50">
+        <div class="status-bar text-slate-800 flex-shrink-0"><span>9:41</span><div class="flex gap-1.5 items-center opacity-60"><svg width="16" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12.55a11 11 0 0 1 14.08 0"/></svg><svg width="16" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="6" width="18" height="12" rx="2"/></svg></div></div>
 
-      <!-- Header -->
-      <div class="bg-white px-5 pt-2 pb-4 border-b border-slate-100">
-        <div class="flex items-center justify-between">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--color-text-main)" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
-          <h1 class="text-lg font-bold text-slate-900">편집 레이어 선택</h1>
-          <div class="w-6"></div>
+        <!-- Header -->
+        <div class="bg-white px-5 pt-2 pb-4 border-b border-slate-100 flex-shrink-0">
+          <div class="flex items-center justify-between">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--color-text-main)" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+            <h1 class="text-lg font-bold text-slate-900">편집 레이어 선택</h1>
+            <div class="w-6"></div>
+          </div>
         </div>
-      </div>
 
-      <div class="px-5 pt-6 flex flex-col items-center">
-        <!-- Icon -->
-        <div class="w-16 h-16 rounded-2xl bg-brand-50 flex items-center justify-center mb-4">
-          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--color-brand)" stroke-width="1.5"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
-        </div>
-        <span class="text-sm text-slate-500 mb-6">편집할 레이어를 선택하세요</span>
-
-        <!-- Layer List -->
-        <div class="w-full bg-white rounded-2xl border border-slate-200 overflow-hidden">
-          <div class="divide-y divide-slate-50">
+        <!-- Scrollable list -->
+        <div class="flex-1 overflow-y-auto px-5 pt-4 pb-2">
+          <div class="bg-white rounded-2xl border border-slate-200 overflow-hidden divide-y divide-slate-50">
+            <!-- 선택된 항목 -->
             <div class="p-4 flex items-center gap-3 bg-brand-50">
-              <div class="w-8 h-8 rounded-lg bg-brand-100 flex items-center justify-center">
+              <div class="w-8 h-8 rounded-lg bg-brand-100 flex items-center justify-center flex-shrink-0">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-brand)" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/></svg>
               </div>
-              <div class="flex-1">
+              <div class="flex-1 min-w-0">
                 <div class="text-sm font-medium text-brand-700">건물</div>
                 <div class="text-xs text-slate-400">Polygon · building</div>
               </div>
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--color-brand)" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--color-brand)" stroke-width="2" class="flex-shrink-0"><polyline points="20 6 9 17 4 12"/></svg>
             </div>
             <div class="p-4 flex items-center gap-3">
-              <div class="w-8 h-8 rounded-lg bg-slate-100 flex items-center justify-center">
+              <div class="w-8 h-8 rounded-lg bg-slate-100 flex items-center justify-center flex-shrink-0">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-text-muted)" stroke-width="2"><line x1="5" y1="19" x2="19" y2="5"/></svg>
               </div>
-              <div class="flex-1">
+              <div class="flex-1 min-w-0">
                 <div class="text-sm font-medium text-slate-700">도로</div>
                 <div class="text-xs text-slate-400">LineString · road</div>
               </div>
             </div>
             <div class="p-4 flex items-center gap-3">
-              <div class="w-8 h-8 rounded-lg bg-slate-100 flex items-center justify-center">
+              <div class="w-8 h-8 rounded-lg bg-slate-100 flex items-center justify-center flex-shrink-0">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-text-muted)" stroke-width="2"><circle cx="12" cy="12" r="4"/></svg>
               </div>
-              <div class="flex-1">
+              <div class="flex-1 min-w-0">
                 <div class="text-sm font-medium text-slate-700">측정소</div>
                 <div class="text-xs text-slate-400">Point · station</div>
               </div>
             </div>
+            <div class="p-4 flex items-center gap-3">
+              <div class="w-8 h-8 rounded-lg bg-slate-100 flex items-center justify-center flex-shrink-0">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-text-muted)" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/></svg>
+              </div>
+              <div class="flex-1 min-w-0">
+                <div class="text-sm font-medium text-slate-700">하천 경계</div>
+                <div class="text-xs text-slate-400">Polygon · river</div>
+              </div>
+            </div>
+            <div class="p-4 flex items-center gap-3">
+              <div class="w-8 h-8 rounded-lg bg-slate-100 flex items-center justify-center flex-shrink-0">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-text-muted)" stroke-width="2"><line x1="5" y1="19" x2="19" y2="5"/></svg>
+              </div>
+              <div class="flex-1 min-w-0">
+                <div class="text-sm font-medium text-slate-700">수계</div>
+                <div class="text-xs text-slate-400">LineString · waterway</div>
+              </div>
+            </div>
+            <div class="p-4 flex items-center gap-3">
+              <div class="w-8 h-8 rounded-lg bg-slate-100 flex items-center justify-center flex-shrink-0">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-text-muted)" stroke-width="2"><circle cx="12" cy="12" r="4"/></svg>
+              </div>
+              <div class="flex-1 min-w-0">
+                <div class="text-sm font-medium text-slate-700">교량</div>
+                <div class="text-xs text-slate-400">Point · bridge</div>
+              </div>
+            </div>
+            <div class="p-4 flex items-center gap-3">
+              <div class="w-8 h-8 rounded-lg bg-slate-100 flex items-center justify-center flex-shrink-0">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-text-muted)" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/></svg>
+              </div>
+              <div class="flex-1 min-w-0">
+                <div class="text-sm font-medium text-slate-700">조사 구역</div>
+                <div class="text-xs text-slate-400">Polygon · survey_area</div>
+              </div>
+            </div>
+            <div class="p-4 flex items-center gap-3 opacity-50">
+              <div class="w-8 h-8 rounded-lg bg-slate-100 flex items-center justify-center flex-shrink-0">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-text-muted)" stroke-width="2"><line x1="5" y1="19" x2="19" y2="5"/></svg>
+              </div>
+              <div class="flex-1 min-w-0">
+                <div class="text-sm font-medium text-slate-400">지형 등고선</div>
+                <div class="text-xs text-slate-400">LineString · contour</div>
+              </div>
+            </div>
+          </div>
+          <!-- 스크롤 힌트 -->
+          <div class="flex items-center justify-center gap-1 py-3">
+            <div class="w-1 h-1 rounded-full bg-slate-300"></div>
+            <div class="w-1 h-1 rounded-full bg-slate-300"></div>
+            <div class="w-1 h-1 rounded-full bg-slate-300"></div>
           </div>
         </div>
-      </div>
 
-      <!-- Bottom Buttons -->
-      <div class="absolute bottom-0 left-0 right-0 px-5 pb-8 pt-3 bg-white border-t border-slate-100">
-        <div class="flex gap-3">
-          <button class="flex-1 py-3 text-sm font-medium text-slate-500 bg-slate-100 rounded-2xl">취소</button>
-          <button class="flex-[2] py-3 text-sm font-bold text-white bg-gradient-to-r from-brand-500 to-brand-700 rounded-2xl shadow-lg shadow-brand-500/25">확인</button>
+        <!-- Bottom Buttons -->
+        <div class="flex-shrink-0 px-5 pb-8 pt-3 bg-white border-t border-slate-100">
+          <div class="flex gap-3">
+            <button class="flex-1 py-3 text-sm font-medium text-slate-500 bg-slate-100 rounded-2xl">취소</button>
+            <button class="flex-[2] py-3 text-sm font-bold text-white bg-gradient-to-r from-brand-500 to-brand-700 rounded-2xl shadow-lg shadow-brand-500/25">확인</button>
+          </div>
         </div>
+        <div class="home-indicator flex-shrink-0" style="background:rgba(0,0,0,0.15)"></div>
       </div>
-      <div class="home-indicator" style="background:rgba(0,0,0,0.15)"></div>
     </div>
   </div>
   <div class="screen-label-bottom">Edit Layer Select<span>편집 레이어 선택</span></div>
