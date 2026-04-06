@@ -1,3 +1,7 @@
 # npm (screenshot 도구)
+package.json
 tools/node_modules/
 tools/package-lock.json
+tools/preview.png
+tools/screenshot_home.mjs
+tools/screenshot_home.png
