@@ -220,14 +220,22 @@
 <!-- 중립 (비활성 역할) -->
 <span class="px-2.5 py-1 bg-slate-100 text-slate-500 text-xs rounded-lg font-medium">Editor</span>
 
-<!-- 상태 pill (활성 표시) -->
-<span class="px-2 py-0.5 bg-accent-100 text-accent-700 text-xs rounded-full font-medium">활성</span>
+<!-- 카드 상태 라벨 (공용: dot + text) -->
+<span class="card-status card-status--active"><span class="card-status__dot"></span><span>활성</span></span>
+<span class="card-status card-status--inactive"><span class="card-status__dot"></span><span>비활성</span></span>
+<span class="card-status card-status--synced"><span class="card-status__dot"></span><span>동기화됨</span></span>
+<span class="card-status card-status--pending"><span class="card-status__dot"></span><span>대기중</span></span>
+<span class="card-status card-status--expired"><span class="card-status__dot"></span><span>만료</span></span>
 
 <!-- 지오메트리 타입 태그 -->
 <span class="px-2.5 py-1 bg-brand-50 text-brand-600 text-xs rounded-lg font-medium">Point</span>
 <span class="px-2.5 py-1 bg-accent-50 text-accent-600 text-xs rounded-lg font-medium">LineString</span>
 <span class="px-2.5 py-1 bg-amber-50 text-amber-600 text-xs rounded-lg font-medium">Polygon</span>
 ```
+
+카드 상태 라벨 규칙:
+- 카드 내 상태는 pill 배경색 대신 `dot + text` 공용 컴포넌트(`card-status`)를 사용
+- 매핑: `active/synced = accent`, `pending = amber`, `inactive/expired = slate`
 
 ---
 
