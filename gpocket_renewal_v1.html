@@ -42,15 +42,15 @@ tailwind.config = {
   .card-hover { transition: all 0.2s ease; }
   .card-hover:hover { transform: translateY(-2px); box-shadow: 0 8px 25px rgba(0,0,0,0.1); }
   .home-v2-shell { position: absolute; top: 78px; left: 18px; right: 18px; bottom: 22px; display: flex; flex-direction: column; z-index: 20; }
-  .home-v2-title-wrap { padding-top: 260px; padding-left: 14px; padding-right: 14px; max-width: min(58%, 220px); position: relative; z-index: 20; }
+  .home-v2-title-wrap { padding-top: 70%; padding-left: 14px; padding-right: 14px; max-width: min(58%, 220px); position: relative; z-index: 20; }
   .home-v2-title-wrap .logo { width:40px; margin-bottom:10px;}
-  .home-v2-illu-wrap { position: absolute; left: 50%; top: 80px; width: 190px; transform: translateX(-30%); pointer-events: none; z-index: 25; }
-  .home-v2-illu { width: 100%; height: 100%; object-fit: contain; opacity: 1; filter: drop-shadow(0 8px 16px rgba(15,23,42,0.12)); }
-  .home-v2-mode-grid { margin-top: auto; margin-bottom:11%; display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 12px; align-content: end; }
-  .home-v2-mode-card { --mode-icon-color: var(--role-mode-pinogio); --shortcut-shadow: var(--role-mode-pinogio-shadow); position: relative; min-height: clamp(112px, 14.5vh, 140px); border-radius: 20px; border: 1px solid #fff; background: linear-gradient(160deg, #ffffff, #f3f7ff); box-shadow: 0 10px 24px rgba(15,23,42,0.10), inset 0 1px 0 #ffffff; padding: 14px 14px 80px; }
-  .home-v2-mode-card-everyone { --mode-icon-color: var(--role-mode-everyone); --shortcut-shadow: var(--role-mode-everyone-shadow); }
-  .home-v2-mode-card-pinogio { --mode-icon-color: var(--role-mode-pinogio); --shortcut-shadow: var(--role-mode-pinogio-shadow); }
-  .home-v2-mode-card-offline { --mode-icon-color: var(--role-mode-offline-dark); --shortcut-shadow: var(--role-mode-offline-shadow); }
+  .home-v2-illu-wrap { position: absolute; right: 11%; top: 12%; width: 160px; pointer-events: none; z-index: 25; }
+  .home-v2-illu { width: 100%; height: 100%; object-fit: contain; opacity: 0.94; filter:drop-shadow(12px 8px 6px rgba(15,23,42,0.34)); }
+  .home-v2-mode-grid { margin-top: 32px; display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 12px; align-content: end; }
+  .home-v2-mode-card { --mode-icon-color: var(--role-mode-pinogio); --shortcut-shadow: var(--role-mode-pinogio-shadow); position: relative; min-height: clamp(112px, 14.5vh, 140px); border-radius: 20px; border: 1px solid #fff; box-shadow: 0 10px 24px rgba(15,23,42,0.10), inset 0 1px 0 #ffffff; padding: 14px 14px 80px; background: linear-gradient(160deg, #ffffff, #f3f7ff); }
+  .home-v2-mode-card-everyone { --mode-icon-color: var(--role-mode-everyone); --shortcut-shadow: var(--role-mode-everyone-shadow);background: linear-gradient(160deg, #ffffff, #fbfffc)}
+  .home-v2-mode-card-pinogio { --mode-icon-color: var(--role-mode-pinogio); --shortcut-shadow: var(--role-mode-pinogio-shadow);background: linear-gradient(160deg, #ffffff, #f3f7ff); }
+  .home-v2-mode-card-offline { --mode-icon-color: var(--role-mode-offline-dark); --shortcut-shadow: var(--role-mode-offline-shadow);}
   .home-v2-mode-icon-row { display: block; margin-bottom: 0; color: var(--mode-icon-color); }
   .home-v2-bubble-icon { width: 30px; height: 30px; border-radius: 10px; background: #eef3ff; border: 1px solid #d9e4ff; color: #3f66bd; display: flex; align-items: center; justify-content: center; }
   .home-v2-image-icon { width: 30px; height: 30px; border-radius: 10px; background: linear-gradient(145deg, #e3f3ff, #dce5ff); border: 1px solid #d3def8; color: #3756a4; display: flex; align-items: center; justify-content: center; }
@@ -599,10 +599,17 @@ tailwind.config = {
     <div class="notch"></div>
     <div class="w-full h-full bg-gradient-to-b from-slate-50 via-white to-slate-100 relative overflow-hidden">
       <!-- BG Decoration: 상단 파란 그라데이션 + 중간 녹색 글로우 -->
-      <div class="absolute inset-x-0 top-0" style="height:55%;background:linear-gradient(180deg, rgba(186,230,253,0.35) 0%, rgba(209,238,252,0.18) 40%, transparent 100%);"></div>
-      <div class="absolute" style="top:55%;left:10%;width:280px;height:120px;border-radius:50%;background:radial-gradient(ellipse,rgba(186,238,220,0.3) 0%,transparent 70%);filter:blur(20px);"></div>
+      <div class="absolute" style="
+      top: -5%;
+    right: -33%;
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    background: radial-gradient(ellipse, rgb(186 211 238 / 50%) 15%, transparent 85%);
+    filter: blur(20px);"></div>
+      <div class="absolute" style="top:38%;left:-32%;width:340px;height:340px;border-radius:50%;background:radial-gradient(ellipse,rgba(186,238,220,0.3) 0%,transparent 70%);filter:blur(20px);"></div>
       <div class="home-v2-illu-wrap" aria-hidden="true">
-        <img src="3d_illu3.png" class="home-v2-illu" alt=""/>
+        <img src="3d_illu5.png" class="home-v2-illu" alt=""/>
       </div>
 
       <!-- Status Bar -->
@@ -618,9 +625,7 @@ tailwind.config = {
         <!-- Logo & Title -->
         <div class="home-v2-title-wrap">
           <div class="logo">
-            <div style="width:40px;height:40px;border-radius:12px;background:linear-gradient(145deg,#3a7bd5,#0B4372);display:flex;align-items:center;justify-content:center;box-shadow:0 4px 12px rgba(11,67,114,0.25);">
-              <span style="color:white;font-size:22px;font-weight:800;font-family:Pretendard,sans-serif;text-shadow:0 1px 2px rgba(0,0,0,0.15);">G</span>
-            </div>
+            <img src="gPocket_logo.png" alt="gPocket logo"/>
           </div>
           <h2 class="text-slate-900 font-bold tracking-tight" style="font-size:36px;line-height:1.08;letter-spacing:-0.02em">gPochet</h2>
           <p class="text-slate-500 text-sm font-medium mt-2 flex items-center gap-2">
