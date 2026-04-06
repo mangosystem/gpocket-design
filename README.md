@@ -1,6 +1,8 @@
 # gPocket 3.0 — Renewal Design Mockup
 
-gPocket 모바일 GIS 앱의 리뉴얼 디자인 목업입니다. (36개 화면)
+gPocket 모바일 GIS 앱의 리뉴얼 디자인 목업입니다. (45개 화면)
+
+![preview](preview.png)
 
 ---
 

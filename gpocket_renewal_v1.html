@@ -221,7 +221,7 @@ tailwind.config = {
 <div id="canvas-viewport" style="width:100%;height:calc(100vh - 200px);overflow:hidden;position:relative;border:1px solid var(--color-border);border-radius:16px;background:var(--color-bg-subtle);cursor:grab;">
 <div id="canvas" style="position:absolute;transform-origin:0 0;">
 
-<svg id="arrows" style="position:absolute;top:0;left:0;width:7800px;height:5600px;pointer-events:none;">
+<svg id="arrows" style="position:absolute;top:0;left:0;width:7800px;height:5400px;pointer-events:none;">
   <defs>
     <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
       <polygon points="0 0, 10 3.5, 0 7" fill="var(--color-text-muted)"/>
@@ -240,147 +240,265 @@ tailwind.config = {
     </marker>
   </defs>
 
+<!-- BOUNDARY_START -->
   <!-- ================================================================
        BOUNDARY BOXES — 행별 섹션 구분
        ================================================================ -->
 
-  <!-- Row 0: 인증 & 프로젝트 진입 (x=0..4590, y=0..844) -->
-  <rect x="-30" y="-30" width="4680" height="904"
+  <!-- row0: Row 0 — 인증 & 프로젝트 -->
+  <rect x="-30" y="-30" width="4650" height="904"
         rx="16" fill="rgba(15,23,42,0.02)" stroke="var(--color-text-muted)"
         stroke-width="1.5" stroke-dasharray="10,6"/>
-  <text x="-14" y="-38" font-size="13" font-weight="700"
+  <text x="-14" y="-34" font-size="13" font-weight="700"
         fill="var(--color-text-sub)" font-family="Pretendard, sans-serif">Row 0 — 인증 &amp; 프로젝트</text>
 
-  <!-- Row 1: 데이터셋 & 팀 관리 (x=0..4590, y=1050..1894) -->
-  <rect x="-30" y="1020" width="4680" height="904"
+  <!-- row1: Row 1 — 데이터셋 & 팀 -->
+  <rect x="-30" y="1020" width="4650" height="904"
         rx="16" fill="rgba(23,101,167,0.02)" stroke="var(--color-brand)"
         stroke-width="1.5" stroke-dasharray="10,6"/>
-  <text x="-14" y="1012" font-size="13" font-weight="700"
+  <text x="-14" y="1016" font-size="13" font-weight="700"
         fill="var(--color-brand)" font-family="Pretendard, sans-serif">Row 1 — 데이터셋 &amp; 팀</text>
 
-  <!-- Row 2: 지도 & 편집 (x=0..5190, y=2100..2944) -->
-  <rect x="-30" y="2070" width="5280" height="904"
+  <!-- row2: Row 2 — 지도 & 편집 -->
+  <rect x="-30" y="2070" width="5850" height="904"
         rx="16" fill="rgba(23,101,167,0.02)" stroke="var(--color-brand)"
         stroke-width="1.5" stroke-dasharray="10,6"/>
-  <text x="-14" y="2062" font-size="13" font-weight="700"
+  <text x="-14" y="2066" font-size="13" font-weight="700"
         fill="var(--color-brand)" font-family="Pretendard, sans-serif">Row 2 — 지도 &amp; 편집</text>
 
-  <!-- Row 3: 드로어 & 레이어 (x=0..7190, y=3150..3994) -->
-  <rect x="-30" y="3120" width="7280" height="904"
+  <!-- row3: Row 3 — 드로어 & 레이어 -->
+  <rect x="-30" y="3120" width="6450" height="904"
         rx="16" fill="rgba(39,171,131,0.02)" stroke="var(--color-success)"
         stroke-width="1.5" stroke-dasharray="10,6"/>
-  <text x="-14" y="3112" font-size="13" font-weight="700"
+  <text x="-14" y="3116" font-size="13" font-weight="700"
         fill="var(--color-success-text)" font-family="Pretendard, sans-serif">Row 3 — 드로어 &amp; 레이어</text>
 
-  <!-- Row 4: 오프라인 & 서버 (x=0..4590, y=4200..5044) -->
-  <rect x="-30" y="4170" width="4680" height="904"
+  <!-- row4: Row 4 — 오프라인 & 서버 -->
+  <rect x="-30" y="4170" width="5250" height="904"
         rx="16" fill="rgba(245,158,11,0.03)" stroke="var(--color-warning)"
         stroke-width="1.5" stroke-dasharray="10,6"/>
-  <text x="-14" y="4162" font-size="13" font-weight="700"
+  <text x="-14" y="4166" font-size="13" font-weight="700"
         fill="var(--color-amber-dark)" font-family="Pretendard, sans-serif">Row 4 — 오프라인 &amp; 서버</text>
 
   <!-- ================================================================
        SUB-BOUNDARY BOXES — 기능별 세부 그룹
-       (행 바운더리보다 안쪽, 실선 + 반투명 fill)
        ================================================================ -->
 
-  <!-- Row 0: 인증 서브그룹 — Home / Login / Register -->
+  <!-- auth: 인증 -->
+  <rect x="-14" y="-14" width="1618" height="872"
+        rx="12" fill="rgba(15,23,42,0.03)" stroke="var(--color-text-muted)"
+        stroke-width="1.2" opacity="0.7"/>
+  <text x="-2" y="-18" font-size="11" font-weight="600"
+        fill="var(--color-text-sub)" font-family="Pretendard, sans-serif">인증</text>
+
+  <!-- project: 프로젝트 -->
+  <rect x="1786" y="-14" width="2818" height="872"
+        rx="12" fill="rgba(15,23,42,0.03)" stroke="var(--color-text-muted)"
+        stroke-width="1.2" opacity="0.7"/>
+  <text x="1798" y="-18" font-size="11" font-weight="600"
+        fill="var(--color-text-sub)" font-family="Pretendard, sans-serif">프로젝트</text>
+
+  <!-- dataset: 데이터셋 -->
+  <rect x="-14" y="1036" width="2818" height="872"
+        rx="12" fill="rgba(23,101,167,0.03)" stroke="var(--color-brand)"
+        stroke-width="1.2" opacity="0.7"/>
+  <text x="-2" y="1032" font-size="11" font-weight="600"
+        fill="var(--color-brand)" font-family="Pretendard, sans-serif">데이터셋</text>
+
+  <!-- team: 팀 관리 -->
+  <rect x="2986" y="1036" width="1618" height="872"
+        rx="12" fill="rgba(23,101,167,0.03)" stroke="var(--color-brand)"
+        stroke-width="1.2" opacity="0.7"/>
+  <text x="2998" y="1032" font-size="11" font-weight="600"
+        fill="var(--color-brand)" font-family="Pretendard, sans-serif">팀 관리</text>
+
+  <!-- map-view-sub: 지도 뷰 -->
+  <rect x="-14" y="2086" width="418" height="872"
+        rx="12" fill="rgba(23,101,167,0.03)" stroke="var(--color-brand)"
+        stroke-width="1.2" opacity="0.7"/>
+  <text x="-2" y="2082" font-size="11" font-weight="600"
+        fill="var(--color-brand)" font-family="Pretendard, sans-serif">지도 뷰</text>
+
+  <!-- edit-flow: 편집 흐름 -->
+  <rect x="586" y="2086" width="4018" height="872"
+        rx="12" fill="rgba(23,101,167,0.03)" stroke="var(--color-brand)"
+        stroke-width="1.2" opacity="0.7"/>
+  <text x="598" y="2082" font-size="11" font-weight="600"
+        fill="var(--color-brand)" font-family="Pretendard, sans-serif">편집 흐름</text>
+
+  <!-- feat-info-sub: 피처 정보 -->
+  <rect x="4786" y="2086" width="1018" height="872"
+        rx="12" fill="rgba(23,101,167,0.03)" stroke="var(--color-brand)"
+        stroke-width="1.2" opacity="0.7"/>
+  <text x="4798" y="2082" font-size="11" font-weight="600"
+        fill="var(--color-brand)" font-family="Pretendard, sans-serif">피처 정보</text>
+
+  <!-- drawer-sub: 드로어 -->
+  <rect x="-14" y="3136" width="1618" height="872"
+        rx="12" fill="rgba(39,171,131,0.03)" stroke="var(--color-success)"
+        stroke-width="1.2" opacity="0.7"/>
+  <text x="-2" y="3132" font-size="11" font-weight="600"
+        fill="var(--color-success-text)" font-family="Pretendard, sans-serif">드로어</text>
+
+  <!-- layer-mgmt-sub: 레이어 관리 -->
+  <rect x="1786" y="3136" width="1018" height="872"
+        rx="12" fill="rgba(39,171,131,0.03)" stroke="var(--color-success)"
+        stroke-width="1.2" opacity="0.7"/>
+  <text x="1798" y="3132" font-size="11" font-weight="600"
+        fill="var(--color-success-text)" font-family="Pretendard, sans-serif">레이어 관리</text>
+
+  <!-- tools: 도구 (CQL / GPS / 북마크) -->
+  <rect x="2986" y="3136" width="1618" height="872"
+        rx="12" fill="rgba(39,171,131,0.03)" stroke="var(--color-success)"
+        stroke-width="1.2" opacity="0.7"/>
+  <text x="2998" y="3132" font-size="11" font-weight="600"
+        fill="var(--color-success-text)" font-family="Pretendard, sans-serif">도구 (CQL / GPS / 북마크)</text>
+
+  <!-- fs-types: 피처 선택 (타입별) -->
+  <rect x="4786" y="3136" width="1618" height="872"
+        rx="12" fill="rgba(15,23,42,0.03)" stroke="var(--color-text-muted)"
+        stroke-width="1.2" opacity="0.7"/>
+  <text x="4798" y="3132" font-size="11" font-weight="600"
+        fill="var(--color-text-sub)" font-family="Pretendard, sans-serif">피처 선택 (타입별)</text>
+
+  <!-- server-sub: 서버 -->
+  <rect x="-14" y="4186" width="1018" height="872"
+        rx="12" fill="rgba(245,158,11,0.04)" stroke="var(--color-warning)"
+        stroke-width="1.2" opacity="0.7"/>
+  <text x="-2" y="4182" font-size="11" font-weight="600"
+        fill="var(--color-amber-dark)" font-family="Pretendard, sans-serif">서버</text>
+
+  <!-- offline-sub: 오프라인 -->
+  <rect x="1186" y="4186" width="2218" height="872"
+        rx="12" fill="rgba(245,158,11,0.04)" stroke="var(--color-warning)"
+        stroke-width="1.2" opacity="0.7"/>
+  <text x="1198" y="4182" font-size="11" font-weight="600"
+        fill="var(--color-amber-dark)" font-family="Pretendard, sans-serif">오프라인</text>
+
+  <!-- system-ui: 시스템 UI -->
+  <rect x="3586" y="4186" width="1018" height="872"
+        rx="12" fill="rgba(15,23,42,0.03)" stroke="var(--color-text-muted)"
+        stroke-width="1.2" opacity="0.7"/>
+  <text x="3598" y="4182" font-size="11" font-weight="600"
+        fill="var(--color-text-sub)" font-family="Pretendard, sans-serif">시스템 UI</text>
+
+  <!-- offline-map-sub: 오프라인 지도 -->
+  <rect x="4786" y="4186" width="418" height="872"
+        rx="12" fill="rgba(245,158,11,0.04)" stroke="var(--color-warning)"
+        stroke-width="1.2" opacity="0.7"/>
+  <text x="4798" y="4182" font-size="11" font-weight="600"
+        fill="var(--color-amber-dark)" font-family="Pretendard, sans-serif">오프라인 지도</text>
+
+  <!-- BOUNDARY_END -->
+
+  <!-- ================================================================
+       SUB-BOUNDARY BOXES — 기능별 세부 그룹
+       ================================================================ -->
+
+  <!-- Row 0: 인증 — 1.Home / 2.Login / 3.Register -->
   <rect x="-14" y="-14" width="1618" height="872"
         rx="12" fill="rgba(15,23,42,0.03)" stroke="var(--color-text-muted)"
         stroke-width="1.2" opacity="0.7"/>
   <text x="-2" y="-18" font-size="11" font-weight="600"
         fill="var(--color-text-muted)" font-family="Pretendard, sans-serif">인증</text>
 
-  <!-- Row 0: 프로젝트 서브그룹 — ProjList / SearchJoin / ProjCreate / ProjDetail / ProjEdit -->
+  <!-- Row 0: 프로젝트 — 4.ProjList / 5.SearchJoin / 6.ProjCreate / 7.ProjDetail / 8.ProjEdit -->
   <rect x="1786" y="-14" width="2818" height="872"
         rx="12" fill="rgba(15,23,42,0.03)" stroke="var(--color-text-muted)"
         stroke-width="1.2" opacity="0.7"/>
   <text x="1798" y="-18" font-size="11" font-weight="600"
         fill="var(--color-text-muted)" font-family="Pretendard, sans-serif">프로젝트</text>
 
-  <!-- Row 1: 데이터셋 서브그룹 — DatasetMgmt / Add / Info / Edit / Col -->
+  <!-- Row 1: 데이터셋 — 9-13 -->
   <rect x="-14" y="1036" width="2818" height="872"
         rx="12" fill="rgba(23,101,167,0.03)" stroke="var(--color-brand)"
         stroke-width="1.2" opacity="0.7"/>
   <text x="-2" y="1030" font-size="11" font-weight="600"
         fill="var(--color-brand)" font-family="Pretendard, sans-serif">데이터셋</text>
 
-  <!-- Row 1: 팀 관리 서브그룹 — MemberMgmt / MyPage / ProjMembership -->
+  <!-- Row 1: 팀 관리 — 14.MemberMgmt / 15.MyPage / 16.ProjMembership -->
   <rect x="2986" y="1036" width="1618" height="872"
         rx="12" fill="rgba(23,101,167,0.03)" stroke="var(--color-brand)"
         stroke-width="1.2" opacity="0.7"/>
   <text x="2998" y="1030" font-size="11" font-weight="600"
         fill="var(--color-brand)" font-family="Pretendard, sans-serif">팀 관리</text>
 
-  <!-- Row 2: 지도 뷰 서브그룹 — MapView -->
+  <!-- Row 2: 지도 뷰 — 17.MapView -->
   <rect x="-14" y="2086" width="418" height="872"
         rx="12" fill="rgba(23,101,167,0.03)" stroke="var(--color-brand)"
         stroke-width="1.2" opacity="0.7"/>
   <text x="-2" y="2080" font-size="11" font-weight="600"
         fill="var(--color-brand)" font-family="Pretendard, sans-serif">지도 뷰</text>
 
-  <!-- Row 2: 편집 흐름 서브그룹 — EditSession / FeatSelected / AddGeo / AttrForm / VertexEdit / DelConfirm -->
-  <rect x="586" y="2086" width="3418" height="872"
+  <!-- Row 2: 편집 흐름 — 18.EditLayerSelect ~ 24.DelConfirm (x=600..4590) -->
+  <rect x="586" y="2086" width="4018" height="872"
         rx="12" fill="rgba(23,101,167,0.03)" stroke="var(--color-brand)"
         stroke-width="1.2" opacity="0.7"/>
   <text x="598" y="2080" font-size="11" font-weight="600"
         fill="var(--color-brand)" font-family="Pretendard, sans-serif">편집 흐름</text>
 
-  <!-- Row 2: 피처 정보 서브그룹 — FeatureInfo / EditHistory -->
-  <rect x="4186" y="2086" width="1018" height="872"
+  <!-- Row 2: 피처 정보 — 25.FeatInfo / 26.EditHistory (x=4800..5790) -->
+  <rect x="4786" y="2086" width="1018" height="872"
         rx="12" fill="rgba(23,101,167,0.03)" stroke="var(--color-brand)"
         stroke-width="1.2" opacity="0.7"/>
-  <text x="4198" y="2080" font-size="11" font-weight="600"
+  <text x="4798" y="2080" font-size="11" font-weight="600"
         fill="var(--color-brand)" font-family="Pretendard, sans-serif">피처 정보</text>
 
-  <!-- Row 3: 드로어 서브그룹 — DrawerP / DrawerE / DrawerO -->
+  <!-- Row 3: 드로어 — 27-29 (x=0..1590) -->
   <rect x="-14" y="3136" width="1618" height="872"
         rx="12" fill="rgba(39,171,131,0.03)" stroke="var(--color-success)"
         stroke-width="1.2" opacity="0.7"/>
   <text x="-2" y="3130" font-size="11" font-weight="600"
         fill="var(--color-success-text)" font-family="Pretendard, sans-serif">드로어</text>
 
-  <!-- Row 3: 레이어 관리 서브그룹 — LayerMgmt / RefLayer / LayerSelector -->
-  <rect x="1786" y="3136" width="1618" height="872"
+  <!-- Row 3: 레이어 관리 — 30.LayerMgmt / 31.RefLayer (x=1800..2790) -->
+  <rect x="1786" y="3136" width="1018" height="872"
         rx="12" fill="rgba(39,171,131,0.03)" stroke="var(--color-success)"
         stroke-width="1.2" opacity="0.7"/>
   <text x="1798" y="3130" font-size="11" font-weight="600"
         fill="var(--color-success-text)" font-family="Pretendard, sans-serif">레이어 관리</text>
 
-  <!-- Row 3: 도구 서브그룹 — CQL / GPS / Bookmark -->
-  <rect x="3586" y="3136" width="1618" height="872"
+  <!-- Row 3: 도구 — 32.CQL / 33.GPS / 34.Bookmark (x=3000..4590) -->
+  <rect x="2986" y="3136" width="1618" height="872"
         rx="12" fill="rgba(39,171,131,0.03)" stroke="var(--color-success)"
         stroke-width="1.2" opacity="0.7"/>
-  <text x="3598" y="3130" font-size="11" font-weight="600"
+  <text x="2998" y="3130" font-size="11" font-weight="600"
         fill="var(--color-success-text)" font-family="Pretendard, sans-serif">도구 (CQL / GPS / 북마크)</text>
 
-  <!-- Row 3: FS 타입별 서브섹션 — FS-A / FS-B / FS-C -->
-  <rect x="5386" y="3136" width="1618" height="872"
+  <!-- Row 3: 피처 선택 — 35.FS-A / 36.FS-B / 37.FS-C (x=4800..6390) -->
+  <rect x="4786" y="3136" width="1618" height="872"
         rx="12" fill="rgba(15,23,42,0.02)" stroke="var(--color-text-muted)"
         stroke-width="1.2" opacity="0.7"/>
-  <text x="5398" y="3130" font-size="11" font-weight="600"
+  <text x="4798" y="3130" font-size="11" font-weight="600"
         fill="var(--color-text-sub)" font-family="Pretendard, sans-serif">피처 선택 (타입별)</text>
 
-  <!-- Row 4: 서버 서브그룹 — ServerMgmt / AddServer -->
+  <!-- Row 4: 서버 — 38.ServerMgmt / 39.AddServer (x=0..990) -->
   <rect x="-14" y="4186" width="1018" height="872"
         rx="12" fill="rgba(245,158,11,0.04)" stroke="var(--color-warning)"
         stroke-width="1.2" opacity="0.7"/>
   <text x="-2" y="4180" font-size="11" font-weight="600"
         fill="var(--color-amber-dark)" font-family="Pretendard, sans-serif">서버</text>
 
-  <!-- Row 4: 오프라인 서브그룹 — OffGPKG / GPKGCreate / SyncOffline / SelectArea -->
+  <!-- Row 4: 오프라인 — 40-43 (x=1200..3390) -->
   <rect x="1186" y="4186" width="2218" height="872"
         rx="12" fill="rgba(245,158,11,0.04)" stroke="var(--color-warning)"
         stroke-width="1.2" opacity="0.7"/>
   <text x="1198" y="4180" font-size="11" font-weight="600"
         fill="var(--color-amber-dark)" font-family="Pretendard, sans-serif">오프라인</text>
 
-  <!-- Row 4: 시스템 UI 서브그룹 — EmptyStates / ConfirmDialog -->
+  <!-- Row 4: 시스템 UI — 44.Empty / 45.Dialog (x=3600..4590) -->
   <rect x="3586" y="4186" width="1018" height="872"
         rx="12" fill="rgba(15,23,42,0.03)" stroke="var(--color-text-muted)"
         stroke-width="1.2" opacity="0.7"/>
   <text x="3598" y="4180" font-size="11" font-weight="600"
         fill="var(--color-text-sub)" font-family="Pretendard, sans-serif">시스템 UI</text>
+
+  <!-- Row 4: 오프라인 지도 — 46.OfflineMapView (x=4800..5190) -->
+  <rect x="4786" y="4186" width="418" height="872"
+        rx="12" fill="rgba(245,158,11,0.04)" stroke="var(--color-warning)"
+        stroke-width="1.2" opacity="0.7"/>
+  <text x="4798" y="4180" font-size="11" font-weight="600"
+        fill="var(--color-amber-dark)" font-family="Pretendard, sans-serif">오프라인 지도</text>
 
   <!-- ================================================================
        ARROWS — 화면 흐름 (회색=주 네비 / 파랑=편집 / 초록=추가 / 빨강=삭제 / 노랑=오프라인)
@@ -590,10 +708,14 @@ tailwind.config = {
   <path d="M3390,1472 L4200,1472" stroke="var(--color-text-muted)" stroke-width="1.5" fill="none" marker-end="url(#arrowhead)"/>
   <text x="3795" y="1462" font-size="10" fill="var(--color-text-muted)" text-anchor="middle">신청 관리</text>
 
+  <!-- 46.OfflineMapView → 26.EditHistory: 작업기록 확인 -->
+  <path d="M4995,4200 C4995,3600 5595,3600 5595,2944" stroke="var(--color-warning)" stroke-width="1.5" fill="none" stroke-dasharray="6,3" marker-end="url(#arrowhead-yellow)"/>
+  <text x="5350" y="3380" font-size="10" fill="var(--color-warning)" text-anchor="middle">작업기록 확인</text>
+
 </svg>
 
 <!-- ==================== 1. HOME SCREEN ==================== -->
-<div class="relative" style="position:absolute;left:0px;top:0px;">
+<div class="relative" data-screen="home" style="position:absolute;left:0px;top:0px;">
   <div class="screen-label">1. Home</div>
   <div class="phone">
     <div class="notch"></div>
@@ -678,8 +800,8 @@ tailwind.config = {
 </div>
 
 <!-- ==================== 2. EDIT SESSION — IDLE ==================== -->
-<div class="relative" style="position:absolute;left:600px;top:2100px;">
-  <div class="screen-label">2. Edit Session</div>
+<div class="relative" data-screen="edit-session" style="position:absolute;left:1200px;top:2100px;">
+  <div class="screen-label">19. Edit Session</div>
   <div class="phone">
     <div class="notch"></div>
     <div class="w-full h-full relative overflow-hidden">
@@ -726,6 +848,9 @@ tailwind.config = {
         <div class="bg-white/95 backdrop-blur-sm rounded-xl px-4 py-2.5 flex items-center gap-2 shadow-sm">
           <div class="w-2 h-2 rounded-full bg-accent-500 pulse-dot"></div>
           <span class="text-sm font-medium text-slate-700 flex-1">firestation 편집 중</span>
+          <button class="py-1.5 px-1.5 rounded-lg bg-white/70 border border-slate-200/80 flex items-center justify-center flex-shrink-0">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--color-text-sub)" stroke-width="2.2" stroke-linecap="round"><polyline points="23 4 23 10 17 10"/><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/></svg>
+          </button>
           <button class="bg-slate-700 text-white text-xs font-medium rounded-lg px-3 py-1.5">편집 종료</button>
         </div>
       </div>
@@ -752,10 +877,11 @@ tailwind.config = {
           </svg>
         </button>
       </div>
-      <!-- Zoom controls (grouped card) -->
-      <div class="absolute right-3 z-20 bg-white rounded-2xl shadow-md overflow-hidden" style="top:162px">
-        <button class="w-11 h-11 flex items-center justify-center border-b border-slate-100 text-slate-600 font-bold text-xl">+</button>
-        <button class="w-11 h-11 flex items-center justify-center text-slate-600 font-bold text-xl">−</button>
+      <!-- Layer TOC button -->
+      <div class="absolute right-3 z-20" style="top:162px">
+        <button class="w-11 h-11 bg-white rounded-2xl shadow-md flex items-center justify-center">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-text-main)" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+        </button>
       </div>
       <!-- GPS current location (standalone circle) -->
       <div class="absolute right-3 z-20" style="bottom:128px">
@@ -779,8 +905,8 @@ tailwind.config = {
 </div>
 
 <!-- ==================== 2a. MAP VIEW (Normal) ==================== -->
-<div class="relative" style="position:absolute;left:0px;top:2100px;">
-  <div class="screen-label">2a. Map View</div>
+<div class="relative" data-screen="map-view" style="position:absolute;left:0px;top:2100px;">
+  <div class="screen-label">17. Map View</div>
   <div class="phone">
     <div class="notch"></div>
     <div class="w-full h-full relative overflow-hidden">
@@ -859,10 +985,11 @@ tailwind.config = {
           </svg>
         </button>
       </div>
-      <!-- Zoom controls (grouped card) -->
-      <div class="absolute right-3 z-20 bg-white rounded-2xl shadow-md overflow-hidden" style="top:162px">
-        <button class="w-11 h-11 flex items-center justify-center border-b border-slate-100 text-slate-600 font-bold text-xl">+</button>
-        <button class="w-11 h-11 flex items-center justify-center text-slate-600 font-bold text-xl">−</button>
+      <!-- Layer TOC button -->
+      <div class="absolute right-3 z-20" style="top:162px">
+        <button class="w-11 h-11 bg-white rounded-2xl shadow-md flex items-center justify-center">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-text-main)" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+        </button>
       </div>
       <!-- GPS current location (standalone circle) -->
       <div class="absolute right-3 z-20" style="bottom:128px">
@@ -883,9 +1010,131 @@ tailwind.config = {
   <div class="screen-label-bottom">Map View<span>지도 보기 (뷰 모드, 편집 전)</span></div>
 </div>
 
+<!-- ==================== 18. EDIT LAYER SELECT ==================== -->
+<div class="relative" data-screen="edit-layer-select" style="position:absolute;left:600px;top:2100px;">
+  <div class="screen-label">18. Edit Layer Select</div>
+  <div class="phone">
+    <div class="notch"></div>
+    <div class="w-full h-full bg-slate-50 relative overflow-hidden">
+      <div class="w-full h-full flex flex-col bg-slate-50">
+        <div class="status-bar text-slate-800 flex-shrink-0"><span>9:41</span><div class="flex gap-1.5 items-center opacity-60"><svg width="16" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12.55a11 11 0 0 1 14.08 0"/></svg><svg width="16" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="6" width="18" height="12" rx="2"/></svg></div></div>
+
+        <!-- Header -->
+        <div class="bg-white px-5 pt-2 pb-4 border-b border-slate-100 flex-shrink-0">
+          <div class="flex items-center justify-between">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--color-text-main)" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+            <h1 class="text-lg font-bold text-slate-900">편집 레이어 선택</h1>
+            <div class="w-6"></div>
+          </div>
+        </div>
+
+        <!-- Icon + hint -->
+        <div class="flex-shrink-0 flex flex-col items-center pt-5 pb-4 px-5">
+          <div class="w-14 h-14 rounded-2xl bg-brand-50 flex items-center justify-center mb-3">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--color-brand)" stroke-width="1.5"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+          </div>
+          <span class="text-sm text-slate-500">편집할 레이어를 선택하세요</span>
+        </div>
+
+        <!-- Scrollable list -->
+        <div class="flex-1 overflow-y-auto px-5 pb-2 relative">
+          <div class="bg-white rounded-2xl border border-slate-200 overflow-hidden divide-y divide-slate-50">
+            <!-- 선택된 항목 -->
+            <div class="p-4 flex items-center gap-3 bg-brand-50">
+              <div class="w-8 h-8 rounded-lg bg-brand-100 flex items-center justify-center flex-shrink-0">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-brand)" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/></svg>
+              </div>
+              <div class="flex-1 min-w-0">
+                <div class="text-sm font-medium text-brand-700">건물</div>
+                <div class="text-xs text-slate-400">Polygon · building</div>
+              </div>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--color-brand)" stroke-width="2" class="flex-shrink-0"><polyline points="20 6 9 17 4 12"/></svg>
+            </div>
+            <div class="p-4 flex items-center gap-3">
+              <div class="w-8 h-8 rounded-lg bg-slate-100 flex items-center justify-center flex-shrink-0">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-text-muted)" stroke-width="2"><line x1="5" y1="19" x2="19" y2="5"/></svg>
+              </div>
+              <div class="flex-1 min-w-0">
+                <div class="text-sm font-medium text-slate-700">도로</div>
+                <div class="text-xs text-slate-400">LineString · road</div>
+              </div>
+            </div>
+            <div class="p-4 flex items-center gap-3">
+              <div class="w-8 h-8 rounded-lg bg-slate-100 flex items-center justify-center flex-shrink-0">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-text-muted)" stroke-width="2"><circle cx="12" cy="12" r="4"/></svg>
+              </div>
+              <div class="flex-1 min-w-0">
+                <div class="text-sm font-medium text-slate-700">측정소</div>
+                <div class="text-xs text-slate-400">Point · station</div>
+              </div>
+            </div>
+            <div class="p-4 flex items-center gap-3">
+              <div class="w-8 h-8 rounded-lg bg-slate-100 flex items-center justify-center flex-shrink-0">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-text-muted)" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/></svg>
+              </div>
+              <div class="flex-1 min-w-0">
+                <div class="text-sm font-medium text-slate-700">하천 경계</div>
+                <div class="text-xs text-slate-400">Polygon · river</div>
+              </div>
+            </div>
+            <div class="p-4 flex items-center gap-3">
+              <div class="w-8 h-8 rounded-lg bg-slate-100 flex items-center justify-center flex-shrink-0">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-text-muted)" stroke-width="2"><line x1="5" y1="19" x2="19" y2="5"/></svg>
+              </div>
+              <div class="flex-1 min-w-0">
+                <div class="text-sm font-medium text-slate-700">수계</div>
+                <div class="text-xs text-slate-400">LineString · waterway</div>
+              </div>
+            </div>
+            <div class="p-4 flex items-center gap-3">
+              <div class="w-8 h-8 rounded-lg bg-slate-100 flex items-center justify-center flex-shrink-0">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-text-muted)" stroke-width="2"><circle cx="12" cy="12" r="4"/></svg>
+              </div>
+              <div class="flex-1 min-w-0">
+                <div class="text-sm font-medium text-slate-700">교량</div>
+                <div class="text-xs text-slate-400">Point · bridge</div>
+              </div>
+            </div>
+            <div class="p-4 flex items-center gap-3">
+              <div class="w-8 h-8 rounded-lg bg-slate-100 flex items-center justify-center flex-shrink-0">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-text-muted)" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/></svg>
+              </div>
+              <div class="flex-1 min-w-0">
+                <div class="text-sm font-medium text-slate-700">조사 구역</div>
+                <div class="text-xs text-slate-400">Polygon · survey_area</div>
+              </div>
+            </div>
+            <div class="p-4 flex items-center gap-3 opacity-50">
+              <div class="w-8 h-8 rounded-lg bg-slate-100 flex items-center justify-center flex-shrink-0">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-text-muted)" stroke-width="2"><line x1="5" y1="19" x2="19" y2="5"/></svg>
+              </div>
+              <div class="flex-1 min-w-0">
+                <div class="text-sm font-medium text-slate-400">지형 등고선</div>
+                <div class="text-xs text-slate-400">LineString · contour</div>
+              </div>
+            </div>
+          </div>
+          <!-- 하단 페이드 (더 있음 암시) -->
+          <div class="absolute bottom-0 left-5 right-5 h-10 bg-gradient-to-t from-slate-50 to-transparent pointer-events-none rounded-b-2xl"></div>
+        </div>
+
+        <!-- Bottom Buttons -->
+        <div class="flex-shrink-0 px-5 pb-8 pt-3 bg-white border-t border-slate-100">
+          <div class="flex gap-3">
+            <button class="flex-1 py-3 text-sm font-medium text-slate-500 bg-slate-100 rounded-2xl">취소</button>
+            <button class="flex-[2] py-3 text-sm font-bold text-white bg-gradient-to-r from-brand-500 to-brand-700 rounded-2xl shadow-lg shadow-brand-500/25">확인</button>
+          </div>
+        </div>
+        <div class="home-indicator flex-shrink-0" style="background:rgba(0,0,0,0.15)"></div>
+      </div>
+    </div>
+  </div>
+  <div class="screen-label-bottom">Edit Layer Select<span>편집 레이어 선택</span></div>
+</div>
+
 <!-- ==================== 2b. FEATURE SELECTED ==================== -->
-<div class="relative" style="position:absolute;left:1200px;top:2100px;">
-  <div class="screen-label">2b. Feature Selected</div>
+<div class="relative" data-screen="feat-selected" style="position:absolute;left:1800px;top:2100px;">
+  <div class="screen-label">20. Feature Selected</div>
   <div class="phone">
     <div class="notch"></div>
     <div class="w-full h-full relative overflow-hidden">
@@ -939,6 +1188,9 @@ tailwind.config = {
         <div class="bg-white/95 backdrop-blur-sm rounded-xl px-4 py-2.5 flex items-center gap-2 shadow-sm">
           <div class="w-2 h-2 rounded-full bg-accent-500 pulse-dot"></div>
           <span class="text-sm font-medium text-slate-700 flex-1">firestation 편집 중</span>
+          <button class="py-1.5 px-1.5 rounded-lg bg-white/70 border border-slate-200/80 flex items-center justify-center flex-shrink-0">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--color-text-sub)" stroke-width="2.2" stroke-linecap="round"><polyline points="23 4 23 10 17 10"/><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/></svg>
+          </button>
           <button class="bg-slate-700 text-white text-xs font-medium rounded-lg px-3 py-1.5">편집 종료</button>
         </div>
       </div>
@@ -952,23 +1204,27 @@ tailwind.config = {
           </svg>
         </button>
       </div>
-      <!-- Zoom controls (grouped card) -->
-      <div class="absolute right-3 z-20 bg-white rounded-2xl shadow-md overflow-hidden" style="top:162px">
-        <button class="w-11 h-11 flex items-center justify-center border-b border-slate-100 text-slate-600 font-bold text-xl">+</button>
-        <button class="w-11 h-11 flex items-center justify-center text-slate-600 font-bold text-xl">−</button>
+      <!-- Layer TOC button -->
+      <div class="absolute right-3 z-20" style="top:162px">
+        <button class="w-11 h-11 bg-white rounded-2xl shadow-md flex items-center justify-center">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-text-main)" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+        </button>
       </div>
       <!-- Bottom Sheet: Feature Info + Actions -->
       <div class="absolute bottom-0 left-0 right-0 z-30">
         <div class="bg-white rounded-t-3xl shadow-2xl px-5 pt-4 pb-8">
           <div class="w-10 h-1 rounded-full bg-slate-200 mx-auto mb-4"></div>
-          <div class="flex items-center gap-3 mb-3">
-            <div class="w-10 h-10 rounded-xl bg-brand-50 flex items-center justify-center">
+          <div class="flex items-center gap-2 mb-3">
+            <div class="w-10 h-10 rounded-xl bg-brand-50 flex items-center justify-center flex-shrink-0">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-brand-dark)" stroke-width="1.8"><circle cx="12" cy="12" r="3"/><path d="M12 2v4M12 18v4M2 12h4M18 12h4"/></svg>
             </div>
-            <div class="flex-1">
+            <div class="flex-1 min-w-0">
               <div class="font-semibold text-slate-800">강남소방서</div>
               <div class="text-xs text-slate-400">firestation #42 &middot; Point</div>
             </div>
+            <button class="w-8 h-8 rounded-xl bg-brand-50 flex items-center justify-center flex-shrink-0"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--color-brand-dark)" stroke-width="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg></button>
+            <button class="w-8 h-8 rounded-xl bg-slate-100 flex items-center justify-center flex-shrink-0"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--color-text-main)" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7"/><polyline points="2 17 12 22 22 17"/></svg></button>
+            <button class="w-8 h-8 rounded-xl bg-red-50 flex items-center justify-center flex-shrink-0"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--color-danger)" stroke-width="2"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg></button>
           </div>
           <div class="bg-slate-50 rounded-xl p-3 mb-4 space-y-1.5">
             <div class="flex items-center text-xs"><span class="text-slate-400 w-14">유형</span><span class="text-slate-700">소방서</span></div>
@@ -977,20 +1233,6 @@ tailwind.config = {
           <div class="flex gap-2 mb-4">
             <div class="w-14 h-14 rounded-lg bg-gradient-to-br from-slate-200 to-slate-300"></div>
             <div class="w-14 h-14 rounded-lg bg-gradient-to-br from-blue-100 to-blue-200"></div>
-          </div>
-          <div class="flex gap-2">
-            <button class="flex-1 py-3 bg-brand-50 text-brand-700 text-sm font-medium rounded-xl flex items-center justify-center gap-1.5">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
-              속성
-            </button>
-            <button class="flex-1 py-3 bg-slate-100 text-slate-700 text-sm font-medium rounded-xl flex items-center justify-center gap-1.5">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7"/><polyline points="2 17 12 22 22 17"/></svg>
-              형상
-            </button>
-            <button class="flex-1 py-3 bg-red-50 text-red-500 text-sm font-medium rounded-xl flex items-center justify-center gap-1.5">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>
-              삭제
-            </button>
           </div>
         </div>
       </div>
@@ -1001,8 +1243,8 @@ tailwind.config = {
 </div>
 
 <!-- ==================== 2c. ADDING GEOMETRY ==================== -->
-<div class="relative" style="position:absolute;left:1800px;top:2100px;">
-  <div class="screen-label">2c. Add Geometry</div>
+<div class="relative" data-screen="add-geo" style="position:absolute;left:2400px;top:2100px;">
+  <div class="screen-label">21. Add Geometry</div>
   <div class="phone">
     <div class="notch"></div>
     <div class="w-full h-full relative overflow-hidden">
@@ -1025,17 +1267,24 @@ tailwind.config = {
         </svg>
       </div>
       <div class="status-bar text-slate-800 absolute top-0 left-0 right-0"><span class="font-semibold text-sm">9:41</span><div class="flex gap-1.5 items-center opacity-60"><svg width="16" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12.55a11 11 0 0 1 14.08 0"/></svg></div></div>
-      <!-- Top bar: geometry type selector + drawing state -->
+      <!-- Top bar: edit session bar + drawing state -->
       <div class="absolute top-14 left-4 right-4 z-30 flex flex-col gap-2">
-        <!-- Geometry type segmented control -->
-        <div class="bg-white/95 backdrop-blur-sm rounded-xl p-1 flex gap-1 shadow-sm">
-          <div class="flex-1 text-center py-1.5 rounded-lg text-xs text-slate-400 font-medium">포인트</div>
-          <div class="flex-1 text-center py-1.5 rounded-lg text-xs text-slate-400 font-medium">라인</div>
-          <div class="flex-1 text-center py-1.5 rounded-lg bg-brand-500 text-xs text-white font-semibold shadow-sm">폴리곤</div>
-        </div>
+        <!-- Edit session bar (from 2b) -->
         <div class="bg-white/95 backdrop-blur-sm rounded-xl px-4 py-2.5 flex items-center gap-2 shadow-sm">
-          <div class="w-2 h-2 rounded-full bg-brand-500 pulse-dot"></div>
-          <span class="text-slate-700 text-xs font-medium">지도를 탭하여 꼭짓점 추가</span>
+          <div class="w-2 h-2 rounded-full bg-accent-500 pulse-dot"></div>
+          <span class="text-sm font-medium text-slate-700 flex-1">firestation 편집 중</span>
+          <button class="py-1.5 px-1.5 rounded-lg bg-white/70 border border-slate-200/80 flex items-center justify-center flex-shrink-0">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--color-text-sub)" stroke-width="2.2" stroke-linecap="round"><polyline points="23 4 23 10 17 10"/><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/></svg>
+          </button>
+          <button class="bg-slate-700 text-white text-xs font-medium rounded-lg px-3 py-1.5">편집 종료</button>
+        </div>
+        <!-- Drawing status -->
+        <div class="bg-white/95 backdrop-blur-sm rounded-xl px-4 py-2.5 shadow-sm">
+          <div class="flex items-center gap-2">
+            <div class="w-2 h-2 rounded-full bg-brand-500 pulse-dot"></div>
+            <span class="text-slate-700 text-xs font-medium flex-1">폴리곤 그리기</span>
+          </div>
+          <p class="text-xs text-slate-400 mt-1 ml-4">지도를 탭하여 꼭짓점 추가. 3점 이상이면 완료할 수 있습니다.</p>
         </div>
       </div>
       <!-- Compass (standalone circle) -->
@@ -1048,10 +1297,17 @@ tailwind.config = {
           </svg>
         </button>
       </div>
-      <!-- Zoom controls (grouped card) -->
-      <div class="absolute right-3 z-20 bg-white rounded-2xl shadow-md overflow-hidden" style="top:222px">
-        <button class="w-11 h-11 flex items-center justify-center border-b border-slate-100 text-slate-600 font-bold text-xl">+</button>
-        <button class="w-11 h-11 flex items-center justify-center text-slate-600 font-bold text-xl">−</button>
+      <!-- Layer TOC button -->
+      <div class="absolute right-3 z-20" style="top:222px">
+        <button class="w-11 h-11 bg-white rounded-2xl shadow-md flex items-center justify-center">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-text-main)" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+        </button>
+      </div>
+      <!-- Undo last point button -->
+      <div class="absolute right-3 z-20" style="top:278px">
+        <button class="w-11 h-11 bg-white rounded-2xl shadow-md flex items-center justify-center">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--color-text-main)" stroke-width="2"><polyline points="9 14 4 9 9 4"/><path d="M20 20v-7a4 4 0 0 0-4-4H4"/></svg>
+        </button>
       </div>
       <!-- Drawing overlay: 3점 배치 상태, 하천 하부 구역 신규 폴리곤 -->
       <svg class="absolute inset-0 w-full h-full z-10" style="pointer-events:none">
@@ -1089,26 +1345,6 @@ tailwind.config = {
       <div class="absolute bottom-0 left-0 right-0 z-30">
         <div class="bg-white rounded-t-3xl shadow-2xl px-5 pt-4 pb-8">
           <div class="w-10 h-1 rounded-full bg-slate-200 mx-auto mb-3"></div>
-          <div class="flex items-center justify-between mb-4">
-            <div class="flex items-center gap-2">
-              <div class="w-8 h-8 rounded-lg bg-brand-50 flex items-center justify-center">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-brand-dark)" stroke-width="2"><polygon points="4 8 10 2 18 6 20 16 12 22 4 16"/></svg>
-              </div>
-              <div>
-                <div class="font-semibold text-slate-800 text-sm">폴리곤 그리기</div>
-                <div class="text-xs text-slate-400">지도를 탭하여 꼭짓점 추가</div>
-              </div>
-            </div>
-            <div class="px-3 py-1 bg-brand-100 text-brand-700 text-xs font-bold rounded-full">4점</div>
-          </div>
-          <!-- Instruction text -->
-          <div class="bg-blue-50 rounded-xl px-3 py-2.5 mb-3">
-            <p class="text-xs text-brand-700 leading-relaxed">지도를 탭하면 꼭짓점이 추가됩니다. 3점 이상이면 완료할 수 있습니다.</p>
-          </div>
-          <button class="w-full py-2.5 bg-slate-100 text-slate-600 text-sm font-medium rounded-xl mb-3 flex items-center justify-center gap-2">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"/></svg>
-            마지막 점 취소
-          </button>
           <div class="flex gap-3">
             <button class="flex-1 py-3 bg-slate-100 text-slate-600 text-sm font-medium rounded-xl">취소</button>
             <button class="flex-[2] py-3 text-sm font-semibold rounded-xl btn-cta btn-cta--positive">완료</button>
@@ -1122,8 +1358,8 @@ tailwind.config = {
 </div>
 
 <!-- ==================== 2d. VERTEX EDITING ==================== -->
-<div class="relative" style="position:absolute;left:3000px;top:2100px;">
-  <div class="screen-label">2d. Vertex Edit</div>
+<div class="relative" data-screen="vertex-edit" style="position:absolute;left:3600px;top:2100px;">
+  <div class="screen-label">23. Vertex Edit</div>
   <div class="phone">
     <div class="notch"></div>
     <div class="w-full h-full relative overflow-hidden">
@@ -1144,13 +1380,24 @@ tailwind.config = {
         </svg>
       </div>
       <div class="status-bar text-slate-800 absolute top-0 left-0 right-0"><span class="font-semibold text-sm">9:41</span><div class="flex gap-1.5 items-center opacity-60"><svg width="16" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12.55a11 11 0 0 1 14.08 0"/></svg></div></div>
-      <!-- Top bar -->
-      <div class="absolute top-14 left-4 right-4 z-30">
+      <!-- Top bar: edit session bar + vertex edit state -->
+      <div class="absolute top-14 left-4 right-4 z-30 flex flex-col gap-2">
+        <!-- Edit session bar -->
         <div class="bg-white/95 backdrop-blur-sm rounded-xl px-4 py-2.5 flex items-center gap-2 shadow-sm">
-          <div class="w-2 h-2 rounded-full bg-amber-400 pulse-dot"></div>
-          <span class="text-sm font-medium text-slate-700">형상 편집</span>
-          <span class="text-slate-300">&middot;</span>
-          <span class="text-xs text-slate-400">조사 경계</span>
+          <div class="w-2 h-2 rounded-full bg-accent-500 pulse-dot"></div>
+          <span class="text-sm font-medium text-slate-700 flex-1">firestation 편집 중</span>
+          <button class="py-1.5 px-1.5 rounded-lg bg-white/70 border border-slate-200/80 flex items-center justify-center flex-shrink-0">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--color-text-sub)" stroke-width="2.2" stroke-linecap="round"><polyline points="23 4 23 10 17 10"/><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/></svg>
+          </button>
+          <button class="bg-slate-700 text-white text-xs font-medium rounded-lg px-3 py-1.5">편집 종료</button>
+        </div>
+        <!-- Vertex edit status -->
+        <div class="bg-white/95 backdrop-blur-sm rounded-xl px-4 py-2.5 shadow-sm">
+          <div class="flex items-center gap-2">
+            <div class="w-2 h-2 rounded-full bg-amber-400 pulse-dot"></div>
+            <span class="text-slate-700 text-xs font-medium flex-1">형상 편집</span>
+          </div>
+          <p class="text-xs text-slate-400 mt-1 ml-4">꼭짓점 드래그 = 이동 &middot; 탭 = 삭제 &middot; 중간점 드래그 = 삽입</p>
         </div>
       </div>
       <!-- Compass (standalone circle) -->
@@ -1163,10 +1410,17 @@ tailwind.config = {
           </svg>
         </button>
       </div>
-      <!-- Zoom controls (grouped card) -->
-      <div class="absolute right-3 z-20 bg-white rounded-2xl shadow-md overflow-hidden" style="top:162px">
-        <button class="w-11 h-11 flex items-center justify-center border-b border-slate-100 text-slate-600 font-bold text-xl">+</button>
-        <button class="w-11 h-11 flex items-center justify-center text-slate-600 font-bold text-xl">−</button>
+      <!-- Layer TOC button -->
+      <div class="absolute right-3 z-20" style="top:162px">
+        <button class="w-11 h-11 bg-white rounded-2xl shadow-md flex items-center justify-center">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-text-main)" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+        </button>
+      </div>
+      <!-- Undo last vertex button -->
+      <div class="absolute right-3 z-20" style="top:218px">
+        <button class="w-11 h-11 bg-white rounded-2xl shadow-md flex items-center justify-center">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--color-text-main)" stroke-width="2"><polyline points="9 14 4 9 9 4"/><path d="M20 20v-7a4 4 0 0 0-4-4H4"/></svg>
+        </button>
       </div>
       <!-- Vertex handles: 2번 화면과 동일한 폴리곤 좌표, 편집 중 점선 표현 -->
       <svg class="absolute inset-0 w-full h-full z-10" style="pointer-events:none">
@@ -1200,14 +1454,6 @@ tailwind.config = {
       <div class="absolute bottom-0 left-0 right-0 z-30">
         <div class="bg-white rounded-t-3xl shadow-2xl px-5 pt-4 pb-8">
           <div class="w-10 h-1 rounded-full bg-slate-200 mx-auto mb-3"></div>
-          <div class="flex items-center gap-2 mb-2">
-            <div class="font-semibold text-slate-800 text-sm">형상 편집</div>
-            <span class="text-slate-300">&middot;</span>
-            <span class="text-xs text-slate-400">firestation #42</span>
-          </div>
-          <div class="bg-slate-50 rounded-xl px-4 py-3 mb-4">
-            <span class="text-xs text-slate-500">꼭짓점 드래그 = 이동 &middot; 탭 = 삭제 &middot; 중간점 드래그 = 삽입</span>
-          </div>
           <div class="flex gap-3">
             <button class="flex-1 py-3 bg-slate-100 text-slate-600 text-sm font-medium rounded-xl">취소</button>
             <button class="flex-[2] py-3 text-sm font-semibold rounded-xl btn-cta btn-cta--primary">저장</button>
@@ -1221,8 +1467,8 @@ tailwind.config = {
 </div>
 
 <!-- ==================== 2e. DELETE CONFIRMATION ==================== -->
-<div class="relative" style="position:absolute;left:3600px;top:2100px;">
-  <div class="screen-label">2e. Delete Confirm</div>
+<div class="relative" data-screen="del-confirm" style="position:absolute;left:4200px;top:2100px;">
+  <div class="screen-label">24. Delete Confirm</div>
   <div class="phone">
     <div class="notch"></div>
     <div class="w-full h-full relative overflow-hidden">
@@ -1267,6 +1513,9 @@ tailwind.config = {
         <div class="bg-white/95 backdrop-blur-sm rounded-xl px-4 py-2.5 flex items-center gap-2 shadow-sm">
           <div class="w-2 h-2 rounded-full bg-accent-500 pulse-dot"></div>
           <span class="text-sm font-medium text-slate-700 flex-1">firestation 편집 중</span>
+          <button class="py-1.5 px-1.5 rounded-lg bg-white/70 border border-slate-200/80 flex items-center justify-center flex-shrink-0">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--color-text-sub)" stroke-width="2.2" stroke-linecap="round"><polyline points="23 4 23 10 17 10"/><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/></svg>
+          </button>
           <button class="bg-slate-700 text-white text-xs font-medium rounded-lg px-3 py-1.5">편집 종료</button>
         </div>
       </div>
@@ -1299,8 +1548,8 @@ tailwind.config = {
 </div>
 
 <!-- ==================== 3a. SIDE MENU (PINOGIO) ==================== -->
-<div class="relative" style="position:absolute;left:0px;top:3150px;">
-  <div class="screen-label">3a. Drawer (PINOGIO)</div>
+<div class="relative" data-screen="drawer-pinogio" style="position:absolute;left:0px;top:3150px;">
+  <div class="screen-label">27. Drawer (PINOGIO)</div>
   <div class="phone">
     <div class="notch"></div>
     <div class="w-full h-full relative overflow-hidden">
@@ -1326,12 +1575,6 @@ tailwind.config = {
         <div class="flex-1 overflow-y-auto py-2">
           <div class="px-4 py-2">
             <div class="text-xs font-semibold text-slate-400 uppercase tracking-wider px-3 py-2">설정</div>
-
-            <div class="flex items-center gap-3 px-3 py-3 rounded-xl hover:bg-slate-50 cursor-pointer">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-text-sub)" stroke-width="1.8"><polygon points="12 2 2 7 12 12 22 7"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
-              <span class="text-sm text-slate-700">레이어 관리</span>
-              <svg class="ml-auto" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-border-light)" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
-            </div>
 
             <div class="flex items-center gap-3 px-3 py-3 rounded-xl hover:bg-slate-50 cursor-pointer">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-text-sub)" stroke-width="1.8"><polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"/></svg>
@@ -1390,8 +1633,8 @@ tailwind.config = {
 </div>
 
 <!-- ==================== 3b. SIDE MENU (Everyone) ==================== -->
-<div class="relative" style="position:absolute;left:600px;top:3150px;">
-  <div class="screen-label">3b. Drawer (Everyone)</div>
+<div class="relative" data-screen="drawer-everyone" style="position:absolute;left:600px;top:3150px;">
+  <div class="screen-label">28. Drawer (Everyone)</div>
   <div class="phone">
     <div class="notch"></div>
     <div class="w-full h-full relative overflow-hidden">
@@ -1432,11 +1675,6 @@ tailwind.config = {
           <div class="px-4 py-2">
             <div class="text-xs font-semibold text-slate-400 uppercase tracking-wider px-3 py-2">레이어 관리</div>
             <div class="flex items-center gap-3 px-3 py-3 rounded-xl hover:bg-slate-50 cursor-pointer">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-text-sub)" stroke-width="1.8"><polygon points="12 2 2 7 12 12 22 7"/><polyline points="2 17 12 22 22 17"/></svg>
-              <span class="text-sm text-slate-700">편집 레이어 설정</span>
-              <svg class="ml-auto" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-border-light)" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
-            </div>
-            <div class="flex items-center gap-3 px-3 py-3 rounded-xl hover:bg-slate-50 cursor-pointer">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-text-sub)" stroke-width="1.8"><polygon points="12 2 2 7 12 12 22 7"/><polyline points="2 12 12 17 22 12"/></svg>
               <span class="text-sm text-slate-700">레이어 관리</span>
               <svg class="ml-auto" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-border-light)" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
@@ -1466,8 +1704,8 @@ tailwind.config = {
 </div>
 
 <!-- ==================== 3c. SIDE MENU (Offline) ==================== -->
-<div class="relative" style="position:absolute;left:1200px;top:3150px;">
-  <div class="screen-label">3c. Drawer (Offline)</div>
+<div class="relative" data-screen="drawer-offline" style="position:absolute;left:1200px;top:3150px;">
+  <div class="screen-label">29. Drawer (Offline)</div>
   <div class="phone">
     <div class="notch"></div>
     <div class="w-full h-full relative overflow-hidden">
@@ -1491,11 +1729,6 @@ tailwind.config = {
         <div class="flex-1 overflow-y-auto py-2">
           <div class="px-4 py-2">
             <div class="text-xs font-semibold text-slate-400 uppercase tracking-wider px-3 py-2">레이어 관리</div>
-            <div class="flex items-center gap-3 px-3 py-3 rounded-xl hover:bg-slate-50 cursor-pointer">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-text-sub)" stroke-width="1.8"><polygon points="12 2 2 7 12 12 22 7"/><polyline points="2 17 12 22 22 17"/></svg>
-              <span class="text-sm text-slate-700">편집 레이어 설정</span>
-              <svg class="ml-auto" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-border-light)" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
-            </div>
             <div class="flex items-center gap-3 px-3 py-3 rounded-xl hover:bg-slate-50 cursor-pointer">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-text-sub)" stroke-width="1.8"><polygon points="12 2 2 7 12 12 22 7"/><polyline points="2 12 12 17 22 12"/></svg>
               <span class="text-sm text-slate-700">레이어 관리</span>
@@ -1550,8 +1783,8 @@ tailwind.config = {
 </div>
 
 <!-- ==================== 4. LOGIN ==================== -->
-<div class="relative" style="position:absolute;left:600px;top:0px;">
-  <div class="screen-label">4. Login (PINOGIO)</div>
+<div class="relative" data-screen="login" style="position:absolute;left:600px;top:0px;">
+  <div class="screen-label">2. Login</div>
   <div class="phone">
     <div class="notch"></div>
     <div class="w-full h-full bg-white relative overflow-hidden">
@@ -1620,8 +1853,8 @@ tailwind.config = {
 </div>
 
 <!-- ==================== 5. PROJECT LIST ==================== -->
-<div class="relative" style="position:absolute;left:1800px;top:0px;">
-  <div class="screen-label">5. Project List</div>
+<div class="relative" data-screen="proj-list" style="position:absolute;left:1800px;top:0px;">
+  <div class="screen-label">4. Project List</div>
   <div class="phone">
     <div class="notch"></div>
     <div class="w-full h-full bg-slate-50 relative overflow-hidden">
@@ -1780,8 +2013,8 @@ tailwind.config = {
 </div>
 
 <!-- ==================== 6. LAYER MANAGEMENT ==================== -->
-<div class="relative" style="position:absolute;left:1800px;top:3150px;">
-  <div class="screen-label">6. Layer Management</div>
+<div class="relative" data-screen="layer-mgmt" style="position:absolute;left:1800px;top:3150px;">
+  <div class="screen-label">30. Layer Management</div>
   <div class="phone">
     <div class="notch"></div>
     <div class="w-full h-full relative overflow-hidden">
@@ -1910,8 +2143,8 @@ tailwind.config = {
 </div>
 
 <!-- ==================== 7. OFFLINE / GPKG ==================== -->
-<div class="relative" style="position:absolute;left:1200px;top:4200px;">
-  <div class="screen-label">7. Offline GPKG</div>
+<div class="relative" data-screen="off-gpkg" style="position:absolute;left:1200px;top:4200px;">
+  <div class="screen-label">40. Offline GPKG</div>
   <div class="phone">
     <div class="notch"></div>
     <div class="w-full h-full bg-slate-50 relative overflow-hidden">
@@ -2033,8 +2266,8 @@ tailwind.config = {
 </div>
 
 <!-- ==================== 8. ATTRIBUTE FORM (BOTTOM SHEET) ==================== -->
-<div class="relative" style="position:absolute;left:2400px;top:2100px;">
-  <div class="screen-label">8. Attribute Form</div>
+<div class="relative" data-screen="attr-form" style="position:absolute;left:3000px;top:2100px;">
+  <div class="screen-label">22. Attribute Form</div>
   <div class="phone">
     <div class="notch"></div>
     <div class="w-full h-full relative overflow-hidden">
@@ -2073,17 +2306,28 @@ tailwind.config = {
           <div class="flex-1 overflow-y-auto px-5 pb-4 space-y-4">
             <div>
               <label class="text-xs font-semibold text-slate-500 uppercase tracking-wider">사진</label>
+              <!-- 사진 스트립 -->
+              <div class="mt-2 flex gap-2 overflow-x-auto pb-1" style="scrollbar-width:none">
+                <!-- 추가 버튼 (인스타 그라디언트) -->
+                <div class="flex-shrink-0 w-20 h-20 rounded-2xl flex flex-col items-center justify-center gap-1 cursor-pointer" style="background:linear-gradient(135deg,#833ab4,#fd1d1d,#fcb045)">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="3"/></svg>
+                  <span class="text-white font-semibold" style="font-size:9px">추가</span>
+                </div>
+                <!-- 업로드된 사진들 -->
+                <div class="flex-shrink-0 w-20 h-20 rounded-2xl" style="background:linear-gradient(135deg,#667eea,#764ba2)"></div>
+                <div class="flex-shrink-0 w-20 h-20 rounded-2xl" style="background:linear-gradient(135deg,#f093fb,#f5576c)"></div>
+                <div class="flex-shrink-0 w-20 h-20 rounded-2xl" style="background:linear-gradient(135deg,#4facfe,#00f2fe)"></div>
+              </div>
+              <!-- 촬영 / 갤러리 탭 -->
               <div class="mt-2 flex gap-2">
-                <div class="w-16 h-16 rounded-xl bg-slate-100 flex flex-col items-center justify-center border-2 border-dashed border-slate-300 gap-0.5">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--color-text-muted)" stroke-width="1.5"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
-                  <span class="text-slate-400" style="font-size:8px">촬영</span>
-                </div>
-                <div class="w-16 h-16 rounded-xl bg-slate-100 flex flex-col items-center justify-center border-2 border-dashed border-slate-300 gap-0.5">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--color-text-muted)" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
-                  <span class="text-slate-400" style="font-size:8px">갤러리</span>
-                </div>
-                <div class="w-16 h-16 rounded-xl bg-gradient-to-br from-slate-200 to-slate-300"></div>
-                <div class="w-16 h-16 rounded-xl bg-gradient-to-br from-blue-100 to-blue-200"></div>
+                <button class="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-slate-100 text-slate-500 text-xs font-medium">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
+                  촬영
+                </button>
+                <button class="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-slate-100 text-slate-500 text-xs font-medium">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+                  갤러리
+                </button>
               </div>
             </div>
             <div>
@@ -2126,8 +2370,8 @@ tailwind.config = {
 </div>
 
 <!-- ==================== FS-A. FEATURE SELECTED — POINT ==================== -->
-<div class="relative" style="position:absolute;left:5400px;top:3150px;">
-  <div class="screen-label">FS-A. Point 선택</div>
+<div class="relative" data-screen="fs-a" style="position:absolute;left:4800px;top:3150px;">
+  <div class="screen-label">35. FS-A (Point)</div>
   <div class="phone">
     <div class="notch"></div>
     <div class="w-full h-full relative overflow-hidden">
@@ -2178,6 +2422,9 @@ tailwind.config = {
         <div class="bg-white/95 backdrop-blur-sm rounded-xl px-4 py-2.5 flex items-center gap-2 shadow-sm">
           <div class="w-2 h-2 rounded-full bg-accent-500 pulse-dot"></div>
           <span class="text-sm font-medium text-slate-700 flex-1">하천조사 2026 편집 중</span>
+          <button class="py-1.5 px-1.5 rounded-lg bg-white/70 border border-slate-200/80 flex items-center justify-center flex-shrink-0">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--color-text-sub)" stroke-width="2.2" stroke-linecap="round"><polyline points="23 4 23 10 17 10"/><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/></svg>
+          </button>
           <button class="bg-slate-700 text-white text-xs font-medium rounded-lg px-3 py-1.5">편집 종료</button>
         </div>
       </div>
@@ -2187,20 +2434,21 @@ tailwind.config = {
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><polygon points="12,3 14,10 12,9 10,10" fill="var(--color-danger)"/><polygon points="12,21 14,14 12,15 10,14" fill="var(--color-text-muted)"/><text x="12" y="2" text-anchor="middle" font-size="7" fill="var(--color-danger)" font-weight="700">N</text></svg>
         </button>
       </div>
-      <!-- Zoom -->
-      <div class="absolute right-3 z-20 bg-white rounded-2xl shadow-md overflow-hidden" style="top:162px">
-        <button class="w-11 h-11 flex items-center justify-center border-b border-slate-100 text-slate-600 font-bold text-xl">+</button>
-        <button class="w-11 h-11 flex items-center justify-center text-slate-600 font-bold text-xl">−</button>
+      <!-- Layer TOC button -->
+      <div class="absolute right-3 z-20" style="top:162px">
+        <button class="w-11 h-11 bg-white rounded-2xl shadow-md flex items-center justify-center">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-text-main)" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+        </button>
       </div>
       <!-- Bottom Sheet: Point Feature -->
       <div class="absolute bottom-0 left-0 right-0 z-30">
         <div class="bg-white rounded-t-3xl shadow-2xl px-5 pt-4 pb-8">
           <div class="w-10 h-1 rounded-full bg-slate-200 mx-auto mb-4"></div>
-          <div class="flex items-center gap-3 mb-3">
-            <div class="w-10 h-10 rounded-xl bg-blue-50 flex items-center justify-center">
+          <div class="flex items-center gap-2 mb-3">
+            <div class="w-10 h-10 rounded-xl bg-blue-50 flex items-center justify-center flex-shrink-0">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="10" r="3" fill="var(--color-brand)"/><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" fill="var(--color-brand)" opacity="0.18" stroke="var(--color-brand)" stroke-width="1.5"/></svg>
             </div>
-            <div class="flex-1">
+            <div class="flex-1 min-w-0">
               <div class="font-semibold text-slate-800 text-base">측정소 B</div>
               <div class="flex items-center gap-1.5 mt-0.5">
                 <span class="geo-chip geo-chip-point">
@@ -2210,6 +2458,9 @@ tailwind.config = {
                 <span class="text-xs text-slate-400">수질측정소 #02</span>
               </div>
             </div>
+            <button class="w-8 h-8 rounded-xl bg-brand-50 flex items-center justify-center flex-shrink-0"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--color-brand-dark)" stroke-width="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg></button>
+            <button class="w-8 h-8 rounded-xl bg-slate-100 flex items-center justify-center flex-shrink-0"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--color-text-main)" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7"/><polyline points="2 17 12 22 22 17"/></svg></button>
+            <button class="w-8 h-8 rounded-xl bg-red-50 flex items-center justify-center flex-shrink-0"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--color-danger)" stroke-width="2"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg></button>
           </div>
           <div class="border-t border-slate-100 py-2.5 space-y-2">
             <div class="flex justify-between text-sm"><span class="text-slate-400">측정날짜</span><span class="text-slate-800 font-medium">2026-03-15</span></div>
@@ -2220,17 +2471,6 @@ tailwind.config = {
             <div class="w-14 h-14 rounded-lg bg-gradient-to-br from-blue-100 to-blue-200 flex items-center justify-center"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--color-blue-light)" stroke-width="1.5"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg></div>
             <div class="w-14 h-14 rounded-lg bg-gradient-to-br from-slate-100 to-slate-200 flex items-center justify-center"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--color-border-light)" stroke-width="1.5"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg></div>
           </div>
-          <div class="flex gap-2">
-            <button class="flex-1 py-2.5 bg-brand-50 text-brand-700 text-sm font-medium rounded-xl flex items-center justify-center gap-1.5">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>속성
-            </button>
-            <button class="flex-1 py-2.5 bg-slate-100 text-slate-700 text-sm font-medium rounded-xl flex items-center justify-center gap-1.5">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7"/><polyline points="2 17 12 22 22 17"/></svg>형상
-            </button>
-            <button class="flex-1 py-2.5 bg-red-50 text-red-500 text-sm font-medium rounded-xl flex items-center justify-center gap-1.5">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>삭제
-            </button>
-          </div>
         </div>
       </div>
       <div class="home-indicator" style="background:rgba(0,0,0,0.15)"></div>
@@ -2240,8 +2480,8 @@ tailwind.config = {
 </div>
 
 <!-- ==================== FS-B. FEATURE SELECTED — LINE ==================== -->
-<div class="relative" style="position:absolute;left:6000px;top:3150px;">
-  <div class="screen-label">FS-B. Line 선택</div>
+<div class="relative" data-screen="fs-b" style="position:absolute;left:5400px;top:3150px;">
+  <div class="screen-label">36. FS-B (Line)</div>
   <div class="phone">
     <div class="notch"></div>
     <div class="w-full h-full relative overflow-hidden">
@@ -2286,6 +2526,9 @@ tailwind.config = {
         <div class="bg-white/95 backdrop-blur-sm rounded-xl px-4 py-2.5 flex items-center gap-2 shadow-sm">
           <div class="w-2 h-2 rounded-full bg-accent-500 pulse-dot"></div>
           <span class="text-sm font-medium text-slate-700 flex-1">하천조사 2026 편집 중</span>
+          <button class="py-1.5 px-1.5 rounded-lg bg-white/70 border border-slate-200/80 flex items-center justify-center flex-shrink-0">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--color-text-sub)" stroke-width="2.2" stroke-linecap="round"><polyline points="23 4 23 10 17 10"/><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/></svg>
+          </button>
           <button class="bg-slate-700 text-white text-xs font-medium rounded-lg px-3 py-1.5">편집 종료</button>
         </div>
       </div>
@@ -2294,19 +2537,21 @@ tailwind.config = {
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><polygon points="12,3 14,10 12,9 10,10" fill="var(--color-danger)"/><polygon points="12,21 14,14 12,15 10,14" fill="var(--color-text-muted)"/><text x="12" y="2" text-anchor="middle" font-size="7" fill="var(--color-danger)" font-weight="700">N</text></svg>
         </button>
       </div>
-      <div class="absolute right-3 z-20 bg-white rounded-2xl shadow-md overflow-hidden" style="top:162px">
-        <button class="w-11 h-11 flex items-center justify-center border-b border-slate-100 text-slate-600 font-bold text-xl">+</button>
-        <button class="w-11 h-11 flex items-center justify-center text-slate-600 font-bold text-xl">−</button>
+      <!-- Layer TOC button -->
+      <div class="absolute right-3 z-20" style="top:162px">
+        <button class="w-11 h-11 bg-white rounded-2xl shadow-md flex items-center justify-center">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-text-main)" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+        </button>
       </div>
       <!-- Bottom Sheet: Line Feature -->
       <div class="absolute bottom-0 left-0 right-0 z-30">
         <div class="bg-white rounded-t-3xl shadow-2xl px-5 pt-4 pb-8">
           <div class="w-10 h-1 rounded-full bg-slate-200 mx-auto mb-4"></div>
-          <div class="flex items-center gap-3 mb-3">
-            <div class="w-10 h-10 rounded-xl flex items-center justify-center" style="background:#F5F3FF">
+          <div class="flex items-center gap-2 mb-3">
+            <div class="w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0" style="background:#F5F3FF">
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M3 17 C8 12 12 6 21 7" stroke="var(--color-purple)" stroke-width="2.5" stroke-linecap="round"/><circle cx="3" cy="17" r="2" fill="var(--color-purple)"/><circle cx="21" cy="7" r="2" fill="var(--color-purple)"/></svg>
             </div>
-            <div class="flex-1">
+            <div class="flex-1 min-w-0">
               <div class="font-semibold text-slate-800 text-base">하천구간 A</div>
               <div class="flex items-center gap-1.5 mt-0.5">
                 <span class="geo-chip geo-chip-line">
@@ -2316,22 +2561,14 @@ tailwind.config = {
                 <span class="text-xs text-slate-400">하천조사 #07</span>
               </div>
             </div>
+            <button class="w-8 h-8 rounded-xl bg-brand-50 flex items-center justify-center flex-shrink-0"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--color-brand-dark)" stroke-width="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg></button>
+            <button class="w-8 h-8 rounded-xl bg-slate-100 flex items-center justify-center flex-shrink-0"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--color-text-main)" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7"/><polyline points="2 17 12 22 22 17"/></svg></button>
+            <button class="w-8 h-8 rounded-xl bg-red-50 flex items-center justify-center flex-shrink-0"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--color-danger)" stroke-width="2"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg></button>
           </div>
           <div class="border-t border-slate-100 py-2.5 space-y-2">
             <div class="flex justify-between text-sm"><span class="text-slate-400">총 길이</span><span class="text-slate-800 font-medium">287m</span></div>
             <div class="flex justify-between text-sm"><span class="text-slate-400">평균 하폭</span><span class="text-slate-800 font-medium">12.4m</span></div>
             <div class="flex justify-between text-sm"><span class="text-slate-400">측정일</span><span class="text-slate-800 font-medium">2026-03-10</span></div>
-          </div>
-          <div class="flex gap-2 mt-2">
-            <button class="flex-1 py-2.5 bg-brand-50 text-brand-700 text-sm font-medium rounded-xl flex items-center justify-center gap-1.5">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>속성
-            </button>
-            <button class="flex-1 py-2.5 bg-slate-100 text-slate-700 text-sm font-medium rounded-xl flex items-center justify-center gap-1.5">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7"/><polyline points="2 17 12 22 22 17"/></svg>형상
-            </button>
-            <button class="flex-1 py-2.5 bg-red-50 text-red-500 text-sm font-medium rounded-xl flex items-center justify-center gap-1.5">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>삭제
-            </button>
           </div>
         </div>
       </div>
@@ -2342,8 +2579,8 @@ tailwind.config = {
 </div>
 
 <!-- ==================== FS-C. FEATURE SELECTED — POLYGON ==================== -->
-<div class="relative" style="position:absolute;left:6600px;top:3150px;">
-  <div class="screen-label">FS-C. Polygon 선택</div>
+<div class="relative" data-screen="fs-c" style="position:absolute;left:6000px;top:3150px;">
+  <div class="screen-label">37. FS-C (Polygon)</div>
   <div class="phone">
     <div class="notch"></div>
     <div class="w-full h-full relative overflow-hidden">
@@ -2392,6 +2629,9 @@ tailwind.config = {
         <div class="bg-white/95 backdrop-blur-sm rounded-xl px-4 py-2.5 flex items-center gap-2 shadow-sm">
           <div class="w-2 h-2 rounded-full bg-accent-500 pulse-dot"></div>
           <span class="text-sm font-medium text-slate-700 flex-1">하천조사 2026 편집 중</span>
+          <button class="py-1.5 px-1.5 rounded-lg bg-white/70 border border-slate-200/80 flex items-center justify-center flex-shrink-0">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--color-text-sub)" stroke-width="2.2" stroke-linecap="round"><polyline points="23 4 23 10 17 10"/><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/></svg>
+          </button>
           <button class="bg-slate-700 text-white text-xs font-medium rounded-lg px-3 py-1.5">편집 종료</button>
         </div>
       </div>
@@ -2400,19 +2640,21 @@ tailwind.config = {
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><polygon points="12,3 14,10 12,9 10,10" fill="var(--color-danger)"/><polygon points="12,21 14,14 12,15 10,14" fill="var(--color-text-muted)"/><text x="12" y="2" text-anchor="middle" font-size="7" fill="var(--color-danger)" font-weight="700">N</text></svg>
         </button>
       </div>
-      <div class="absolute right-3 z-20 bg-white rounded-2xl shadow-md overflow-hidden" style="top:162px">
-        <button class="w-11 h-11 flex items-center justify-center border-b border-slate-100 text-slate-600 font-bold text-xl">+</button>
-        <button class="w-11 h-11 flex items-center justify-center text-slate-600 font-bold text-xl">−</button>
+      <!-- Layer TOC button -->
+      <div class="absolute right-3 z-20" style="top:162px">
+        <button class="w-11 h-11 bg-white rounded-2xl shadow-md flex items-center justify-center">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-text-main)" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+        </button>
       </div>
       <!-- Bottom Sheet: Polygon Feature -->
       <div class="absolute bottom-0 left-0 right-0 z-30">
         <div class="bg-white rounded-t-3xl shadow-2xl px-5 pt-4 pb-8">
           <div class="w-10 h-1 rounded-full bg-slate-200 mx-auto mb-4"></div>
-          <div class="flex items-center gap-3 mb-3">
-            <div class="w-10 h-10 rounded-xl flex items-center justify-center" style="background:var(--color-map-bg-green-light)">
+          <div class="flex items-center gap-2 mb-3">
+            <div class="w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0" style="background:var(--color-map-bg-green-light)">
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><polygon points="12,2 22,8.5 22,15.5 12,22 2,15.5 2,8.5" fill="rgba(5,150,105,0.15)" stroke="var(--color-green)" stroke-width="1.8" stroke-linejoin="round"/></svg>
             </div>
-            <div class="flex-1">
+            <div class="flex-1 min-w-0">
               <div class="font-semibold text-slate-800 text-base">조사구역 01</div>
               <div class="flex items-center gap-1.5 mt-0.5">
                 <span class="geo-chip geo-chip-polygon">
@@ -2422,22 +2664,14 @@ tailwind.config = {
                 <span class="text-xs text-slate-400">조사경계 #01</span>
               </div>
             </div>
+            <button class="w-8 h-8 rounded-xl bg-brand-50 flex items-center justify-center flex-shrink-0"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--color-brand-dark)" stroke-width="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg></button>
+            <button class="w-8 h-8 rounded-xl bg-slate-100 flex items-center justify-center flex-shrink-0"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--color-text-main)" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7"/><polyline points="2 17 12 22 22 17"/></svg></button>
+            <button class="w-8 h-8 rounded-xl bg-red-50 flex items-center justify-center flex-shrink-0"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--color-danger)" stroke-width="2"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg></button>
           </div>
           <div class="border-t border-slate-100 py-2.5 space-y-2">
             <div class="flex justify-between text-sm"><span class="text-slate-400">면적</span><span class="text-slate-800 font-medium">18,420㎡</span></div>
             <div class="flex justify-between text-sm"><span class="text-slate-400">둘레</span><span class="text-slate-800 font-medium">654m</span></div>
             <div class="flex justify-between text-sm"><span class="text-slate-400">담당자</span><span class="text-slate-800 font-medium">김민준</span></div>
-          </div>
-          <div class="flex gap-2 mt-2">
-            <button class="flex-1 py-2.5 bg-brand-50 text-brand-700 text-sm font-medium rounded-xl flex items-center justify-center gap-1.5">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>속성
-            </button>
-            <button class="flex-1 py-2.5 bg-slate-100 text-slate-700 text-sm font-medium rounded-xl flex items-center justify-center gap-1.5">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7"/><polyline points="2 17 12 22 22 17"/></svg>형상
-            </button>
-            <button class="flex-1 py-2.5 bg-red-50 text-red-500 text-sm font-medium rounded-xl flex items-center justify-center gap-1.5">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>삭제
-            </button>
           </div>
         </div>
       </div>
@@ -2448,8 +2682,8 @@ tailwind.config = {
 </div>
 
 <!-- ==================== 27. DATASET MANAGE ==================== -->
-<div class="relative" style="position:absolute;left:0px;top:1050px;">
-  <div class="screen-label">27. Dataset Manage</div>
+<div class="relative" data-screen="dataset-mgmt" style="position:absolute;left:0px;top:1050px;">
+  <div class="screen-label">9. Dataset Manage</div>
   <div class="phone">
     <div class="notch"></div>
     <div class="w-full h-full bg-white relative overflow-hidden">
@@ -2535,8 +2769,8 @@ tailwind.config = {
 </div>
 
 <!-- ==================== 9. SERVER MANAGE ==================== -->
-<div class="relative" style="position:absolute;left:0px;top:4200px;">
-  <div class="screen-label">9. Server Manage</div>
+<div class="relative" data-screen="server-mgmt" style="position:absolute;left:0px;top:4200px;">
+  <div class="screen-label">38. Server Manage</div>
   <div class="phone">
     <div class="notch"></div>
     <div class="w-full h-full bg-white relative overflow-hidden">
@@ -2615,8 +2849,8 @@ tailwind.config = {
 </div>
 
 <!-- ==================== 10. ADD SERVER ==================== -->
-<div class="relative" style="position:absolute;left:600px;top:4200px;">
-  <div class="screen-label">10. Add Server</div>
+<div class="relative" data-screen="add-server" style="position:absolute;left:600px;top:4200px;">
+  <div class="screen-label">39. Add Server</div>
   <div class="phone">
     <div class="notch"></div>
     <div class="w-full h-full bg-white relative overflow-hidden">
@@ -2637,15 +2871,17 @@ tailwind.config = {
           <label class="text-xs font-semibold text-slate-500 uppercase tracking-wider">WFS URL</label>
           <input type="text" placeholder="https://example.com/geoserver/wfs" class="mt-2 w-full border border-slate-200 rounded-xl px-4 py-3.5 text-sm outline-none focus:border-brand-400 focus:ring-2 focus:ring-brand-100 transition" />
         </div>
-        <div class="flex gap-3">
-          <div class="flex-1">
-            <label class="text-xs font-semibold text-slate-500 uppercase tracking-wider">아이디</label>
-            <input type="text" placeholder="선택 사항" class="mt-2 w-full border border-slate-200 rounded-xl px-4 py-3.5 text-sm outline-none" />
-          </div>
-          <div class="flex-1">
-            <label class="text-xs font-semibold text-slate-500 uppercase tracking-wider">비밀번호</label>
-            <input type="password" placeholder="선택 사항" class="mt-2 w-full border border-slate-200 rounded-xl px-4 py-3.5 text-sm outline-none" />
-          </div>
+        <div>
+          <label class="text-xs font-semibold text-slate-500 uppercase tracking-wider">아이디</label>
+          <input type="text" placeholder="선택 사항" class="mt-2 w-full border border-slate-200 rounded-xl px-4 py-3.5 text-sm outline-none" />
+        </div>
+        <div>
+          <label class="text-xs font-semibold text-slate-500 uppercase tracking-wider">비밀번호</label>
+          <input type="password" placeholder="선택 사항" class="mt-2 w-full border border-slate-200 rounded-xl px-4 py-3.5 text-sm outline-none" />
+        </div>
+        <div>
+          <label class="text-xs font-semibold text-slate-500 uppercase tracking-wider">비밀번호 확인</label>
+          <input type="password" placeholder="선택 사항" class="mt-2 w-full border border-slate-200 rounded-xl px-4 py-3.5 text-sm outline-none" />
         </div>
 
         <div class="pt-2">
@@ -2667,8 +2903,8 @@ tailwind.config = {
 </div>
 
 <!-- ==================== 11. BOOKMARK ==================== -->
-<div class="relative" style="position:absolute;left:4800px;top:3150px;">
-  <div class="screen-label">11. Bookmark</div>
+<div class="relative" data-screen="bookmark" style="position:absolute;left:4200px;top:3150px;">
+  <div class="screen-label">34. Bookmark</div>
   <div class="phone">
     <div class="notch"></div>
     <div class="w-full h-full bg-slate-50 relative overflow-hidden">
@@ -2748,8 +2984,8 @@ tailwind.config = {
 </div>
 
 <!-- ==================== 12. CQL FILTER ==================== -->
-<div class="relative" style="position:absolute;left:3600px;top:3150px;">
-  <div class="screen-label">12. CQL Filter</div>
+<div class="relative" data-screen="cql-filter" style="position:absolute;left:3000px;top:3150px;">
+  <div class="screen-label">32. CQL Filter</div>
   <div class="phone">
     <div class="notch"></div>
     <div class="w-full h-full bg-white relative overflow-hidden">
@@ -2854,8 +3090,8 @@ tailwind.config = {
 </div>
 
 <!-- ==================== 13. GPS TRACKING ==================== -->
-<div class="relative" style="position:absolute;left:4200px;top:3150px;">
-  <div class="screen-label">13. GPS Tracking</div>
+<div class="relative" data-screen="gps-tracking" style="position:absolute;left:3600px;top:3150px;">
+  <div class="screen-label">33. GPS Tracking</div>
   <div class="phone">
     <div class="notch"></div>
     <div class="w-full h-full relative overflow-hidden">
@@ -2921,8 +3157,8 @@ tailwind.config = {
 </div>
 
 <!-- ==================== 14. GPKG CREATE ==================== -->
-<div class="relative" style="position:absolute;left:1800px;top:4200px;">
-  <div class="screen-label">14. GPKG Create</div>
+<div class="relative" data-screen="gpkg-create" style="position:absolute;left:1800px;top:4200px;">
+  <div class="screen-label">41. GPKG Create</div>
   <div class="phone">
     <div class="notch"></div>
     <div class="w-full h-full bg-white relative overflow-hidden">
@@ -3012,8 +3248,8 @@ tailwind.config = {
 </div>
 
 <!-- ==================== 15. SYNC OFFLINE ==================== -->
-<div class="relative" style="position:absolute;left:2400px;top:4200px;">
-  <div class="screen-label">15. Sync Offline</div>
+<div class="relative" data-screen="sync-offline" style="position:absolute;left:2400px;top:4200px;">
+  <div class="screen-label">42. Sync Offline</div>
   <div class="phone">
     <div class="notch"></div>
     <div class="w-full h-full bg-white relative overflow-hidden">
@@ -3104,8 +3340,8 @@ tailwind.config = {
 </div>
 
 <!-- ==================== 16. REGISTER ==================== -->
-<div class="relative" style="position:absolute;left:1200px;top:0px;">
-  <div class="screen-label">16. Register</div>
+<div class="relative" data-screen="register" style="position:absolute;left:1200px;top:0px;">
+  <div class="screen-label">3. Register</div>
   <div class="phone">
     <div class="notch"></div>
     <div class="w-full h-full bg-white relative overflow-hidden">
@@ -3159,8 +3395,8 @@ tailwind.config = {
 </div>
 
 <!-- ==================== 17. PROJECT DETAIL ==================== -->
-<div class="relative" style="position:absolute;left:3600px;top:0px;">
-  <div class="screen-label">17. Project Detail</div>
+<div class="relative" data-screen="proj-detail" style="position:absolute;left:3600px;top:0px;">
+  <div class="screen-label">7. Project Detail</div>
   <div class="phone">
     <div class="notch"></div>
     <div class="w-full h-full bg-slate-50 relative overflow-hidden">
@@ -3269,8 +3505,8 @@ tailwind.config = {
 </div>
 
 <!-- ==================== 18. DATASET COLUMNS ==================== -->
-<div class="relative" style="position:absolute;left:2400px;top:1050px;">
-  <div class="screen-label">18. Dataset Columns</div>
+<div class="relative" data-screen="dataset-col" style="position:absolute;left:2400px;top:1050px;">
+  <div class="screen-label">13. Dataset Columns</div>
   <div class="phone">
     <div class="notch"></div>
     <div class="w-full h-full bg-white relative overflow-hidden">
@@ -3359,8 +3595,8 @@ tailwind.config = {
 </div>
 
 <!-- ==================== 19. MEMBER MANAGE ==================== -->
-<div class="relative" style="position:absolute;left:3000px;top:1050px;">
-  <div class="screen-label">19. Member Manage</div>
+<div class="relative" data-screen="member-mgmt" style="position:absolute;left:3000px;top:1050px;">
+  <div class="screen-label">14. Member Manage</div>
   <div class="phone">
     <div class="notch"></div>
     <div class="w-full h-full bg-slate-50 relative overflow-hidden">
@@ -3438,8 +3674,8 @@ tailwind.config = {
 </div>
 
 <!-- ==================== 20. MY PAGE ==================== -->
-<div class="relative" style="position:absolute;left:3600px;top:1050px;">
-  <div class="screen-label">20. My Page</div>
+<div class="relative" data-screen="my-page" style="position:absolute;left:3600px;top:1050px;">
+  <div class="screen-label">15. My Page</div>
   <div class="phone">
     <div class="notch"></div>
     <div class="w-full h-full bg-slate-50 relative overflow-hidden">
@@ -3532,8 +3768,8 @@ tailwind.config = {
 </div>
 
 <!-- ==================== 21. EDIT HISTORY ==================== -->
-<div class="relative" style="position:absolute;left:4800px;top:2100px;">
-  <div class="screen-label">21. Edit History</div>
+<div class="relative" data-screen="edit-history" style="position:absolute;left:5400px;top:2100px;">
+  <div class="screen-label">26. Edit History</div>
   <div class="phone">
     <div class="notch"></div>
     <div class="w-full h-full bg-slate-50 relative overflow-hidden">
@@ -3691,8 +3927,8 @@ tailwind.config = {
 </div>
 
 <!-- ==================== 22. FEATURE INFO POPUP ==================== -->
-<div class="relative" style="position:absolute;left:4200px;top:2100px;">
-  <div class="screen-label">22. Feature Info (Map)</div>
+<div class="relative" data-screen="feat-info" style="position:absolute;left:4800px;top:2100px;">
+  <div class="screen-label">25. Feature Info</div>
   <div class="phone">
     <div class="notch"></div>
     <div class="w-full h-full relative overflow-hidden">
@@ -3793,8 +4029,8 @@ tailwind.config = {
 </div>
 
 <!-- ==================== 23. SEARCH PROJECT ==================== -->
-<div class="relative" style="position:absolute;left:2400px;top:0px;">
-  <div class="screen-label">23. Search & Join Project</div>
+<div class="relative" data-screen="search-join" style="position:absolute;left:2400px;top:0px;">
+  <div class="screen-label">5. Search & Join Project</div>
   <div class="phone">
     <div class="notch"></div>
     <div class="w-full h-full bg-slate-50 relative overflow-hidden">
@@ -3887,8 +4123,8 @@ tailwind.config = {
 </div>
 
 <!-- ==================== 24. PROJECT CREATE ==================== -->
-<div class="relative" style="position:absolute;left:3000px;top:0px;">
-  <div class="screen-label">24. Project Create</div>
+<div class="relative" data-screen="proj-create" style="position:absolute;left:3000px;top:0px;">
+  <div class="screen-label">6. Project Create</div>
   <div class="phone">
     <div class="notch"></div>
     <div class="w-full h-full bg-white relative overflow-hidden">
@@ -3960,8 +4196,8 @@ tailwind.config = {
 </div>
 
 <!-- ==================== 25. EMPTY STATES ==================== -->
-<div class="relative" style="position:absolute;left:3600px;top:4200px;">
-  <div class="screen-label">25. Empty / Error States</div>
+<div class="relative" data-screen="empty-states" style="position:absolute;left:3600px;top:4200px;">
+  <div class="screen-label">44. Empty / Error States</div>
   <div class="phone">
     <div class="notch"></div>
     <div class="w-full h-full bg-slate-50 relative overflow-hidden">
@@ -4022,8 +4258,8 @@ tailwind.config = {
 </div>
 
 <!-- ==================== 26. CONFIRM DIALOG & TOAST ==================== -->
-<div class="relative" style="position:absolute;left:4200px;top:4200px;">
-  <div class="screen-label">26. Dialog & Toast</div>
+<div class="relative" data-screen="dialog-toast" style="position:absolute;left:4200px;top:4200px;">
+  <div class="screen-label">45. Dialog & Toast</div>
   <div class="phone">
     <div class="notch"></div>
     <div class="w-full h-full relative overflow-hidden">
@@ -4070,9 +4306,95 @@ tailwind.config = {
   <div class="screen-label-bottom">Dialog & Toast<span>확인 다이얼로그 / 토스트 / 오프라인 배너</span></div>
 </div>
 
+<!-- ==================== 46. OFFLINE MAP VIEW ==================== -->
+<div class="relative" data-screen="offline-map-view" style="position:absolute;left:4800px;top:4200px;">
+  <div class="screen-label">46. Offline Map View</div>
+  <div class="phone">
+    <div class="notch"></div>
+    <div class="w-full h-full relative overflow-hidden">
+      <div class="map-placeholder w-full h-full">
+        <!-- 지도 격자 -->
+        <div class="absolute inset-0 opacity-10">
+          <div class="absolute top-32 left-0 right-0 h-px bg-slate-400"></div>
+          <div class="absolute top-56 left-0 right-0 h-px bg-slate-400"></div>
+          <div class="absolute top-80 left-0 right-0 h-px bg-slate-400"></div>
+          <div class="absolute left-24 top-0 bottom-0 w-px bg-slate-400"></div>
+          <div class="absolute left-48 top-0 bottom-0 w-px bg-slate-400"></div>
+          <div class="absolute left-72 top-0 bottom-0 w-px bg-slate-400"></div>
+        </div>
+        <div class="absolute top-36 left-6 text-xs text-slate-400 font-medium opacity-50">서울특별시 광진구</div>
+        <svg class="absolute inset-0 w-full h-full" style="pointer-events:none">
+          <path d="M10,170 C60,195 90,235 150,248 C210,261 245,288 295,312 C335,330 365,358 395,378" fill="none" stroke="var(--color-blue-light)" stroke-width="10" stroke-linecap="round" opacity="0.55"/>
+          <path d="M10,185 C60,210 90,250 150,263 C210,276 245,303 295,327 C335,345 365,373 395,393" fill="none" stroke="var(--color-blue-lighter)" stroke-width="5" stroke-linecap="round" opacity="0.35"/>
+          <polygon points="60,160 200,155 320,270 370,390 240,400 80,310" fill="rgba(39,171,131,0.13)" stroke="var(--color-success)" stroke-width="1.5"/>
+        </svg>
+        <div class="absolute" style="top:212px;left:72px"><div class="w-6 h-6 rounded-full bg-brand-500 border-2 border-white shadow-md flex items-center justify-center"><div class="w-1.5 h-1.5 rounded-full bg-white"></div></div></div>
+        <div class="absolute" style="top:292px;left:192px"><div class="w-6 h-6 rounded-full bg-brand-500 border-2 border-white shadow-md flex items-center justify-center"><div class="w-1.5 h-1.5 rounded-full bg-white"></div></div></div>
+        <div class="absolute" style="top:362px;left:302px"><div class="w-6 h-6 rounded-full bg-brand-500 border-2 border-white shadow-md flex items-center justify-center"><div class="w-1.5 h-1.5 rounded-full bg-white"></div></div></div>
+      </div>
+      <div class="status-bar text-slate-800 absolute top-0 left-0 right-0"><span class="font-semibold text-sm">9:41</span><div class="flex gap-1.5 items-center opacity-60"><svg width="16" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12.55a11 11 0 0 1 14.08 0"/></svg></div></div>
+      <!-- Top bar -->
+      <div class="absolute top-14 left-4 right-4 z-30">
+        <div class="bg-white/95 backdrop-blur-sm rounded-xl px-4 py-2.5 flex items-center gap-2 shadow-sm">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--color-text-main)" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+          <span class="text-sm font-medium text-slate-700 flex-1">하천조사 2026</span>
+          <button class="w-8 h-8 rounded-lg bg-slate-100 flex items-center justify-center">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-text-tertiary)" stroke-width="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+          </button>
+          <button class="w-8 h-8 rounded-lg bg-slate-100 flex items-center justify-center">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-text-tertiary)" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+          </button>
+        </div>
+      </div>
+      <!-- Scale bar -->
+      <div class="absolute left-4 z-20" style="bottom:82px">
+        <div style="display:inline-block;background:rgba(255,255,255,0.85);backdrop-filter:blur(4px);border-radius:6px;padding:4px 8px;box-shadow:0 1px 3px rgba(0,0,0,0.12)">
+          <svg width="60" height="8" viewBox="0 0 60 8"><line x1="1" y1="4" x2="59" y2="4" stroke="var(--color-text-tertiary)" stroke-width="1.5" stroke-linecap="round"/><line x1="1" y1="1" x2="1" y2="7" stroke="var(--color-text-tertiary)" stroke-width="1.5" stroke-linecap="round"/><line x1="59" y1="1" x2="59" y2="7" stroke="var(--color-text-tertiary)" stroke-width="1.5" stroke-linecap="round"/></svg>
+          <div style="text-align:right;margin-top:2px"><span style="font-size:9px;font-weight:700;color:var(--color-text-tertiary);letter-spacing:0.2px;line-height:1">100m</span></div>
+        </div>
+      </div>
+      <!-- Compass -->
+      <div class="absolute right-3 z-20" style="top:110px">
+        <button class="w-11 h-11 bg-white rounded-full shadow-md flex items-center justify-center">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <polygon points="12,3 14,10 12,9 10,10" fill="var(--color-danger)"/>
+            <polygon points="12,21 14,14 12,15 10,14" fill="var(--color-text-muted)"/>
+            <text x="12" y="2" text-anchor="middle" font-size="7" fill="var(--color-danger)" font-weight="700">N</text>
+          </svg>
+        </button>
+      </div>
+      <!-- Layer TOC -->
+      <div class="absolute right-3 z-20" style="top:162px">
+        <button class="w-11 h-11 bg-white rounded-2xl shadow-md flex items-center justify-center">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-text-main)" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+        </button>
+      </div>
+      <!-- GPS -->
+      <div class="absolute right-3 z-20" style="bottom:128px">
+        <button class="w-11 h-11 bg-white rounded-full shadow-md flex items-center justify-center">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-brand)" stroke-width="2"><circle cx="12" cy="12" r="3" fill="var(--color-brand)" stroke="none"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3"/><circle cx="12" cy="12" r="7" stroke-dasharray="4,3"/></svg>
+        </button>
+      </div>
+      <!-- 작업기록 확인 아이콘 버튼 + 편집 FAB -->
+      <div class="absolute bottom-16 right-4 z-30 flex items-end gap-2">
+        <button class="w-11 h-11 bg-white rounded-2xl shadow-md flex flex-col items-center justify-center gap-0.5">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--color-text-sub)" stroke-width="1.8"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+          <span style="font-size:7px;color:var(--color-text-sub);line-height:1">기록</span>
+        </button>
+        <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-brand-500 to-brand-700 shadow-lg shadow-brand-500/30 flex flex-col items-center justify-center">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+          <span style="font-size:9px;color:white;margin-top:1px;">편집</span>
+        </div>
+      </div>
+      <div class="home-indicator" style="background:rgba(0,0,0,0.15)"></div>
+    </div>
+  </div>
+  <div class="screen-label-bottom">Offline Map View<span>오프라인 지도 · 작업기록 확인 / 편집 추가</span></div>
+</div>
+
 <!-- ==================== 28. DATASET ADD ==================== -->
-<div class="relative" style="position:absolute;left:600px;top:1050px;">
-  <div class="screen-label">28. Dataset Add</div>
+<div class="relative" data-screen="dataset-add" style="position:absolute;left:600px;top:1050px;">
+  <div class="screen-label">10. Dataset Add</div>
   <div class="phone">
     <div class="notch"></div>
     <div class="w-full h-full bg-slate-50 relative overflow-hidden">
@@ -4203,8 +4525,8 @@ tailwind.config = {
 </div>
 
 <!-- ==================== 29. DATASET INFO ==================== -->
-<div class="relative" style="position:absolute;left:1200px;top:1050px;">
-  <div class="screen-label">29. Dataset Info</div>
+<div class="relative" data-screen="dataset-info" style="position:absolute;left:1200px;top:1050px;">
+  <div class="screen-label">11. Dataset Info</div>
   <div class="phone">
     <div class="notch"></div>
     <div class="w-full h-full bg-slate-50 relative overflow-hidden">
@@ -4311,8 +4633,8 @@ tailwind.config = {
 </div>
 
 <!-- ==================== 30. DATASET EDIT ==================== -->
-<div class="relative" style="position:absolute;left:1800px;top:1050px;">
-  <div class="screen-label">30. Dataset Edit</div>
+<div class="relative" data-screen="dataset-edit" style="position:absolute;left:1800px;top:1050px;">
+  <div class="screen-label">12. Dataset Edit</div>
   <div class="phone">
     <div class="notch"></div>
     <div class="w-full h-full bg-slate-50 relative overflow-hidden">
@@ -4379,8 +4701,8 @@ tailwind.config = {
 </div>
 
 <!-- ==================== 31. PROJECT EDIT ==================== -->
-<div class="relative" style="position:absolute;left:4200px;top:0px;">
-  <div class="screen-label">31. Project Edit</div>
+<div class="relative" data-screen="proj-edit" style="position:absolute;left:4200px;top:0px;">
+  <div class="screen-label">8. Project Edit</div>
   <div class="phone">
     <div class="notch"></div>
     <div class="w-full h-full bg-slate-50 relative overflow-hidden">
@@ -4447,8 +4769,8 @@ tailwind.config = {
 </div>
 
 <!-- ==================== 32. REFERENCE LAYER ==================== -->
-<div class="relative" style="position:absolute;left:2400px;top:3150px;">
-  <div class="screen-label">32. Reference Layer</div>
+<div class="relative" data-screen="ref-layer" style="position:absolute;left:2400px;top:3150px;">
+  <div class="screen-label">31. Reference Layer</div>
   <div class="phone">
     <div class="notch"></div>
     <div class="w-full h-full bg-slate-50 relative overflow-hidden">
@@ -4543,8 +4865,8 @@ tailwind.config = {
 </div>
 
 <!-- ==================== 33. SELECT AREA ==================== -->
-<div class="relative" style="position:absolute;left:3000px;top:4200px;">
-  <div class="screen-label">33. Select Area</div>
+<div class="relative" data-screen="select-area" style="position:absolute;left:3000px;top:4200px;">
+  <div class="screen-label">43. Select Area</div>
   <div class="phone">
     <div class="notch"></div>
     <div class="w-full h-full relative overflow-hidden">
@@ -4634,93 +4956,9 @@ tailwind.config = {
   <div class="screen-label-bottom">Select Area<span>오프라인 영역 선택 · 지도 드래그</span></div>
 </div>
 
-<!-- ==================== 34. LAYER SELECTOR ==================== -->
-<div class="relative" style="position:absolute;left:3000px;top:3150px;">
-  <div class="screen-label">34. Layer Selector</div>
-  <div class="phone">
-    <div class="notch"></div>
-    <div class="w-full h-full bg-slate-50 relative overflow-hidden">
-      <div class="status-bar text-slate-800"><span>9:41</span><div class="flex gap-1.5 items-center opacity-60"><svg width="16" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12.55a11 11 0 0 1 14.08 0"/></svg><svg width="16" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="6" width="18" height="12" rx="2"/></svg></div></div>
-
-      <!-- Header -->
-      <div class="bg-white px-5 pt-2 pb-4 border-b border-slate-100">
-        <div class="flex items-center justify-between">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--color-text-main)" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
-          <h1 class="text-lg font-bold text-slate-900">레이어 선택</h1>
-          <div class="w-6"></div>
-        </div>
-      </div>
-
-      <div class="px-5 pt-6 flex flex-col items-center">
-        <!-- Icon -->
-        <div class="w-16 h-16 rounded-2xl bg-brand-50 flex items-center justify-center mb-4">
-          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--color-brand)" stroke-width="1.5"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
-        </div>
-        <span class="text-sm text-slate-500 mb-6">레이어를 선택하세요</span>
-
-        <!-- Dropdown -->
-        <div class="w-full bg-white rounded-2xl border border-slate-200 overflow-hidden">
-          <div class="p-4 flex items-center justify-between border-b border-slate-100">
-            <div class="flex items-center gap-2">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-text-muted)" stroke-width="2"><rect x="2" y="2" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="8" rx="2"/></svg>
-              <span class="text-sm text-slate-500">서버 선택</span>
-            </div>
-            <div class="flex items-center gap-1.5 px-3 py-1.5 bg-brand-50 rounded-lg border border-brand-200">
-              <span class="text-sm font-medium text-brand-600">Sample Server</span>
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--color-brand)" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
-            </div>
-          </div>
-
-          <!-- Layer List -->
-          <div class="divide-y divide-slate-50">
-            <div class="p-4 flex items-center gap-3 bg-brand-50">
-              <div class="w-8 h-8 rounded-lg bg-brand-100 flex items-center justify-center">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-brand)" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/></svg>
-              </div>
-              <div class="flex-1">
-                <div class="text-sm font-medium text-brand-700">건물</div>
-                <div class="text-xs text-slate-400">Polygon · building</div>
-              </div>
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--color-brand)" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-            </div>
-            <div class="p-4 flex items-center gap-3">
-              <div class="w-8 h-8 rounded-lg bg-slate-100 flex items-center justify-center">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-text-muted)" stroke-width="2"><line x1="5" y1="19" x2="19" y2="5"/></svg>
-              </div>
-              <div class="flex-1">
-                <div class="text-sm font-medium text-slate-700">도로</div>
-                <div class="text-xs text-slate-400">LineString · road</div>
-              </div>
-            </div>
-            <div class="p-4 flex items-center gap-3">
-              <div class="w-8 h-8 rounded-lg bg-slate-100 flex items-center justify-center">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-text-muted)" stroke-width="2"><circle cx="12" cy="12" r="4"/></svg>
-              </div>
-              <div class="flex-1">
-                <div class="text-sm font-medium text-slate-700">측정소</div>
-                <div class="text-xs text-slate-400">Point · station</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Bottom Buttons -->
-      <div class="absolute bottom-0 left-0 right-0 px-5 pb-8 pt-3 bg-white border-t border-slate-100">
-        <div class="flex gap-3">
-          <button class="flex-1 py-3 text-sm font-medium text-slate-500 bg-slate-100 rounded-2xl">취소</button>
-          <button class="flex-[2] py-3 text-sm font-bold text-white bg-gradient-to-r from-brand-500 to-brand-700 rounded-2xl shadow-lg shadow-brand-500/25">추가</button>
-        </div>
-      </div>
-      <div class="home-indicator" style="background:rgba(0,0,0,0.15)"></div>
-    </div>
-  </div>
-  <div class="screen-label-bottom">Layer Selector<span>레이어 추가/편집 · 서버 드롭다운 + 목록</span></div>
-</div>
-
 <!-- ==================== 35. PROJECT MEMBERSHIP ==================== -->
-<div class="relative" style="position:absolute;left:4200px;top:1050px;">
-  <div class="screen-label">35. Project Membership</div>
+<div class="relative" data-screen="proj-membership" style="position:absolute;left:4200px;top:1050px;">
+  <div class="screen-label">16. Project Membership</div>
   <div class="phone">
     <div class="notch"></div>
     <div class="w-full h-full bg-slate-50 relative overflow-hidden">

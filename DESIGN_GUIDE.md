@@ -351,3 +351,110 @@ Color change point for maintenance:
 - Brand: `--sem-brand*`
 - Success: `--sem-success*`
 - Mode: `--sem-mode-pinogio*`, `--sem-mode-everyone*`, `--sem-mode-offline*`
+
+---
+
+## 17. 캔버스 관리 — canvas.json + canvas_tool.py
+
+> 화면 추가/이동/삭제/번호 변경 시 HTML을 직접 수정하지 말고 이 툴을 사용할 것.
+
+### 파일 구조
+
+| 파일 | 역할 |
+|------|------|
+| `canvas.json` | 화면 위치·번호·그룹 정의 **단일 소스** |
+| `canvas_tool.py` | JSON → HTML 자동 적용 도구 |
+
+### canvas.json 구조
+
+```json
+{
+  "canvas": { "screenWidth": 390, "screenHeight": 844, "padding": 14 },
+  "screens": [
+    { "id": "home", "num": 1, "name": "Home", "x": 0, "y": 0 },
+    ...
+  ],
+  "rowGroups": [
+    { "id": "row0", "label": "Row 0 — 인증 & 프로젝트", "color": "muted",
+      "screens": ["home","login",...] }
+  ],
+  "subGroups": [
+    { "id": "auth", "label": "인증", "color": "muted",
+      "screens": ["home","login","register"] }
+  ]
+}
+```
+
+### 캔버스 레이아웃 (46개 화면)
+
+```
+Row 0 (y=0):    1.Home  2.Login  3.Register  4.ProjList  5.SearchJoin  6.ProjCreate  7.ProjDetail  8.ProjEdit
+Row 1 (y=1050): 9.DatasetMgmt  10.DatasetAdd  11.DatasetInfo  12.DatasetEdit  13.DatasetCol  14.MemberMgmt  15.MyPage  16.ProjMembership
+Row 2 (y=2100): 17.MapView  18.EditLayerSelect  19.EditSession  20.FeatSelected  21.AddGeo  22.AttrForm  23.VertexEdit  24.DelConfirm  25.FeatInfo  26.EditHistory
+Row 3 (y=3150): 27.DrawerP  28.DrawerE  29.DrawerO  30.LayerMgmt  31.RefLayer  32.CQL  33.GPS  34.Bookmark  35.FS-A  36.FS-B  37.FS-C
+Row 4 (y=4200): 38.ServerMgmt  39.AddServer  40.OffGPKG  41.GPKGCreate  42.SyncOffline  43.SelectArea  44.Empty  45.Dialog  46.OfflineMapView
+```
+
+- 화면 간격: 좌우 600px, 상하 1050px
+- 화면 크기: 390×844px (iPhone 프레임)
+
+### 사용법
+
+```bash
+# 현재 화면 목록 확인
+python canvas_tool.py status
+
+# JSON 변경사항 HTML에 반영 (위치·번호·바운더리 박스 전체 갱신)
+python canvas_tool.py apply
+
+# 화면 위치 이동 후 자동 반영
+python canvas_tool.py move <id> <x> <y>
+# 예: python canvas_tool.py move edit-history 6000 2100
+
+# 화면 번호 변경 후 자동 반영
+python canvas_tool.py renumber <id> <num>
+# 예: python canvas_tool.py renumber login 2
+
+# 새 화면 JSON에 추가 (HTML div는 별도로 추가해야 함)
+python canvas_tool.py add <id> <num> <name> <x> <y>
+
+# JSON에서 화면 제거
+python canvas_tool.py remove <id>
+```
+
+### 화면 추가 절차
+
+1. HTML에 화면 div 추가 (`data-screen="id"` 속성 포함):
+```html
+<div class="relative" data-screen="new-screen" style="position:absolute;left:0px;top:0px;">
+  <div class="screen-label"></div>
+  <div class="phone">...</div>
+  <div class="screen-label-bottom">...</div>
+</div>
+```
+
+2. JSON에 등록:
+```bash
+python canvas_tool.py add new-screen 47 "New Screen" 5400 4200
+```
+
+3. 적용:
+```bash
+python canvas_tool.py apply
+```
+
+### 화면 삭제 절차
+
+1. HTML에서 해당 div 블록 제거
+2. `python canvas_tool.py remove <id>` (JSON에서 제거)
+3. 번호 재정렬 필요 시 canvas.json의 num 값 직접 수정 후 `python canvas_tool.py apply`
+
+### SVG 바운더리 박스
+
+`apply` 실행 시 HTML 내 `<!-- BOUNDARY_START -->` ~ `<!-- BOUNDARY_END -->` 구간이 자동 재생성됩니다. 이 구간을 직접 수정하지 마세요.
+
+그룹 색상 규칙:
+- `muted`: Row 0 (인증·프로젝트)
+- `brand`: Row 1 (데이터셋·팀), Row 2 (지도·편집)
+- `success`: Row 3 (드로어·레이어)
+- `warning`: Row 4 (오프라인·서버)

@@ -1,0 +1,23 @@
+{
+  "name": "gpocket-design",
+  "version": "1.0.0",
+  "description": "gPocket 모바일 GIS 앱의 리뉴얼 디자인 목업입니다. (45개 화면)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://kstarmango@github.com/mangosystem/gpocket-design.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mangosystem/gpocket-design/issues"
+  },
+  "homepage": "https://github.com/mangosystem/gpocket-design#readme",
+  "dependencies": {
+    "puppeteer": "^24.40.0"
+  }
+}
