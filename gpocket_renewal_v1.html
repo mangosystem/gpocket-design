@@ -82,6 +82,23 @@ tailwind.config = {
   .flow-node-screen.active { background: #EBF8FF; color: var(--color-brand-dark); border-color: #A7D8F0; }
   .flow-section { margin-bottom: 16px; }
   .flow-label { font-size: 11px; font-weight: 600; color: var(--color-text-muted); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 8px; }
+  .geo-chip { display: inline-flex; align-items: center; gap: 4px; padding: 4px 6px; border-radius: 6px; border: 1px solid #eaeaea; background: var(--sem-slate-50); color: var(--color-text-tertiary); font-size: 11px; font-weight: 400; }
+  .geo-chip-icon { width: 13px; height: 13px; display: block; color: var(--color-text-sub); }
+  .geo-chip-point .geo-chip-icon { color: var(--sem-slate-700); }
+  .geo-chip-line .geo-chip-icon { color: var(--sem-slate-600); }
+  .geo-chip-polygon .geo-chip-icon { color: var(--sem-slate-500); }
+  .card-status { display: inline-flex; align-items: center; gap: 5px; font-size: 12px; font-weight: 500; line-height: 1; }
+  .card-status__dot { width: 8px; height: 8px; border-radius: 999px; background: var(--color-text-muted); }
+  .card-status--active { color: var(--sem-success-text); }
+  .card-status--active .card-status__dot { background: var(--sem-success-mid); }
+  .card-status--inactive { color: var(--color-text-muted); }
+  .card-status--inactive .card-status__dot { background: var(--sem-slate-300); }
+  .card-status--synced { color: var(--sem-success-text); }
+  .card-status--synced .card-status__dot { background: var(--sem-success-mid); }
+  .card-status--pending { color: var(--sem-amber-dark); }
+  .card-status--pending .card-status__dot { background: var(--sem-warning); }
+  .card-status--expired { color: var(--color-text-muted); }
+  .card-status--expired .card-status__dot { background: var(--sem-slate-300); }
 </style>
 </head>
 <body class="min-h-screen p-12">
@@ -1586,15 +1603,24 @@ tailwind.config = {
                 <div class="text-xs text-slate-400 mt-0.5">3개 데이터셋 &middot; 5명</div>
               </div>
             </div>
-            <div class="flex items-center gap-1">
-              <div class="w-2 h-2 rounded-full bg-accent-400 pulse-dot"></div>
-              <span class="text-xs text-accent-600 font-medium">활성</span>
+            <div class="card-status card-status--active">
+              <span class="card-status__dot pulse-dot"></span>
+              <span>활성</span>
             </div>
           </div>
           <div class="flex gap-2 mt-4">
-            <span class="px-2.5 py-1 bg-brand-50 text-brand-600 text-xs rounded-lg font-medium">Point</span>
-            <span class="px-2.5 py-1 bg-accent-50 text-accent-600 text-xs rounded-lg font-medium">LineString</span>
-            <span class="px-2.5 py-1 bg-amber-50 text-amber-600 text-xs rounded-lg font-medium">Polygon</span>
+            <span class="geo-chip geo-chip-point">
+              <svg class="geo-chip-icon" viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="8" cy="8" r="3.2" fill="currentColor"/></svg>
+              <span>Point</span>
+            </span>
+            <span class="geo-chip geo-chip-line">
+              <svg class="geo-chip-icon" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 11 L14 5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+              <span>LineString</span>
+            </span>
+            <span class="geo-chip geo-chip-polygon">
+              <svg class="geo-chip-icon" viewBox="0 0 16 16" fill="none" aria-hidden="true"><polygon points="8,2.4 13.2,6 11.2,12.3 4.8,12.3 2.8,6" stroke="currentColor" stroke-width="1.7" fill="none" stroke-linejoin="round"/></svg>
+              <span>Polygon</span>
+            </span>
           </div>
           <div class="flex items-center gap-3 mt-4 pt-3 border-t border-slate-100">
             <div class="flex -space-x-2">
@@ -1619,14 +1645,20 @@ tailwind.config = {
                 <div class="text-xs text-slate-400 mt-0.5">2개 데이터셋 &middot; 3명</div>
               </div>
             </div>
-            <div class="flex items-center gap-1">
-              <div class="w-2 h-2 rounded-full bg-accent-400 pulse-dot"></div>
-              <span class="text-xs text-accent-600 font-medium">활성</span>
+            <div class="card-status card-status--active">
+              <span class="card-status__dot pulse-dot"></span>
+              <span>활성</span>
             </div>
           </div>
           <div class="flex gap-2 mt-4">
-            <span class="px-2.5 py-1 bg-brand-50 text-brand-600 text-xs rounded-lg font-medium">Point</span>
-            <span class="px-2.5 py-1 bg-accent-50 text-accent-600 text-xs rounded-lg font-medium">LineString</span>
+            <span class="geo-chip geo-chip-point">
+              <svg class="geo-chip-icon" viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="8" cy="8" r="3.2" fill="currentColor"/></svg>
+              <span>Point</span>
+            </span>
+            <span class="geo-chip geo-chip-line">
+              <svg class="geo-chip-icon" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 11 L14 5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+              <span>LineString</span>
+            </span>
           </div>
           <div class="flex items-center gap-3 mt-4 pt-3 border-t border-slate-100">
             <div class="flex -space-x-2">
@@ -1650,13 +1682,16 @@ tailwind.config = {
                 <div class="text-xs text-slate-400 mt-0.5">1개 데이터셋 &middot; 2명</div>
               </div>
             </div>
-            <div class="flex items-center gap-1">
-              <div class="w-2 h-2 rounded-full bg-slate-300"></div>
-              <span class="text-xs text-slate-400">비활성</span>
+            <div class="card-status card-status--inactive">
+              <span class="card-status__dot"></span>
+              <span>비활성</span>
             </div>
           </div>
           <div class="flex gap-2 mt-4">
-            <span class="px-2.5 py-1 bg-amber-50 text-amber-600 text-xs rounded-lg font-medium">Polygon</span>
+            <span class="geo-chip geo-chip-polygon">
+              <svg class="geo-chip-icon" viewBox="0 0 16 16" fill="none" aria-hidden="true"><polygon points="8,2.4 13.2,6 11.2,12.3 4.8,12.3 2.8,6" stroke="currentColor" stroke-width="1.7" fill="none" stroke-linejoin="round"/></svg>
+              <span>Polygon</span>
+            </span>
           </div>
           <div class="flex items-center gap-3 mt-4 pt-3 border-t border-slate-100">
             <div class="flex -space-x-2">
@@ -1854,7 +1889,7 @@ tailwind.config = {
               <div class="text-xs text-slate-400 mt-0.5">3 레이어 &middot; 12.4 MB</div>
             </div>
             <div class="flex flex-col items-end gap-1">
-              <span class="px-2 py-0.5 bg-accent-100 text-accent-700 text-xs rounded-full font-medium">동기화됨</span>
+              <span class="card-status card-status--synced"><span class="card-status__dot"></span><span>동기화됨</span></span>
               <span class="text-xs text-slate-400">03.25</span>
             </div>
           </div>
@@ -1884,7 +1919,7 @@ tailwind.config = {
               <div class="text-xs text-slate-400 mt-0.5">2 레이어 &middot; 8.7 MB</div>
             </div>
             <div class="flex flex-col items-end gap-1">
-              <span class="px-2 py-0.5 bg-amber-100 text-amber-700 text-xs rounded-full font-medium">대기중</span>
+              <span class="card-status card-status--pending"><span class="card-status__dot"></span><span>대기중</span></span>
               <span class="text-xs text-slate-400">03.22</span>
             </div>
           </div>
@@ -1893,7 +1928,7 @@ tailwind.config = {
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6"/></svg>
               지도 보기
             </button>
-            <button class="flex-1 flex items-center justify-center gap-1.5 py-2 rounded-lg bg-amber-50 text-amber-600 text-xs font-medium">
+            <button class="flex-1 flex items-center justify-center gap-1.5 py-2 rounded-lg bg-slate-50 text-slate-600 text-xs font-medium">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
               업로드
             </button>
@@ -1914,7 +1949,7 @@ tailwind.config = {
               <div class="text-xs text-slate-400 mt-0.5">1 레이어 &middot; 2.1 MB</div>
             </div>
             <div class="flex flex-col items-end gap-1">
-              <span class="px-2 py-0.5 bg-slate-100 text-slate-500 text-xs rounded-full font-medium">만료</span>
+              <span class="card-status card-status--expired"><span class="card-status__dot"></span><span>만료</span></span>
               <span class="text-xs text-slate-400">02.10</span>
             </div>
           </div>
@@ -2106,7 +2141,10 @@ tailwind.config = {
             <div class="flex-1">
               <div class="font-semibold text-slate-800 text-base">측정소 B</div>
               <div class="flex items-center gap-1.5 mt-0.5">
-                <span class="text-xs font-medium px-2 py-0.5 rounded-full" style="background:#EFF6FF;color:var(--color-blue-dark)">Point</span>
+                <span class="geo-chip geo-chip-point">
+                  <svg class="geo-chip-icon" viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="8" cy="8" r="3.2" fill="currentColor"/></svg>
+                  <span>Point</span>
+                </span>
                 <span class="text-xs text-slate-400">수질측정소 #02</span>
               </div>
             </div>
@@ -2209,7 +2247,10 @@ tailwind.config = {
             <div class="flex-1">
               <div class="font-semibold text-slate-800 text-base">하천구간 A</div>
               <div class="flex items-center gap-1.5 mt-0.5">
-                <span class="text-xs font-medium px-2 py-0.5 rounded-full" style="background:#F5F3FF;color:var(--color-purple-dark)">LineString</span>
+                <span class="geo-chip geo-chip-line">
+                  <svg class="geo-chip-icon" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 11 L14 5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                  <span>LineString</span>
+                </span>
                 <span class="text-xs text-slate-400">하천조사 #07</span>
               </div>
             </div>
@@ -2312,7 +2353,10 @@ tailwind.config = {
             <div class="flex-1">
               <div class="font-semibold text-slate-800 text-base">조사구역 01</div>
               <div class="flex items-center gap-1.5 mt-0.5">
-                <span class="text-xs font-medium px-2 py-0.5 rounded-full" style="background:var(--color-map-bg-green-light);color:#065F46">Polygon</span>
+                <span class="geo-chip geo-chip-polygon">
+                  <svg class="geo-chip-icon" viewBox="0 0 16 16" fill="none" aria-hidden="true"><polygon points="8,2.4 13.2,6 11.2,12.3 4.8,12.3 2.8,6" stroke="currentColor" stroke-width="1.7" fill="none" stroke-linejoin="round"/></svg>
+                  <span>Polygon</span>
+                </span>
                 <span class="text-xs text-slate-400">조사경계 #01</span>
               </div>
             </div>
@@ -3720,12 +3764,15 @@ tailwind.config = {
             </div>
           </div>
           <p class="text-xs text-slate-500 mb-3 leading-relaxed">전국 주요 하천 수질 모니터링 프로젝트입니다.</p>
-          <div class="flex items-center justify-between">
-            <div class="flex gap-1.5">
-              <span class="px-2 py-0.5 bg-slate-100 text-slate-500 text-xs rounded">공개</span>
-              <span class="px-2 py-0.5 bg-violet-50 text-violet-500 text-xs rounded">Point</span>
-            </div>
-            <button class="px-4 py-2 bg-brand-500 text-white text-xs font-medium rounded-lg">참여 신청</button>
+          <div class="flex gap-2 mt-3 pt-3 border-t border-slate-100">
+            <button class="flex-1 flex items-center justify-center gap-1.5 py-2 rounded-lg bg-brand-50 text-brand-600 text-xs font-medium">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="8.5" cy="7" r="4"/><line x1="20" y1="8" x2="20" y2="14"/><line x1="23" y1="11" x2="17" y2="11"/></svg>
+              참여 신청
+            </button>
+            <button class="flex-1 flex items-center justify-center gap-1.5 py-2 rounded-lg bg-slate-50 text-slate-600 text-xs font-medium">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6"/></svg>
+              프로젝트 보기
+            </button>
           </div>
         </div>
 
@@ -3741,12 +3788,15 @@ tailwind.config = {
             </div>
           </div>
           <p class="text-xs text-slate-500 mb-3 leading-relaxed">국립공원 산림 생태 데이터 수집 프로젝트입니다.</p>
-          <div class="flex items-center justify-between">
-            <div class="flex gap-1.5">
-              <span class="px-2 py-0.5 bg-slate-100 text-slate-500 text-xs rounded">승인 필요</span>
-              <span class="px-2 py-0.5 bg-emerald-50 text-emerald-500 text-xs rounded">Polygon</span>
-            </div>
-            <button class="px-4 py-2 bg-brand-500 text-white text-xs font-medium rounded-lg">참여 신청</button>
+          <div class="flex gap-2 mt-3 pt-3 border-t border-slate-100">
+            <button class="flex-1 flex items-center justify-center gap-1.5 py-2 rounded-lg bg-brand-50 text-brand-600 text-xs font-medium">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="8.5" cy="7" r="4"/><line x1="20" y1="8" x2="20" y2="14"/><line x1="23" y1="11" x2="17" y2="11"/></svg>
+              참여 신청
+            </button>
+            <button class="flex-1 flex items-center justify-center gap-1.5 py-2 rounded-lg bg-slate-50 text-slate-600 text-xs font-medium">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6"/></svg>
+              프로젝트 보기
+            </button>
           </div>
         </div>
 
