@@ -1,4 +1,4 @@
-# gPocket Renewal — 디자인 가이드
+﻿# gPocket Renewal — 디자인 가이드
 
 > 신규 화면 추가 시 이 문서의 패턴을 반드시 따를 것.
 > 기준 파일: `gpocket_renewal_v1.html` + `colors.css`
@@ -283,3 +283,33 @@
 | 초록 `#27AB83` | 피처 추가 흐름 |
 | 빨강 `#EF4444` | 삭제 흐름 |
 | 노랑 `#F59E0B` | 오프라인 흐름 |
+
+---
+
+## 15. CTA Semantic Rule
+
+CTA uses role classes only: `btn-cta btn-cta--primary|positive|danger`.
+Do not hardcode CTA color with `from-*`, `to-*`, `text-*`, `shadow-*` utility classes.
+
+```html
+<button class="... btn-cta btn-cta--primary">저장</button>
+<button class="... btn-cta btn-cta--positive">전송</button>
+<button class="... btn-cta btn-cta--danger">삭제</button>
+```
+
+---
+
+## 16. Token Layer Rule
+
+Use semantic/role tokens first. Do not hardcode color values directly in new styles.
+
+| Layer | Prefix | Rule |
+|------|--------|------|
+| Canonical source | `--sem-*` | Single source for actual color values |
+| Role / component intent | `--role-*` | Map intent (CTA, mode, etc.) to canonical tokens |
+| Legacy alias (compat) | `--color-*` | Existing screen compatibility only (`@deprecated`) |
+
+Color change point for maintenance:
+- Brand: `--sem-brand*`
+- Success: `--sem-success*`
+- Mode: `--sem-mode-pinogio*`, `--sem-mode-everyone*`, `--sem-mode-offline*`

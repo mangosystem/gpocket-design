@@ -12,9 +12,9 @@ tailwind.config = {
     extend: {
       fontFamily: { sans: ['Pretendard', 'system-ui', 'sans-serif'] },
       colors: {
-        brand: { 50:'var(--c-primary-subtle)', 100:'var(--c-primary-light)', 200:'var(--c-primary-medium)', 300:'var(--c-primary-pale)', 400:'var(--c-primary-mid)', 500:'var(--c-primary)', 600:'var(--c-primary-dark)', 700:'var(--c-primary-darker)', 800:'var(--c-primary-deep)', 900:'var(--c-primary-deepest)' },
-        accent: { 50:'var(--c-success-subtle)', 100:'var(--c-success-light)', 200:'var(--c-success-medium)', 300:'var(--c-success-pale)', 400:'var(--c-success-mid)', 500:'var(--c-success)', 600:'var(--c-success-text)', 700:'var(--c-success-dark)', 800:'var(--c-success-deep)', 900:'var(--c-success-deepest)' },
-        slate: { 50:'var(--c-slate-50)', 100:'var(--c-slate-100)', 200:'var(--c-slate-200)', 300:'var(--c-slate-300)', 400:'var(--c-slate-400)', 500:'var(--c-slate-500)', 600:'var(--c-slate-600)', 700:'var(--c-slate-700)', 800:'var(--c-slate-800)', 900:'var(--c-slate-900)', 950:'var(--c-slate-950)' },
+        brand: { 50:'var(--sem-brand-subtle)', 100:'var(--sem-brand-light)', 200:'var(--sem-brand-medium)', 300:'var(--sem-brand-pale)', 400:'var(--sem-brand-mid)', 500:'var(--sem-brand)', 600:'var(--sem-brand-dark)', 700:'var(--sem-brand-darker)', 800:'var(--sem-brand-deep)', 900:'var(--sem-brand-deepest)' },
+        accent: { 50:'var(--sem-success-subtle)', 100:'var(--sem-success-light)', 200:'var(--sem-success-medium)', 300:'var(--sem-success-pale)', 400:'var(--sem-success-mid)', 500:'var(--sem-success)', 600:'var(--sem-success-text)', 700:'var(--sem-success-dark)', 800:'var(--sem-success-deep)', 900:'var(--sem-success-deepest)' },
+        slate: { 50:'var(--sem-slate-50)', 100:'var(--sem-slate-100)', 200:'var(--sem-slate-200)', 300:'var(--sem-slate-300)', 400:'var(--sem-slate-400)', 500:'var(--sem-slate-500)', 600:'var(--sem-slate-600)', 700:'var(--sem-slate-700)', 800:'var(--sem-slate-800)', 900:'var(--sem-slate-900)', 950:'var(--sem-slate-950)' },
       }
     }
   }
@@ -43,14 +43,14 @@ tailwind.config = {
   .card-hover:hover { transform: translateY(-2px); box-shadow: 0 8px 25px rgba(0,0,0,0.1); }
   .home-v2-shell { position: absolute; top: 78px; left: 18px; right: 18px; bottom: 22px; display: flex; flex-direction: column; z-index: 20; }
   .home-v2-title-wrap { padding-top: 56px; padding-left: 14px; padding-right: 14px; max-width: min(58%, 220px); position: relative; z-index: 20; }
-  .home-v2-title-wrap .logo { width:64px; margin-bottom:16px;}
+  .home-v2-title-wrap .logo { width:48px; margin-bottom:16px;}
   .home-v2-illu-wrap { position: absolute; right: 30px; top: 220px; width: 166px; pointer-events: none; z-index: 8; }
   .home-v2-illu { width: 100%; height: 100%; object-fit: contain; object-position: right bottom; opacity: 0.94; filter: drop-shadow(12px 8px 6px rgba(15,23,42,0.34)); }
   .home-v2-mode-grid { margin-top: auto; margin-bottom:20%; display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 12px; align-content: end; }
-  .home-v2-mode-card { --mode-icon-color: #0B69A3; --shortcut-shadow: rgba(11,105,163,0.35); position: relative; min-height: clamp(112px, 14.5vh, 140px); border-radius: 20px; border: 1px solid #fff; background: linear-gradient(160deg, #ffffff, #f3f7ff); box-shadow: 0 10px 24px rgba(15,23,42,0.10), inset 0 1px 0 #ffffff; padding: 14px 14px 80px; }
-  .home-v2-mode-card-everyone { --mode-icon-color: #0B69A3; --shortcut-shadow: rgba(11,105,163,0.13); }
-  .home-v2-mode-card-pinogio { --mode-icon-color: #199473; --shortcut-shadow: rgba(25,148,115,0.13); }
-  .home-v2-mode-card-offline { --mode-icon-color: #D97706; --shortcut-shadow: rgba(217,119,6,0.13); }
+  .home-v2-mode-card { --mode-icon-color: var(--role-mode-pinogio); --shortcut-shadow: var(--role-mode-pinogio-shadow); position: relative; min-height: clamp(112px, 14.5vh, 140px); border-radius: 20px; border: 1px solid #fff; background: linear-gradient(160deg, #ffffff, #f3f7ff); box-shadow: 0 10px 24px rgba(15,23,42,0.10), inset 0 1px 0 #ffffff; padding: 14px 14px 80px; }
+  .home-v2-mode-card-everyone { --mode-icon-color: var(--role-mode-everyone); --shortcut-shadow: var(--role-mode-everyone-shadow); }
+  .home-v2-mode-card-pinogio { --mode-icon-color: var(--role-mode-pinogio); --shortcut-shadow: var(--role-mode-pinogio-shadow); }
+  .home-v2-mode-card-offline { --mode-icon-color: var(--role-mode-offline-dark); --shortcut-shadow: var(--role-mode-offline-shadow); }
   .home-v2-mode-icon-row { display: block; margin-bottom: 0; color: var(--mode-icon-color); }
   .home-v2-bubble-icon { width: 30px; height: 30px; border-radius: 10px; background: #eef3ff; border: 1px solid #d9e4ff; color: #3f66bd; display: flex; align-items: center; justify-content: center; }
   .home-v2-image-icon { width: 30px; height: 30px; border-radius: 10px; background: linear-gradient(145deg, #e3f3ff, #dce5ff); border: 1px solid #d3def8; color: #3756a4; display: flex; align-items: center; justify-content: center; }
@@ -60,6 +60,11 @@ tailwind.config = {
   .home-v2-mode-card-line { min-height: 0; padding: 12px 12px; display: flex; align-items: center; gap: 12px; }
   .home-v2-mode-card-line .home-v2-mode-title { font-size: 15px; }
   .home-v2-mode-card-line .home-v2-mode-desc { margin-top: 2px; }
+  .drawer-mode-header { background-image: linear-gradient(to bottom right, var(--drawer-mode-from), var(--drawer-mode-to)); }
+  .drawer-mode-header-pinogio { --drawer-mode-from: var(--role-mode-pinogio); --drawer-mode-to: var(--role-mode-pinogio-dark); }
+  .drawer-mode-header-everyone { --drawer-mode-from: var(--role-mode-everyone); --drawer-mode-to: var(--role-mode-everyone-dark); }
+  .drawer-mode-header-offline { --drawer-mode-from: var(--role-mode-offline); --drawer-mode-to: var(--role-mode-offline-dark); }
+  .login-pinogio-icon { background-image: linear-gradient(to bottom right, color-mix(in srgb, var(--role-mode-pinogio) 70%, white), var(--role-mode-pinogio-dark)); }
   @media (max-height: 780px) {
     .home-v2-title-wrap { max-width: min(62%, 230px); }
     .home-v2-illu-wrap { top: 102px; bottom: 226px; width: 52%; right: -6px; }
@@ -987,7 +992,7 @@ tailwind.config = {
           </button>
           <div class="flex gap-3">
             <button class="flex-1 py-3 bg-slate-100 text-slate-600 text-sm font-medium rounded-xl">취소</button>
-            <button class="flex-[2] py-3 bg-gradient-to-r from-brand-600 to-brand-700 text-white text-sm font-semibold rounded-xl shadow-lg shadow-brand-500/25">완료</button>
+            <button class="flex-[2] py-3 text-sm font-semibold rounded-xl btn-cta btn-cta--positive">완료</button>
           </div>
         </div>
       </div>
@@ -1086,7 +1091,7 @@ tailwind.config = {
           </div>
           <div class="flex gap-3">
             <button class="flex-1 py-3 bg-slate-100 text-slate-600 text-sm font-medium rounded-xl">취소</button>
-            <button class="flex-[2] py-3 bg-gradient-to-r from-brand-600 to-brand-700 text-white text-sm font-semibold rounded-xl shadow-lg shadow-brand-500/25">저장</button>
+            <button class="flex-[2] py-3 text-sm font-semibold rounded-xl btn-cta btn-cta--primary">저장</button>
           </div>
         </div>
       </div>
@@ -1164,7 +1169,7 @@ tailwind.config = {
           </div>
           <div class="flex gap-3">
             <button class="flex-1 py-3 bg-slate-100 text-slate-600 text-sm font-medium rounded-xl">취소</button>
-            <button class="flex-[2] py-3 bg-red-500 text-white text-sm font-semibold rounded-xl shadow-lg shadow-red-500/25">삭제</button>
+            <button class="flex-[2] py-3 text-sm font-semibold rounded-xl btn-cta btn-cta--danger">삭제</button>
           </div>
         </div>
       </div>
@@ -1186,7 +1191,7 @@ tailwind.config = {
       <!-- Drawer (Right side = endDrawer) -->
       <div class="absolute top-0 right-0 w-80 h-full bg-white shadow-2xl z-30 flex flex-col">
         <!-- Header -->
-        <div class="bg-gradient-to-br from-accent-600 to-accent-800 pt-16 pb-6 px-6">
+        <div class="drawer-mode-header drawer-mode-header-pinogio pt-16 pb-6 px-6">
           <div class="flex items-center gap-4">
             <div class="w-14 h-14 rounded-2xl bg-white/15 flex items-center justify-center">
               <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.8"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
@@ -1276,7 +1281,7 @@ tailwind.config = {
       <!-- Drawer -->
       <div class="absolute top-0 right-0 w-80 h-full bg-white shadow-2xl z-30 flex flex-col">
         <!-- Header -->
-        <div class="bg-gradient-to-br from-brand-600 to-brand-800 pt-16 pb-6 px-6">
+        <div class="drawer-mode-header drawer-mode-header-everyone pt-16 pb-6 px-6">
           <div class="flex items-center gap-4">
             <div class="w-14 h-14 rounded-2xl bg-white/15 flex items-center justify-center">
               <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
@@ -1352,7 +1357,7 @@ tailwind.config = {
       <!-- Drawer -->
       <div class="absolute top-0 right-0 w-80 h-full bg-white shadow-2xl z-30 flex flex-col">
         <!-- Header -->
-        <div class="bg-gradient-to-br from-amber-600 to-amber-800 pt-16 pb-6 px-6">
+        <div class="drawer-mode-header drawer-mode-header-offline pt-16 pb-6 px-6">
           <div class="flex items-center gap-4">
             <div class="w-14 h-14 rounded-2xl bg-white/15 flex items-center justify-center">
               <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.8"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
@@ -1413,7 +1418,7 @@ tailwind.config = {
 
         <!-- Action Button -->
         <div class="px-4 pb-8 pt-2 border-t border-slate-100">
-          <button class="w-full py-3.5 bg-gradient-to-r from-accent-600 to-accent-700 text-white text-sm font-semibold rounded-xl flex items-center justify-center gap-2">
+          <button class="w-full py-3.5 text-sm font-semibold rounded-xl flex items-center justify-center gap-2 btn-cta btn-cta--positive btn-cta--flat">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
             저장내역 전송하기
           </button>
@@ -1447,7 +1452,7 @@ tailwind.config = {
 
       <!-- Content -->
       <div class="px-8 pt-8">
-        <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-accent-400 to-accent-600 flex items-center justify-center mb-6">
+        <div class="w-16 h-16 rounded-2xl login-pinogio-icon flex items-center justify-center mb-6">
           <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.8"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
         </div>
         <h2 class="text-2xl font-bold text-slate-900">PINOGIO 로그인</h2>
@@ -1480,7 +1485,7 @@ tailwind.config = {
         </div>
 
         <!-- Button -->
-        <button class="w-full mt-8 bg-gradient-to-r from-brand-600 to-brand-700 text-white py-4 rounded-xl font-semibold text-base shadow-lg shadow-brand-500/25 hover:shadow-brand-500/40 transition">
+        <button class="w-full mt-8 py-4 rounded-xl font-semibold text-base transition btn-cta btn-cta--primary btn-cta--hover">
           로그인
         </button>
 
@@ -1872,7 +1877,7 @@ tailwind.config = {
 
       <!-- FAB -->
       <div class="absolute bottom-10 right-5 z-30">
-        <div class="fab bg-gradient-to-br from-accent-500 to-accent-700 shadow-lg shadow-accent-500/30">
+        <div class="fab bg-gradient-to-br from-brand-500 to-brand-700 shadow-lg shadow-brand-500/30">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
         </div>
       </div>
@@ -1962,7 +1967,7 @@ tailwind.config = {
           <div class="shrink-0 bg-white border-t border-slate-100 px-5 py-4 pb-8">
             <div class="flex gap-3">
               <button class="flex-1 py-3 bg-slate-100 text-slate-600 text-sm font-medium rounded-xl">취소</button>
-              <button class="flex-[2] py-3 bg-gradient-to-r from-brand-600 to-brand-700 text-white text-sm font-semibold rounded-xl shadow-lg shadow-brand-500/25">저장</button>
+              <button class="flex-[2] py-3 text-sm font-semibold rounded-xl btn-cta btn-cta--primary">저장</button>
             </div>
           </div>
         </div>
@@ -2066,7 +2071,7 @@ tailwind.config = {
             <div class="w-14 h-14 rounded-lg bg-gradient-to-br from-slate-100 to-slate-200 flex items-center justify-center"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--color-border-light)" stroke-width="1.5"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg></div>
           </div>
           <div class="flex gap-2">
-            <button class="flex-1 py-2.5 bg-brand-600 text-white text-sm font-medium rounded-xl flex items-center justify-center gap-1.5">
+            <button class="flex-1 py-2.5 bg-brand-50 text-brand-700 text-sm font-medium rounded-xl flex items-center justify-center gap-1.5">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>속성
             </button>
             <button class="flex-1 py-2.5 bg-slate-100 text-slate-700 text-sm font-medium rounded-xl flex items-center justify-center gap-1.5">
@@ -2165,7 +2170,7 @@ tailwind.config = {
             <div class="flex justify-between text-sm"><span class="text-slate-400">측정일</span><span class="text-slate-800 font-medium">2026-03-10</span></div>
           </div>
           <div class="flex gap-2 mt-2">
-            <button class="flex-1 py-2.5 bg-brand-600 text-white text-sm font-medium rounded-xl flex items-center justify-center gap-1.5">
+            <button class="flex-1 py-2.5 bg-brand-50 text-brand-700 text-sm font-medium rounded-xl flex items-center justify-center gap-1.5">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>속성
             </button>
             <button class="flex-1 py-2.5 bg-slate-100 text-slate-700 text-sm font-medium rounded-xl flex items-center justify-center gap-1.5">
@@ -2268,7 +2273,7 @@ tailwind.config = {
             <div class="flex justify-between text-sm"><span class="text-slate-400">담당자</span><span class="text-slate-800 font-medium">김민준</span></div>
           </div>
           <div class="flex gap-2 mt-2">
-            <button class="flex-1 py-2.5 bg-brand-600 text-white text-sm font-medium rounded-xl flex items-center justify-center gap-1.5">
+            <button class="flex-1 py-2.5 bg-brand-50 text-brand-700 text-sm font-medium rounded-xl flex items-center justify-center gap-1.5">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>속성
             </button>
             <button class="flex-1 py-2.5 bg-slate-100 text-slate-700 text-sm font-medium rounded-xl flex items-center justify-center gap-1.5">
@@ -2494,7 +2499,7 @@ tailwind.config = {
           </button>
         </div>
 
-        <button class="w-full mt-4 bg-gradient-to-r from-brand-600 to-brand-700 text-white py-4 rounded-xl font-semibold text-base shadow-lg shadow-brand-500/25">
+        <button class="w-full mt-4 py-4 rounded-xl font-semibold text-base btn-cta btn-cta--primary">
           서버 등록
         </button>
       </div>
@@ -2575,7 +2580,7 @@ tailwind.config = {
       </div>
 
       <div class="absolute bottom-10 right-5 z-30">
-        <div class="fab bg-gradient-to-br from-amber-500 to-amber-600 shadow-lg shadow-amber-500/30">
+        <div class="fab bg-gradient-to-br from-brand-500 to-brand-700 shadow-lg shadow-brand-500/30">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
         </div>
       </div>
@@ -2681,7 +2686,7 @@ tailwind.config = {
 
       <!-- Bottom action -->
       <div class="absolute bottom-0 left-0 right-0 bg-white border-t border-slate-100 px-5 py-4 pb-8">
-        <button class="w-full bg-gradient-to-r from-brand-600 to-brand-700 text-white py-3.5 rounded-xl font-semibold text-sm shadow-lg shadow-brand-500/25">
+        <button class="w-full py-3.5 rounded-xl font-semibold text-sm btn-cta btn-cta--primary">
           필터 적용
         </button>
       </div>
@@ -2838,7 +2843,7 @@ tailwind.config = {
 
       <!-- Bottom action -->
       <div class="absolute bottom-0 left-0 right-0 bg-white border-t border-slate-100 px-5 py-4 pb-8">
-        <button class="w-full bg-gradient-to-r from-brand-600 to-brand-700 text-white py-4 rounded-xl font-semibold text-base shadow-lg shadow-brand-500/25 flex items-center justify-center gap-2">
+        <button class="w-full py-4 rounded-xl font-semibold text-base flex items-center justify-center gap-2 btn-cta btn-cta--primary">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
           GPKG 생성
         </button>
@@ -2930,7 +2935,7 @@ tailwind.config = {
           </div>
         </div>
 
-        <button class="w-full bg-gradient-to-r from-accent-600 to-accent-700 text-white py-4 rounded-xl font-semibold text-base shadow-lg shadow-accent-500/25 flex items-center justify-center gap-2">
+        <button class="w-full py-4 rounded-xl font-semibold text-base flex items-center justify-center gap-2 btn-cta btn-cta--positive">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
           서버로 동기화
         </button>
@@ -2985,7 +2990,7 @@ tailwind.config = {
           </div>
         </div>
 
-        <button class="w-full mt-8 bg-gradient-to-r from-accent-600 to-accent-700 text-white py-4 rounded-xl font-semibold text-base shadow-lg shadow-accent-500/25">
+        <button class="w-full mt-8 py-4 rounded-xl font-semibold text-base btn-cta btn-cta--primary">
           가입하기
         </button>
       </div>
@@ -3095,7 +3100,7 @@ tailwind.config = {
 
       <!-- Bottom action -->
       <div class="absolute bottom-0 left-0 right-0 bg-white border-t border-slate-100 px-5 py-4 pb-8">
-        <button class="w-full bg-gradient-to-r from-brand-600 to-brand-700 text-white py-3.5 rounded-xl font-semibold text-sm shadow-lg shadow-brand-500/25 flex items-center justify-center gap-2">
+        <button class="w-full py-3.5 rounded-xl font-semibold text-sm flex items-center justify-center gap-2 btn-cta btn-cta--primary">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6"/></svg>
           지도에서 열기
         </button>
@@ -3775,7 +3780,7 @@ tailwind.config = {
 
       <!-- Bottom action -->
       <div class="absolute bottom-0 left-0 right-0 bg-white border-t border-slate-100 px-5 py-4 pb-8">
-        <button class="w-full bg-gradient-to-r from-brand-600 to-brand-700 text-white py-4 rounded-xl font-semibold text-base shadow-lg shadow-brand-500/25">
+        <button class="w-full py-4 rounded-xl font-semibold text-base btn-cta btn-cta--primary">
           프로젝트 생성
         </button>
       </div>
@@ -3809,7 +3814,7 @@ tailwind.config = {
         </div>
         <h3 class="text-lg font-semibold text-slate-700 mb-2">프로젝트가 없습니다</h3>
         <p class="text-sm text-slate-400 text-center leading-relaxed mb-6">새 프로젝트를 생성하거나<br>기존 프로젝트에 참여하세요</p>
-        <button class="px-6 py-3 bg-gradient-to-r from-brand-600 to-brand-700 text-white text-sm font-semibold rounded-xl shadow-lg shadow-brand-500/25 flex items-center gap-2">
+        <button class="px-6 py-3 text-sm font-semibold rounded-xl flex items-center gap-2 btn-cta btn-cta--primary">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
           프로젝트 생성
         </button>

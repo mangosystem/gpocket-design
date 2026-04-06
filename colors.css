@@ -1,100 +1,189 @@
-:root {
+﻿:root {
   /* ===========================
      gPocket 3.0 디자인 색상 변수
      이 파일만 수정하면 전체 화면에 반영됩니다.
      =========================== */
 
-  /* ─────────────────────────────
-     앱 UI — Primary (브랜드 파랑)
-     버튼, 지도 마커, 토글, 활성 탭
-     ───────────────────────────── */
-  --c-primary:         #1A91DA;   /* 버튼 bg, 마커, 토글 on */
-  --c-primary-dark:    #0B69A3;   /* 버튼 hover, 진한 배경 */
-  --c-primary-darker:  #0A558C;   /* 텍스트 강조, pressed */
-  --c-primary-deep:    #0B4372;
-  --c-primary-deepest: #0A3055;
-  --c-primary-mid:     #3EAAE0;   /* 아이콘 색, 링크 */
-  --c-primary-pale:    #7CC4EA;
-  --c-primary-medium:  #A7D8F0;   /* 중간 배경 */
-  --c-primary-light:   #D1EEFC;   /* 배지 bg, 카드 구역 */
-  --c-primary-subtle:  #EBF8FF;   /* 아이콘 컨테이너 bg, subtle */
+  /* Canonical semantic tokens (single source of truth) */
+  --sem-brand:         #1A91DA;
+  --sem-brand-dark:    #0B69A3;
+  --sem-brand-darker:  #0A558C;
+  --sem-brand-deep:    #0B4372;
+  --sem-brand-deepest: #0A3055;
+  --sem-brand-mid:     #3EAAE0;
+  --sem-brand-pale:    #7CC4EA;
+  --sem-brand-medium:  #A7D8F0;
+  --sem-brand-light:   #D1EEFC;
+  --sem-brand-subtle:  #EBF8FF;
 
-  /* ─────────────────────────────
-     앱 UI — Success (초록)
-     확인 버튼, 저장, 완료 상태
-     ───────────────────────────── */
-  --c-success:         #27AB83;   /* 확인/저장 버튼 bg */
-  --c-success-mid:     #3EBD93;   /* hover */
-  --c-success-dark:    #147D64;   /* 텍스트, pressed */
-  --c-success-deep:    #0C6B58;
-  --c-success-deepest: #014D40;
-  --c-success-text:    #199473;   /* 배지 텍스트 */
-  --c-success-text-dk: #147D64;   /* 강조 텍스트 */
-  --c-success-pale:    #65D6AD;
-  --c-success-medium:  #8EEDC7;   /* 중간 배경 */
-  --c-success-light:   #C6F7E2;   /* 배지 bg */
-  --c-success-subtle:  #EFFCF6;   /* subtle bg */
+  --sem-success:         #27AB83;
+  --sem-success-mid:     #3EBD93;
+  --sem-success-dark:    #147D64;
+  --sem-success-deep:    #0C6B58;
+  --sem-success-deepest: #014D40;
+  --sem-success-text:    #199473;
+  --sem-success-pale:    #65D6AD;
+  --sem-success-medium:  #8EEDC7;
+  --sem-success-light:   #C6F7E2;
+  --sem-success-subtle:  #EFFCF6;
 
-  /* ─────────────────────────────
-     앱 UI — Slate (회색 텍스트/배경)
-     ───────────────────────────── */
-  --c-slate-950: #020617;
-  --c-slate-900: #0F172A;
-  --c-slate-800: #1E293B;
-  --c-slate-700: #334155;
-  --c-slate-600: #475569;
-  --c-slate-500: #64748B;
-  --c-slate-400: #94A3B8;
-  --c-slate-300: #CBD5E1;
-  --c-slate-200: #E2E8F0;
-  --c-slate-100: #F1F5F9;
-  --c-slate-50:  #F8FAFC;
+  --sem-slate-950: #020617;
+  --sem-slate-900: #0F172A;
+  --sem-slate-800: #1E293B;
+  --sem-slate-700: #334155;
+  --sem-slate-600: #475569;
+  --sem-slate-500: #64748B;
+  --sem-slate-400: #94A3B8;
+  --sem-slate-300: #CBD5E1;
+  --sem-slate-200: #E2E8F0;
+  --sem-slate-100: #F1F5F9;
+  --sem-slate-50:  #F8FAFC;
+
+  --sem-danger: #EF4444;
+  --sem-warning: #F59E0B;
+  --sem-amber-dark: #B45309;
+  --sem-green: #059669;
+
+  --sem-blue: #2563EB;
+  --sem-blue-dark: #1D4ED8;
+  --sem-blue-medium: #60A5FA;
+  --sem-blue-light: #93C5FD;
+  --sem-blue-lighter: #BFDBFE;
+  --sem-purple: #7C3AED;
+  --sem-purple-dark: #6D28D9;
+  --sem-yellow: #FCD34D;
+
+  --sem-brand-alt: #169DDB;
+  --sem-map-bg-blue: #dbeafe;
+  --sem-map-bg-sky: #e0f2fe;
+  --sem-map-bg-green: #ecfdf5;
+  --sem-map-bg-green-light: #f0fdf4;
+
+  --sem-mode-pinogio: #4391FF;
+  --sem-mode-pinogio-dark: var(--sem-brand-dark);
+  --sem-mode-everyone: #2EC9A9;
+  --sem-mode-everyone-dark: var(--sem-success-dark);
+  --sem-mode-offline: #FFC359;
+  --sem-mode-offline-dark: #de9300;
 
   /* ─────────────────────────────
      캔버스 / 목업 레이아웃 색상
      ───────────────────────────── */
 
+  /* @deprecated legacy alias: prefer --sem-* / --role-* in new definitions */
   /* 텍스트 */
-  --color-text-darkest:  var(--c-slate-900);
-  --color-text-heading:  var(--c-slate-800);
-  --color-text-main:     var(--c-slate-700);
-  --color-text-tertiary: var(--c-slate-600);
-  --color-text-sub:      var(--c-slate-500);
-  --color-text-muted:    var(--c-slate-400);
+  --color-text-darkest:  var(--sem-slate-900);
+  --color-text-heading:  var(--sem-slate-800);
+  --color-text-main:     var(--sem-slate-700);
+  --color-text-tertiary: var(--sem-slate-600);
+  --color-text-sub:      var(--sem-slate-500);
+  --color-text-muted:    var(--sem-slate-400);
 
   /* 테두리/배경 */
-  --color-border:       var(--c-slate-200);
-  --color-border-light: var(--c-slate-300);
-  --color-bg-subtle:    var(--c-slate-100);
-  --color-bg-lightest:  var(--c-slate-50);
+  --color-border:       var(--sem-slate-200);
+  --color-border-light: var(--sem-slate-300);
+  --color-bg-subtle:    var(--sem-slate-100);
 
-  /* 브랜드 단일 참조 */
-  --color-brand:      var(--c-primary);
-  --color-brand-dark: var(--c-primary-dark);
-  --color-brand-alt:  #169DDB;
+  /* @deprecated legacy alias: use --sem-brand-* or --role-* for new definitions */
+  --color-brand:      var(--sem-brand);
+  --color-brand-dark: var(--sem-brand-dark);
+  --color-brand-alt:  var(--sem-brand-alt);
 
   /* 상태 */
-  --color-danger:       #EF4444;
-  --color-success:      var(--c-success);
-  --color-success-dark: var(--c-success-dark);
-  --color-green:        #059669;
-  --color-warning:      #F59E0B;
-  --color-amber-dark:   #B45309;
-  --color-amber-darker: #92400E;
+  --color-danger:       var(--sem-danger);
+  --color-success:      var(--sem-success);
+  --color-success-dark: var(--sem-success-dark);
+  --color-green:        var(--sem-green);
+  --color-warning:      var(--sem-warning);
+  --color-amber-dark:   var(--sem-amber-dark);
 
   /* 기타 */
-  --color-blue:        #2563EB;
-  --color-blue-dark:   #1D4ED8;
-  --color-blue-medium: #60A5FA;
-  --color-blue-light:  #93C5FD;
-  --color-blue-lighter:#BFDBFE;
-  --color-purple:      #7C3AED;
-  --color-purple-dark: #6D28D9;
-  --color-yellow:      #FCD34D;
+  --color-blue:        var(--sem-blue);
+  --color-blue-dark:   var(--sem-blue-dark);
+  --color-blue-medium: var(--sem-blue-medium);
+  --color-blue-light:  var(--sem-blue-light);
+  --color-blue-lighter:var(--sem-blue-lighter);
+  --color-purple:      var(--sem-purple);
+  --color-purple-dark: var(--sem-purple-dark);
+  --color-yellow:      var(--sem-yellow);
 
   /* 지도 배경 */
-  --color-map-bg-blue:        #dbeafe;
-  --color-map-bg-sky:         #e0f2fe;
-  --color-map-bg-green:       #ecfdf5;
-  --color-map-bg-green-light: #f0fdf4;
+  --color-map-bg-blue:        var(--sem-map-bg-blue);
+  --color-map-bg-sky:         var(--sem-map-bg-sky);
+  --color-map-bg-green:       var(--sem-map-bg-green);
+  --color-map-bg-green-light: var(--sem-map-bg-green-light);
+
+  /* Mode role mapping
+     NOTE: PINOGIO = blue family, Everyone = green family, Offline = orange family */
+  --role-mode-pinogio:        var(--sem-mode-pinogio);
+  --role-mode-pinogio-dark:   var(--sem-mode-pinogio-dark);
+  --role-mode-pinogio-shadow: color-mix(in srgb, var(--role-mode-pinogio) 13%, transparent);
+
+  --role-mode-everyone:        var(--sem-mode-everyone);
+  --role-mode-everyone-dark:   var(--sem-mode-everyone-dark);
+  --role-mode-everyone-shadow: color-mix(in srgb, var(--role-mode-everyone) 13%, transparent);
+
+  --role-mode-offline:        var(--sem-mode-offline);
+  --role-mode-offline-dark:   var(--sem-mode-offline-dark);
+  --role-mode-offline-shadow: color-mix(in srgb, var(--role-mode-offline) 13%, transparent);
+
+  /* CTA role mapping (reuses existing design tokens only) */
+  --role-cta-primary-text:  white;
+  --role-cta-primary-from:  var(--sem-brand);
+  --role-cta-primary-to:    var(--sem-brand-dark);
+  --role-cta-primary-shadow: color-mix(in srgb, var(--sem-brand) 25%, transparent);
+
+  --role-cta-positive-text:  white;
+  --role-cta-positive-from:  var(--sem-brand);
+  --role-cta-positive-to:    var(--sem-brand-dark);
+  --role-cta-positive-shadow: color-mix(in srgb, var(--sem-brand) 25%, transparent);
+
+  --role-cta-danger-text:  white;
+  --role-cta-danger-from:  var(--sem-danger);
+  --role-cta-danger-to:    var(--sem-danger);
+  --role-cta-danger-shadow: color-mix(in srgb, var(--sem-danger) 25%, transparent);
+}
+
+/* CTA color-only skin (no spacing/size/layout/typography rules)
+   NOTE: --btn-cta-* variables are intentional local overrides per modifier. */
+.btn-cta {
+  --btn-cta-text-color: var(--role-cta-primary-text);
+  --btn-cta-bg-from: var(--role-cta-primary-from);
+  --btn-cta-bg-to: var(--role-cta-primary-to);
+  --btn-cta-shadow-color: var(--role-cta-primary-shadow);
+
+  color: var(--btn-cta-text-color);
+  background-image: linear-gradient(to right, var(--btn-cta-bg-from), var(--btn-cta-bg-to));
+  box-shadow: 0 10px 15px -3px var(--btn-cta-shadow-color), 0 4px 6px -4px var(--btn-cta-shadow-color);
+}
+
+.btn-cta--primary {
+  --btn-cta-text-color: var(--role-cta-primary-text);
+  --btn-cta-bg-from: var(--role-cta-primary-from);
+  --btn-cta-bg-to: var(--role-cta-primary-to);
+  --btn-cta-shadow-color: var(--role-cta-primary-shadow);
+}
+
+.btn-cta--positive {
+  --btn-cta-text-color: var(--role-cta-positive-text);
+  --btn-cta-bg-from: var(--role-cta-positive-from);
+  --btn-cta-bg-to: var(--role-cta-positive-to);
+  --btn-cta-shadow-color: var(--role-cta-positive-shadow);
+}
+
+.btn-cta--danger {
+  --btn-cta-text-color: var(--role-cta-danger-text);
+  --btn-cta-bg-from: var(--role-cta-danger-from);
+  --btn-cta-bg-to: var(--role-cta-danger-to);
+  --btn-cta-shadow-color: var(--role-cta-danger-shadow);
+}
+
+/* Keep existing "no shadow" visual where needed */
+.btn-cta--flat {
+  box-shadow: none;
+}
+
+/* Optional hover intensity for legacy elevated CTA */
+.btn-cta--hover:hover {
+  box-shadow: 0 20px 25px -5px var(--btn-cta-shadow-color), 0 8px 10px -6px var(--btn-cta-shadow-color);
 }
