@@ -221,7 +221,7 @@ tailwind.config = {
 <div id="canvas-viewport" style="width:100%;height:calc(100vh - 200px);overflow:hidden;position:relative;border:1px solid var(--color-border);border-radius:16px;background:var(--color-bg-subtle);cursor:grab;">
 <div id="canvas" style="position:absolute;transform-origin:0 0;">
 
-<svg id="arrows" style="position:absolute;top:0;left:0;width:7800px;height:5600px;pointer-events:none;">
+<svg id="arrows" style="position:absolute;top:0;left:0;width:7800px;height:5400px;pointer-events:none;">
   <defs>
     <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
       <polygon points="0 0, 10 3.5, 0 7" fill="var(--color-text-muted)"/>
@@ -589,6 +589,10 @@ tailwind.config = {
   <!-- 19.MemberMgmt → 35.ProjMembership: 신청 관리 -->
   <path d="M3390,1472 L4200,1472" stroke="var(--color-text-muted)" stroke-width="1.5" fill="none" marker-end="url(#arrowhead)"/>
   <text x="3795" y="1462" font-size="10" fill="var(--color-text-muted)" text-anchor="middle">신청 관리</text>
+
+  <!-- 46.OfflineMapView → 26.EditHistory: 작업기록 확인 -->
+  <path d="M4995,4200 C4995,3600 5595,3600 5595,2944" stroke="var(--color-warning)" stroke-width="1.5" fill="none" stroke-dasharray="6,3" marker-end="url(#arrowhead-yellow)"/>
+  <text x="5350" y="3380" font-size="10" fill="var(--color-warning)" text-anchor="middle">작업기록 확인</text>
 
 </svg>
 
@@ -4177,6 +4181,83 @@ tailwind.config = {
   </div>
 
   <div class="screen-label-bottom">Dialog & Toast<span>확인 다이얼로그 / 토스트 / 오프라인 배너</span></div>
+</div>
+
+<!-- ==================== 46. OFFLINE MAP VIEW ==================== -->
+<div class="relative" style="position:absolute;left:4800px;top:4200px;">
+  <div class="screen-label">46. Offline Map View</div>
+  <div class="phone">
+    <div class="notch"></div>
+    <div class="w-full h-full relative overflow-hidden">
+      <div class="map-placeholder w-full h-full">
+        <!-- 지도 격자 -->
+        <div class="absolute inset-0 opacity-10">
+          <div class="absolute top-32 left-0 right-0 h-px bg-slate-400"></div>
+          <div class="absolute top-56 left-0 right-0 h-px bg-slate-400"></div>
+          <div class="absolute top-80 left-0 right-0 h-px bg-slate-400"></div>
+          <div class="absolute left-24 top-0 bottom-0 w-px bg-slate-400"></div>
+          <div class="absolute left-48 top-0 bottom-0 w-px bg-slate-400"></div>
+          <div class="absolute left-72 top-0 bottom-0 w-px bg-slate-400"></div>
+        </div>
+        <svg class="absolute inset-0 w-full h-full" style="pointer-events:none">
+          <path d="M10,170 C60,195 90,235 150,248 C210,261 245,288 295,312 C335,330 365,358 395,378" fill="none" stroke="var(--color-blue-light)" stroke-width="10" stroke-linecap="round" opacity="0.55"/>
+          <polygon points="60,200 180,195 280,310 330,430 200,440 70,350" fill="rgba(39,171,131,0.15)" stroke="var(--color-success)" stroke-width="1.5" opacity="0.6"/>
+        </svg>
+      </div>
+      <div class="status-bar text-slate-800 absolute top-0 left-0 right-0"><span class="font-semibold text-sm">9:41</span><div class="flex gap-1.5 items-center opacity-60"><svg width="16" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12.55a11 11 0 0 1 14.08 0"/></svg></div></div>
+
+      <!-- 오프라인 배너 -->
+      <div class="absolute top-10 left-0 right-0 z-20">
+        <div class="mx-4 bg-amber-500 rounded-xl px-4 py-2 flex items-center gap-2 shadow-md">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M1 6s2.5-3 6-3 6 3 6 3"/><path d="M5 10s1.5-1.5 4-1.5 4 1.5 4 1.5"/><circle cx="9" cy="14" r="1" fill="white"/><line x1="1" y1="1" x2="23" y2="23" stroke="white" stroke-width="2"/></svg>
+          <span class="text-white text-xs font-semibold flex-1">오프라인 모드</span>
+          <span class="text-amber-100 text-xs">하천조사_서울_2026</span>
+        </div>
+      </div>
+
+      <!-- 드로어 버튼 -->
+      <div class="absolute left-3 z-20" style="top:68px">
+        <button class="w-11 h-11 bg-white rounded-2xl shadow-md flex items-center justify-center">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--color-text-main)" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
+      </div>
+
+      <!-- Compass -->
+      <div class="absolute right-3 z-20" style="top:68px">
+        <button class="w-11 h-11 bg-white rounded-full shadow-md flex items-center justify-center">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <polygon points="12,3 14,10 12,9 10,10" fill="var(--color-danger)"/>
+            <polygon points="12,21 14,14 12,15 10,14" fill="var(--color-text-muted)"/>
+            <text x="12" y="2" text-anchor="middle" font-size="7" fill="var(--color-danger)" font-weight="700">N</text>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Layer TOC -->
+      <div class="absolute right-3 z-20" style="top:126px">
+        <button class="w-11 h-11 bg-white rounded-2xl shadow-md flex items-center justify-center">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-text-main)" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+        </button>
+      </div>
+
+      <!-- 하단 버튼 영역 -->
+      <div class="absolute bottom-0 left-0 right-0 z-30 px-4 pb-8 pt-3" style="background:linear-gradient(to top, rgba(255,255,255,0.95) 70%, transparent)">
+        <div class="flex gap-3">
+          <button class="flex-1 py-3 flex items-center justify-center gap-2 bg-white rounded-2xl shadow-md border border-slate-200">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-text-sub)" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
+            <span class="text-sm font-semibold text-slate-700">작업기록 확인</span>
+          </button>
+          <button class="flex-1 py-3 flex items-center justify-center gap-2 rounded-2xl shadow-md btn-cta btn-cta--primary">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+            <span class="text-sm font-semibold text-white">편집 추가</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="home-indicator" style="background:rgba(0,0,0,0.15)"></div>
+    </div>
+  </div>
+  <div class="screen-label-bottom">Offline Map View<span>오프라인 지도 · 작업기록 확인 / 편집 추가</span></div>
 </div>
 
 <!-- ==================== 28. DATASET ADD ==================== -->
