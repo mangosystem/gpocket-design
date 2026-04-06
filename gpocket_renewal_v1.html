@@ -44,6 +44,7 @@ tailwind.config = {
   .home-v2-shell { position: absolute; top: 78px; left: 18px; right: 18px; bottom: 22px; display: flex; flex-direction: column; z-index: 20; }
   .home-v2-title-wrap { padding-top: 70%; padding-left: 14px; padding-right: 14px; max-width: min(58%, 220px); position: relative; z-index: 20; }
   .home-v2-title-wrap .logo { width:40px; margin-bottom:10px;}
+  .home-v2-title-wrap .logo img { width:100%; height:auto; display:block; }
   .home-v2-illu-wrap { position: absolute; right: 11%; top: 12%; width: 160px; pointer-events: none; z-index: 25; }
   .home-v2-illu { width: 100%; height: 100%; object-fit: contain; opacity: 0.94; filter:drop-shadow(12px 8px 6px rgba(15,23,42,0.34)); }
   .home-v2-mode-grid { margin-top: 32px; display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 12px; align-content: end; }
@@ -749,7 +750,7 @@ tailwind.config = {
           <div class="logo">
             <img src="gPocket_logo.png" alt="gPocket logo"/>
           </div>
-          <h2 class="text-slate-900 font-bold tracking-tight" style="font-size:36px;line-height:1.08;letter-spacing:-0.02em">gPochet</h2>
+          <h2 class="text-slate-900 font-bold tracking-tight" style="font-size:36px;line-height:1.08;letter-spacing:-0.02em">gPocket</h2>
           <p class="text-slate-500 text-sm font-medium mt-2 flex items-center gap-2">
             <span>지포켓</span>
             <span class="px-2 py-0.5 rounded-md text-xs font-bold" style="background:var(--color-brand-alt);color:white">v3.0</span>
