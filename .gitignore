@@ -5,3 +5,4 @@ tools/package-lock.json
 tools/preview.png
 tools/screenshot_home.mjs
 tools/screenshot_home.png
+.gstack/

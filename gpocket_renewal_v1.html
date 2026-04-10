@@ -138,7 +138,7 @@ tailwind.config = {
       <span class="flow-arrow">&rarr;</span>
       <span class="flow-node flow-node-screen">8. 속성 폼</span>
       <span class="flow-arrow">/</span>
-      <span class="flow-node flow-node-screen">2d. 형상 편집</span>
+      <span class="flow-node flow-node-screen">2d. 지오메트리 편집</span>
       <span class="flow-arrow">/</span>
       <span class="flow-node flow-node-screen">2e. 삭제</span>
     </div>
@@ -178,7 +178,7 @@ tailwind.config = {
       <span class="text-xs text-slate-400">프로젝트 허브:</span>
       <span class="flow-node flow-node-screen">17. 상세</span>
       <span class="flow-arrow">/</span>
-      <span class="flow-node flow-node-screen">18. 컬럼</span>
+      <span class="flow-node flow-node-screen">18. 필드</span>
       <span class="flow-arrow">/</span>
       <span class="flow-node flow-node-screen">19. 멤버</span>
       <span class="flow-arrow">/</span>
@@ -254,7 +254,7 @@ tailwind.config = {
         fill="var(--color-text-sub)" font-family="Pretendard, sans-serif">Row 0 — 인증 &amp; 프로젝트</text>
 
   <!-- row1: Row 1 — 데이터셋 & 팀 -->
-  <rect x="-30" y="1020" width="4650" height="904"
+  <rect x="-30" y="1020" width="5850" height="904"
         rx="16" fill="rgba(23,101,167,0.02)" stroke="var(--color-brand)"
         stroke-width="1.5" stroke-dasharray="10,6"/>
   <text x="-14" y="1016" font-size="13" font-weight="700"
@@ -300,17 +300,17 @@ tailwind.config = {
         fill="var(--color-text-sub)" font-family="Pretendard, sans-serif">프로젝트</text>
 
   <!-- dataset: 데이터셋 -->
-  <rect x="-14" y="1036" width="2818" height="872"
+  <rect x="-14" y="1036" width="3418" height="872"
         rx="12" fill="rgba(23,101,167,0.03)" stroke="var(--color-brand)"
         stroke-width="1.2" opacity="0.7"/>
   <text x="-2" y="1032" font-size="11" font-weight="600"
         fill="var(--color-brand)" font-family="Pretendard, sans-serif">데이터셋</text>
 
   <!-- team: 팀 관리 -->
-  <rect x="2986" y="1036" width="1618" height="872"
+  <rect x="3586" y="1036" width="2218" height="872"
         rx="12" fill="rgba(23,101,167,0.03)" stroke="var(--color-brand)"
         stroke-width="1.2" opacity="0.7"/>
-  <text x="2998" y="1032" font-size="11" font-weight="600"
+  <text x="3598" y="1032" font-size="11" font-weight="600"
         fill="var(--color-brand)" font-family="Pretendard, sans-serif">팀 관리</text>
 
   <!-- map-view-sub: 지도 뷰 -->
@@ -331,7 +331,7 @@ tailwind.config = {
   <rect x="5386" y="2086" width="1018" height="872"
         rx="12" fill="rgba(23,101,167,0.03)" stroke="var(--color-brand)"
         stroke-width="1.2" opacity="0.7"/>
-  <text x="4798" y="2082" font-size="11" font-weight="600"
+  <text x="5398" y="2082" font-size="11" font-weight="600"
         fill="var(--color-brand)" font-family="Pretendard, sans-serif">피처 정보</text>
 
   <!-- drawer-sub: 드로어 -->
@@ -581,10 +581,10 @@ tailwind.config = {
   <path d="M2790,2522 L3600,2522" stroke="var(--color-brand)" stroke-width="2.5" fill="none" marker-end="url(#arrowhead-brand)"/>
   <text x="3195" y="2512" font-size="11" fill="var(--color-brand)" text-anchor="middle">정보 수정</text>
 
-  <!-- 2b.FeatSelected → 2d.VertexEdit: 형상 편집 (파랑, 하단 우회) -->
-  <path d="M2595,2944 L2595,2970 Q2595,2985 2615,2985 L4380,2985 Q4395,2985 4395,2965 L4395,2944"
+  <!-- 2b.FeatSelected → 2d.VertexEdit: 지오메트리 편집 (파랑, 하단 우회) -->
+  <path d="M1395,2944 L1395,2970 Q1395,2985 1415,2985 L3180,2985 Q3195,2985 3195,2965 L3195,2944"
         stroke="var(--color-brand)" stroke-width="2" fill="none" marker-end="url(#arrowhead-brand)"/>
-  <text x="3495" y="3000" font-size="10" fill="var(--color-brand)" text-anchor="middle">도형 편집</text>
+  <text x="2295" y="3000" font-size="10" fill="var(--color-brand)" text-anchor="middle">지오메트리 편집</text>
 
   <!-- 2b.FeatSelected → 2e.DelConfirm: 삭제 (빨강, 하단 우회) -->
   <path d="M2595,2944 L2595,2975 Q2595,2990 2615,2990 L4980,2990 Q4995,2990 4995,2970 L4995,2944"
@@ -661,8 +661,8 @@ tailwind.config = {
         stroke="var(--color-warning)" stroke-width="1.5" stroke-dasharray="5,4" fill="none" marker-end="url(#arrowhead-yellow)"/>
   <text x="795" y="4082" font-size="10" fill="var(--color-warning)" text-anchor="middle">GPKG 다운로드</text>
 
-  <!-- 3a.DrawerP → 20.MyPage: 설정 -->
-  <path d="M390,3994 L390,4048 Q390,4068 410,4068 L3780,4068 Q3795,4068 3795,4048 L3795,3572"
+  <!-- 3a.DrawerP → 15.MyPage: 설정 -->
+  <path d="M390,3994 L390,4048 Q390,4068 410,4068 L4380,4068 Q4395,4068 4395,4048 L4395,3572"
         stroke="var(--color-text-muted)" stroke-width="1" stroke-dasharray="3,4" fill="none" marker-end="url(#arrowhead)"/>
 
   <!-- 3a.DrawerP → 9.ServerMgmt: 서버 관리 (Row4로) -->
@@ -709,9 +709,12 @@ tailwind.config = {
   <path d="M1590,1472 L1800,1472" stroke="var(--color-text-muted)" stroke-width="1.5" fill="none" marker-end="url(#arrowhead)"/>
   <text x="1695" y="1462" font-size="10" fill="var(--color-text-muted)" text-anchor="middle">편집</text>
 
-  <!-- 19.MemberMgmt → 35.ProjMembership: 신청 관리 -->
-  <path d="M3390,1472 L4200,1472" stroke="var(--color-text-muted)" stroke-width="1.5" fill="none" marker-end="url(#arrowhead)"/>
-  <text x="3795" y="1462" font-size="10" fill="var(--color-text-muted)" text-anchor="middle">신청 관리</text>
+  <!-- 14.MemberMgmt → 16.ProjMembership: 신청 관리 -->
+  <path d="M3990,1472 L4800,1472" stroke="var(--color-text-muted)" stroke-width="1.5" fill="none" marker-end="url(#arrowhead)"/>
+  <text x="4395" y="1462" font-size="10" fill="var(--color-text-muted)" text-anchor="middle">신청 관리</text>
+  <!-- 16.ProjMembership → 16b.ProjMembershipPart: 참여중 탭 -->
+  <path d="M5190,1472 L5400,1472" stroke="var(--color-text-muted)" stroke-width="1.5" fill="none" marker-end="url(#arrowhead)"/>
+  <text x="5295" y="1462" font-size="10" fill="var(--color-text-muted)" text-anchor="middle">참여중 탭</text>
 
   <!-- 46.OfflineMapView → 26.EditHistory: 작업기록 확인 -->
   <path d="M4995,4200 C4995,3600 6195,3600 6195,2944" stroke="var(--color-warning)" stroke-width="1.5" fill="none" stroke-dasharray="6,3" marker-end="url(#arrowhead-yellow)"/>
@@ -800,7 +803,7 @@ tailwind.config = {
 
 <!-- ==================== 2. EDIT SESSION — IDLE ==================== -->
 <div class="relative" data-screen="edit-session" style="position:absolute;left:1200px;top:2100px;">
-  <div class="screen-label">19. Edit Session</div>
+  <div class="screen-label">21. Edit Session</div>
   <div class="phone">
     <div class="notch"></div>
     <div class="w-full h-full relative overflow-hidden">
@@ -905,7 +908,7 @@ tailwind.config = {
 
 <!-- ==================== 2a. MAP VIEW (Normal) ==================== -->
 <div class="relative" data-screen="map-view" style="position:absolute;left:0px;top:2100px;">
-  <div class="screen-label">17. Map View</div>
+  <div class="screen-label">19. Map View</div>
   <div class="phone">
     <div class="notch"></div>
     <div class="w-full h-full relative overflow-hidden">
@@ -1011,7 +1014,7 @@ tailwind.config = {
 
 <!-- ==================== 18. EDIT LAYER SELECT ==================== -->
 <div class="relative" data-screen="edit-layer-select" style="position:absolute;left:600px;top:2100px;">
-  <div class="screen-label">18. Edit Layer Select</div>
+  <div class="screen-label">20. Edit Layer Select</div>
   <div class="phone">
     <div class="notch"></div>
     <div class="w-full h-full bg-slate-50 relative overflow-hidden">
@@ -1133,7 +1136,7 @@ tailwind.config = {
 
 <!-- ==================== 2b. FEATURE SELECTED ==================== -->
 <div class="relative" data-screen="feat-selected" style="position:absolute;left:1800px;top:2100px;">
-  <div class="screen-label">20. Feature Selected</div>
+  <div class="screen-label">22. Feature Selected</div>
   <div class="phone">
     <div class="notch"></div>
     <div class="w-full h-full relative overflow-hidden">
@@ -1247,7 +1250,7 @@ tailwind.config = {
 
 <!-- ==================== 2b-1. FEATURE SELECTED (MORE) ==================== -->
 <div class="relative" data-screen="feat-selected-more" style="position:absolute;left:2400px;top:2100px;">
-  <div class="screen-label">20. Feature Selected (More)</div>
+  <div class="screen-label">23. Feature Selected (More)</div>
   <div class="phone">
     <div class="notch"></div>
     <div class="w-full h-full relative overflow-hidden">
@@ -1324,7 +1327,7 @@ tailwind.config = {
 
 <!-- ==================== 2c. ADDING GEOMETRY ==================== -->
 <div class="relative" data-screen="add-geo" style="position:absolute;left:3000px;top:2100px;">
-  <div class="screen-label">21. Add Geometry</div>
+  <div class="screen-label">24. Add Geometry</div>
   <div class="phone">
     <div class="notch"></div>
     <div class="w-full h-full relative overflow-hidden">
@@ -1439,7 +1442,7 @@ tailwind.config = {
 
 <!-- ==================== 2d. VERTEX EDITING ==================== -->
 <div class="relative" data-screen="vertex-edit" style="position:absolute;left:4200px;top:2100px;">
-  <div class="screen-label">23. Vertex Edit</div>
+  <div class="screen-label">26. Vertex Edit</div>
   <div class="phone">
     <div class="notch"></div>
     <div class="w-full h-full relative overflow-hidden">
@@ -1475,7 +1478,7 @@ tailwind.config = {
         <div class="bg-white/95 backdrop-blur-sm rounded-xl px-4 py-2.5 shadow-sm">
           <div class="flex items-center gap-2">
             <div class="w-2 h-2 rounded-full bg-amber-400 pulse-dot"></div>
-            <span class="text-slate-700 text-xs font-medium flex-1">형상 편집</span>
+            <span class="text-slate-700 text-xs font-medium flex-1">지오메트리 편집</span>
           </div>
           <p class="text-xs text-slate-400 mt-1 ml-4">꼭짓점 드래그 = 이동 &middot; 탭 = 삭제 &middot; 중간점 드래그 = 삽입</p>
         </div>
@@ -1543,12 +1546,12 @@ tailwind.config = {
       <div class="home-indicator" style="background:rgba(0,0,0,0.15)"></div>
     </div>
   </div>
-  <div class="screen-label-bottom">Vertex Edit<span>형상 편집 → 버텍스 드래그</span></div>
+  <div class="screen-label-bottom">Vertex Edit<span>지오메트리 편집 → 버텍스 드래그</span></div>
 </div>
 
 <!-- ==================== 2e. DELETE CONFIRMATION ==================== -->
 <div class="relative" data-screen="del-confirm" style="position:absolute;left:4800px;top:2100px;">
-  <div class="screen-label">24. Delete Confirm</div>
+  <div class="screen-label">27. Delete Confirm</div>
   <div class="phone">
     <div class="notch"></div>
     <div class="w-full h-full relative overflow-hidden">
@@ -1629,7 +1632,7 @@ tailwind.config = {
 
 <!-- ==================== 3a. SIDE MENU (PINOGIO) ==================== -->
 <div class="relative" data-screen="drawer-pinogio" style="position:absolute;left:0px;top:3150px;">
-  <div class="screen-label">27. Drawer (PINOGIO)</div>
+  <div class="screen-label">30. Drawer (PINOGIO)</div>
   <div class="phone">
     <div class="notch"></div>
     <div class="w-full h-full relative overflow-hidden">
@@ -1714,7 +1717,7 @@ tailwind.config = {
 
 <!-- ==================== 3b. SIDE MENU (Everyone) ==================== -->
 <div class="relative" data-screen="drawer-everyone" style="position:absolute;left:600px;top:3150px;">
-  <div class="screen-label">28. Drawer (Everyone)</div>
+  <div class="screen-label">31. Drawer (Everyone)</div>
   <div class="phone">
     <div class="notch"></div>
     <div class="w-full h-full relative overflow-hidden">
@@ -1785,7 +1788,7 @@ tailwind.config = {
 
 <!-- ==================== 3c. SIDE MENU (Offline) ==================== -->
 <div class="relative" data-screen="drawer-offline" style="position:absolute;left:1200px;top:3150px;">
-  <div class="screen-label">29. Drawer (Offline)</div>
+  <div class="screen-label">32. Drawer (Offline)</div>
   <div class="phone">
     <div class="notch"></div>
     <div class="w-full h-full relative overflow-hidden">
@@ -1954,7 +1957,7 @@ tailwind.config = {
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--color-text-main)" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
           <h1 class="text-lg font-bold text-slate-900">프로젝트</h1>
           <div class="flex items-center gap-3">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--color-text-main)" stroke-width="2"><line x1="4" y1="6" x2="20" y2="6"/><line x1="8" y1="12" x2="16" y2="12"/><line x1="11" y1="18" x2="13" y2="18"/></svg>
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--color-text-main)" stroke-width="2"><circle cx="12" cy="5" r="1" fill="currentColor"/><circle cx="12" cy="12" r="1" fill="currentColor"/><circle cx="12" cy="19" r="1" fill="currentColor"/></svg>
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--color-text-main)" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
           </div>
         </div>
@@ -2095,7 +2098,7 @@ tailwind.config = {
 
 <!-- ==================== 6. LAYER MANAGEMENT ==================== -->
 <div class="relative" data-screen="layer-mgmt" style="position:absolute;left:1800px;top:3150px;">
-  <div class="screen-label">30. Layer Management</div>
+  <div class="screen-label">33. Layer Management</div>
   <div class="phone">
     <div class="notch"></div>
     <div class="w-full h-full relative overflow-hidden">
@@ -2225,7 +2228,7 @@ tailwind.config = {
 
 <!-- ==================== 7. OFFLINE / GPKG ==================== -->
 <div class="relative" data-screen="off-gpkg" style="position:absolute;left:1200px;top:4200px;">
-  <div class="screen-label">40. Offline GPKG</div>
+  <div class="screen-label">43. Offline GPKG</div>
   <div class="phone">
     <div class="notch"></div>
     <div class="w-full h-full bg-slate-50 relative overflow-hidden">
@@ -2348,7 +2351,7 @@ tailwind.config = {
 
 <!-- ==================== 8. ATTRIBUTE FORM (BOTTOM SHEET) ==================== -->
 <div class="relative" data-screen="attr-form" style="position:absolute;left:3600px;top:2100px;">
-  <div class="screen-label">22. Attribute Form</div>
+  <div class="screen-label">25. Attribute Form</div>
   <div class="phone">
     <div class="notch"></div>
     <div class="w-full h-full relative overflow-hidden">
@@ -2452,7 +2455,7 @@ tailwind.config = {
 
 <!-- ==================== FS-A. FEATURE SELECTED — POINT ==================== -->
 <div class="relative" data-screen="fs-a" style="position:absolute;left:4800px;top:3150px;">
-  <div class="screen-label">35. FS-A (Point)</div>
+  <div class="screen-label">38. FS-A (Point)</div>
   <div class="phone">
     <div class="notch"></div>
     <div class="w-full h-full relative overflow-hidden">
@@ -2562,7 +2565,7 @@ tailwind.config = {
 
 <!-- ==================== FS-B. FEATURE SELECTED — LINE ==================== -->
 <div class="relative" data-screen="fs-b" style="position:absolute;left:5400px;top:3150px;">
-  <div class="screen-label">36. FS-B (Line)</div>
+  <div class="screen-label">39. FS-B (Line)</div>
   <div class="phone">
     <div class="notch"></div>
     <div class="w-full h-full relative overflow-hidden">
@@ -2661,7 +2664,7 @@ tailwind.config = {
 
 <!-- ==================== FS-C. FEATURE SELECTED — POLYGON ==================== -->
 <div class="relative" data-screen="fs-c" style="position:absolute;left:6000px;top:3150px;">
-  <div class="screen-label">37. FS-C (Polygon)</div>
+  <div class="screen-label">40. FS-C (Polygon)</div>
   <div class="phone">
     <div class="notch"></div>
     <div class="w-full h-full relative overflow-hidden">
@@ -2787,7 +2790,7 @@ tailwind.config = {
             </div>
             <div class="flex-1">
               <div class="font-semibold text-slate-800 text-sm">하천조사 구역</div>
-              <div class="text-xs text-slate-400 mt-0.5">Polygon · 컬럼 5개</div>
+              <div class="text-xs text-slate-400 mt-0.5">Polygon · 필드 5개</div>
             </div>
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-brand)" stroke-width="2"><polyline points="18 15 12 9 6 15"/></svg>
           </div>
@@ -2799,7 +2802,7 @@ tailwind.config = {
               <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>편집
             </button>
             <button class="flex-1 py-2 text-xs font-medium text-brand-600 bg-white rounded-lg border border-brand-200 flex items-center justify-center gap-1">
-              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>컬럼
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>필드
             </button>
             <button class="flex-1 py-2 text-xs font-medium text-slate-500 bg-white rounded-lg border border-slate-200 flex items-center justify-center gap-1">
               <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>삭제
@@ -2815,7 +2818,7 @@ tailwind.config = {
             </div>
             <div class="flex-1">
               <div class="font-semibold text-slate-600 text-sm">수질 측정소</div>
-              <div class="text-xs text-slate-400 mt-0.5">Point · 컬럼 8개</div>
+              <div class="text-xs text-slate-400 mt-0.5">Point · 필드 8개</div>
             </div>
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-text-muted)" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
           </div>
@@ -2829,7 +2832,7 @@ tailwind.config = {
             </div>
             <div class="flex-1">
               <div class="font-semibold text-slate-600 text-sm">하천 구간</div>
-              <div class="text-xs text-slate-400 mt-0.5">LineString · 컬럼 6개</div>
+              <div class="text-xs text-slate-400 mt-0.5">LineString · 필드 6개</div>
             </div>
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-text-muted)" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
           </div>
@@ -2851,7 +2854,7 @@ tailwind.config = {
 
 <!-- ==================== 9. SERVER MANAGE ==================== -->
 <div class="relative" data-screen="server-mgmt" style="position:absolute;left:0px;top:4200px;">
-  <div class="screen-label">38. Server Manage</div>
+  <div class="screen-label">41. Server Manage</div>
   <div class="phone">
     <div class="notch"></div>
     <div class="w-full h-full bg-white relative overflow-hidden">
@@ -2931,7 +2934,7 @@ tailwind.config = {
 
 <!-- ==================== 10. ADD SERVER ==================== -->
 <div class="relative" data-screen="add-server" style="position:absolute;left:600px;top:4200px;">
-  <div class="screen-label">39. Add Server</div>
+  <div class="screen-label">42. Add Server</div>
   <div class="phone">
     <div class="notch"></div>
     <div class="w-full h-full bg-white relative overflow-hidden">
@@ -2987,7 +2990,7 @@ tailwind.config = {
 
 <!-- ==================== 11. BOOKMARK ==================== -->
 <div class="relative" data-screen="bookmark" style="position:absolute;left:4200px;top:3150px;">
-  <div class="screen-label">34. Bookmark</div>
+  <div class="screen-label">37. Bookmark</div>
   <div class="phone">
     <div class="notch"></div>
     <div class="w-full h-full bg-slate-50 relative overflow-hidden">
@@ -3068,7 +3071,7 @@ tailwind.config = {
 
 <!-- ==================== 12. CQL FILTER ==================== -->
 <div class="relative" data-screen="cql-filter" style="position:absolute;left:3000px;top:3150px;">
-  <div class="screen-label">32. CQL Filter</div>
+  <div class="screen-label">35. CQL Filter</div>
   <div class="phone">
     <div class="notch"></div>
     <div class="w-full h-full bg-white relative overflow-hidden">
@@ -3103,7 +3106,7 @@ tailwind.config = {
 
         <!-- Column Selection -->
         <div>
-          <label class="text-xs font-semibold text-slate-500 uppercase tracking-wider">컬럼 선택</label>
+          <label class="text-xs font-semibold text-slate-500 uppercase tracking-wider">필드 선택</label>
           <div class="mt-2 flex items-center justify-between border border-slate-200 rounded-xl px-4 py-3">
             <span class="text-sm text-slate-800">status</span>
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-text-muted)" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
@@ -3128,7 +3131,7 @@ tailwind.config = {
         <div>
           <div class="flex items-center justify-between mb-2">
             <label class="text-xs font-semibold text-slate-500 uppercase tracking-wider">적용된 필터</label>
-            <span class="text-xs text-slate-400">2개 컬럼</span>
+            <span class="text-xs text-slate-400">2개 필드</span>
           </div>
           <div class="space-y-2">
             <!-- Filter chip group: status -->
@@ -3174,7 +3177,7 @@ tailwind.config = {
 
 <!-- ==================== 13. GPS TRACKING ==================== -->
 <div class="relative" data-screen="gps-tracking" style="position:absolute;left:3600px;top:3150px;">
-  <div class="screen-label">33. GPS Tracking</div>
+  <div class="screen-label">36. GPS Tracking</div>
   <div class="phone">
     <div class="notch"></div>
     <div class="w-full h-full relative overflow-hidden">
@@ -3241,7 +3244,7 @@ tailwind.config = {
 
 <!-- ==================== 14. GPKG CREATE ==================== -->
 <div class="relative" data-screen="gpkg-create" style="position:absolute;left:1800px;top:4200px;">
-  <div class="screen-label">41. GPKG Create</div>
+  <div class="screen-label">44. GPKG Create</div>
   <div class="phone">
     <div class="notch"></div>
     <div class="w-full h-full bg-white relative overflow-hidden">
@@ -3332,7 +3335,7 @@ tailwind.config = {
 
 <!-- ==================== 15. SYNC OFFLINE ==================== -->
 <div class="relative" data-screen="sync-offline" style="position:absolute;left:2400px;top:4200px;">
-  <div class="screen-label">42. Sync Offline</div>
+  <div class="screen-label">45. Sync Offline</div>
   <div class="phone">
     <div class="notch"></div>
     <div class="w-full h-full bg-white relative overflow-hidden">
@@ -3606,14 +3609,14 @@ tailwind.config = {
       <div class="px-5 pt-2 pb-3 flex items-center justify-between border-b border-slate-100">
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--color-text-main)" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
         <div class="text-center">
-          <h1 class="text-base font-bold text-slate-900">컬럼 설정</h1>
+          <h1 class="text-base font-bold text-slate-900">필드 설정</h1>
           <p class="text-xs text-slate-400">하천 입구</p>
         </div>
         <button class="text-sm text-brand-500 font-medium">저장</button>
       </div>
 
       <div class="px-5 pt-4 space-y-2">
-        <!-- Column items -->
+        <!-- Column item: normal -->
         <div class="flex items-center gap-3 p-3.5 bg-slate-50 rounded-xl border border-slate-100">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-border-light)" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
           <div class="flex-1">
@@ -3621,7 +3624,12 @@ tailwind.config = {
             <div class="text-xs text-slate-400">String &middot; 필수</div>
           </div>
           <span class="px-2 py-0.5 bg-red-50 text-red-500 text-xs rounded font-medium">필수</span>
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-text-muted)" stroke-width="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+          <button class="p-1.5 rounded-lg hover:bg-slate-100">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--color-text-muted)" stroke-width="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+          </button>
+          <button class="p-1.5 rounded-lg hover:bg-red-50">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="2"><polyline points="3 6 5 6 21 6"/><path d="M19 6l-1 14H6L5 6"/><path d="M10 11v6"/><path d="M14 11v6"/><path d="M9 6V4h6v2"/></svg>
+          </button>
         </div>
 
         <div class="flex items-center gap-3 p-3.5 bg-slate-50 rounded-xl border border-slate-100">
@@ -3631,16 +3639,92 @@ tailwind.config = {
             <div class="text-xs text-slate-400">String &middot; 선택형</div>
           </div>
           <span class="px-2 py-0.5 bg-brand-50 text-brand-500 text-xs rounded font-medium">Select</span>
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-text-muted)" stroke-width="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+          <button class="p-1.5 rounded-lg hover:bg-slate-100">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--color-text-muted)" stroke-width="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+          </button>
+          <button class="p-1.5 rounded-lg hover:bg-red-50">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="2"><polyline points="3 6 5 6 21 6"/><path d="M19 6l-1 14H6L5 6"/><path d="M10 11v6"/><path d="M14 11v6"/><path d="M9 6V4h6v2"/></svg>
+          </button>
         </div>
 
-        <div class="flex items-center gap-3 p-3.5 bg-slate-50 rounded-xl border border-slate-100">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-border-light)" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
-          <div class="flex-1">
-            <div class="text-sm text-slate-700 font-medium">address</div>
-            <div class="text-xs text-slate-400">String</div>
+        <!-- Column item: 수정 중 상태 (address) -->
+        <div class="bg-white rounded-xl border-2 border-brand-400 shadow-sm shadow-brand-100">
+          <div class="flex items-center gap-3 px-3.5 pt-3 pb-2 border-b border-slate-100">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-border-light)" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+            <div class="flex-1">
+              <div class="text-xs font-semibold text-brand-500 uppercase tracking-wider">필드 수정</div>
+            </div>
+            <button class="p-1.5 rounded-lg bg-red-50">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="2"><polyline points="3 6 5 6 21 6"/><path d="M19 6l-1 14H6L5 6"/><path d="M10 11v6"/><path d="M14 11v6"/><path d="M9 6V4h6v2"/></svg>
+            </button>
           </div>
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-text-muted)" stroke-width="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+          <div class="px-3.5 pb-3 pt-2.5 space-y-3">
+            <!-- 필드명 -->
+            <div>
+              <label class="text-xs text-slate-400 mb-1 block">필드명 <span class="text-red-400">*</span></label>
+              <div class="flex items-center bg-slate-50 border border-brand-300 rounded-lg px-3 py-2">
+                <span class="text-sm text-slate-800 flex-1">address</span>
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="var(--color-text-muted)" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+              </div>
+            </div>
+            <!-- 별칭 -->
+            <div>
+              <label class="text-xs text-slate-400 mb-1 block">별칭 <span class="text-slate-300">(표시 이름)</span></label>
+              <div class="flex items-center bg-slate-50 border border-slate-200 rounded-lg px-3 py-2">
+                <span class="text-sm text-slate-500 flex-1">주소</span>
+              </div>
+            </div>
+            <!-- 타입 -->
+            <div>
+              <label class="text-xs text-slate-400 mb-1 block">데이터 타입</label>
+              <div class="flex gap-1.5 flex-wrap">
+                <span class="px-2.5 py-1 rounded-lg text-xs font-medium bg-brand-500 text-white">String</span>
+                <span class="px-2.5 py-1 rounded-lg text-xs font-medium bg-slate-100 text-slate-500">Integer</span>
+                <span class="px-2.5 py-1 rounded-lg text-xs font-medium bg-slate-100 text-slate-500">Double</span>
+                <span class="px-2.5 py-1 rounded-lg text-xs font-medium bg-slate-100 text-slate-500">Boolean</span>
+                <span class="px-2.5 py-1 rounded-lg text-xs font-medium bg-slate-100 text-slate-500">Date</span>
+              </div>
+            </div>
+            <!-- 허용값 -->
+            <div>
+              <label class="text-xs text-slate-400 mb-1.5 block">허용값</label>
+              <div class="flex rounded-lg overflow-hidden border border-slate-200 text-xs font-medium">
+                <div class="flex-1 py-1.5 text-center bg-slate-100 text-slate-400">제한 없음</div>
+                <div class="flex-1 py-1.5 text-center bg-brand-500 text-white">목록 지정</div>
+              </div>
+              <!-- 목록 지정 선택 시 옵션 목록 -->
+              <div class="mt-2 space-y-1.5">
+                <div class="flex items-center gap-2 bg-slate-50 border border-slate-200 rounded-lg px-3 py-1.5">
+                  <span class="text-xs text-slate-700 flex-1">서울특별시</span>
+                  <button><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+                </div>
+                <div class="flex items-center gap-2 bg-slate-50 border border-slate-200 rounded-lg px-3 py-1.5">
+                  <span class="text-xs text-slate-700 flex-1">경기도</span>
+                  <button><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+                </div>
+                <div class="flex items-center gap-2 bg-slate-50 border border-slate-200 rounded-lg px-3 py-1.5">
+                  <span class="text-xs text-slate-700 flex-1">부산광역시</span>
+                  <button><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+                </div>
+                <button class="w-full flex items-center justify-center gap-1.5 py-1.5 rounded-lg border border-dashed border-brand-300 text-brand-500 text-xs font-medium">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                  옵션 추가
+                </button>
+              </div>
+            </div>
+            <!-- 필수 토글 -->
+            <div class="flex items-center justify-between">
+              <span class="text-xs text-slate-600 font-medium">필수 입력</span>
+              <div class="w-9 h-5 bg-slate-200 rounded-full relative">
+                <div class="w-4 h-4 bg-white rounded-full absolute top-0.5 left-0.5 shadow-sm"></div>
+              </div>
+            </div>
+            <!-- 확인/취소 -->
+            <div class="flex gap-2 pt-0.5">
+              <button class="flex-1 py-1.5 rounded-lg border border-slate-200 text-xs text-slate-500 font-medium">취소</button>
+              <button class="flex-1 py-1.5 rounded-lg bg-brand-500 text-white text-xs font-medium">확인</button>
+            </div>
+          </div>
         </div>
 
         <div class="flex items-center gap-3 p-3.5 bg-slate-50 rounded-xl border border-slate-100">
@@ -3650,7 +3734,12 @@ tailwind.config = {
             <div class="text-xs text-slate-400">Integer &middot; 숫자형</div>
           </div>
           <span class="px-2 py-0.5 bg-violet-50 text-violet-500 text-xs rounded font-medium">Number</span>
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-text-muted)" stroke-width="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+          <button class="p-1.5 rounded-lg hover:bg-slate-100">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--color-text-muted)" stroke-width="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+          </button>
+          <button class="p-1.5 rounded-lg hover:bg-red-50">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="2"><polyline points="3 6 5 6 21 6"/><path d="M19 6l-1 14H6L5 6"/><path d="M10 11v6"/><path d="M14 11v6"/><path d="M9 6V4h6v2"/></svg>
+          </button>
         </div>
 
         <div class="flex items-center gap-3 p-3.5 bg-slate-50 rounded-xl border border-slate-100">
@@ -3659,7 +3748,12 @@ tailwind.config = {
             <div class="text-sm text-slate-700 font-medium">note</div>
             <div class="text-xs text-slate-400">String</div>
           </div>
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-text-muted)" stroke-width="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+          <button class="p-1.5 rounded-lg hover:bg-slate-100">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--color-text-muted)" stroke-width="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+          </button>
+          <button class="p-1.5 rounded-lg hover:bg-red-50">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="2"><polyline points="3 6 5 6 21 6"/><path d="M19 6l-1 14H6L5 6"/><path d="M10 11v6"/><path d="M14 11v6"/><path d="M9 6V4h6v2"/></svg>
+          </button>
         </div>
 
         <div class="flex items-center gap-3 p-3.5 bg-slate-50 rounded-xl border border-slate-100">
@@ -3669,7 +3763,12 @@ tailwind.config = {
             <div class="text-xs text-slate-400">String &middot; 이미지 URL</div>
           </div>
           <span class="px-2 py-0.5 bg-emerald-50 text-emerald-500 text-xs rounded font-medium">Image</span>
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-text-muted)" stroke-width="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+          <button class="p-1.5 rounded-lg hover:bg-slate-100">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--color-text-muted)" stroke-width="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+          </button>
+          <button class="p-1.5 rounded-lg hover:bg-red-50">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="2"><polyline points="3 6 5 6 21 6"/><path d="M19 6l-1 14H6L5 6"/><path d="M10 11v6"/><path d="M14 11v6"/><path d="M9 6V4h6v2"/></svg>
+          </button>
         </div>
       </div>
 
@@ -3678,16 +3777,113 @@ tailwind.config = {
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
         </div>
       </div>
+
       <div class="home-indicator" style="background:rgba(0,0,0,0.15)"></div>
     </div>
   </div>
 
-  <div class="screen-label-bottom">Dataset Columns<span>데이터셋 컬럼 설정</span></div>
+  <div class="screen-label-bottom">Dataset Columns<span>데이터셋 필드 설정</span></div>
+</div>
+
+<!-- ==================== 13b. DATASET COL ADD ==================== -->
+<div class="relative" data-screen="dataset-col-add" style="position:absolute;left:3000px;top:1050px;">
+  <div class="screen-label">14. Dataset Col Add</div>
+  <div class="phone">
+    <div class="notch"></div>
+    <div class="w-full h-full bg-white relative overflow-hidden">
+      <div class="status-bar text-slate-800"><span>9:41</span><div class="flex gap-1.5 items-center opacity-60"><svg width="16" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12.55a11 11 0 0 1 14.08 0"/></svg></div></div>
+
+      <div class="px-5 pt-2 pb-3 flex items-center justify-between border-b border-slate-100">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--color-text-main)" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+        <div class="text-center">
+          <h1 class="text-base font-bold text-slate-900">필드 설정</h1>
+          <p class="text-xs text-slate-400">하천 입구</p>
+        </div>
+        <button class="text-sm text-brand-500 font-medium">저장</button>
+      </div>
+
+      <!-- 기존 필드 목록 (dimmed) -->
+      <div class="px-5 pt-4 space-y-2 opacity-40">
+        <div class="flex items-center gap-3 p-3.5 bg-slate-50 rounded-xl border border-slate-100">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#cbd5e1" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+          <div class="flex-1"><div class="text-sm text-slate-700 font-medium">name</div><div class="text-xs text-slate-400">String · 필수</div></div>
+        </div>
+        <div class="flex items-center gap-3 p-3.5 bg-slate-50 rounded-xl border border-slate-100">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#cbd5e1" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+          <div class="flex-1"><div class="text-sm text-slate-700 font-medium">type</div><div class="text-xs text-slate-400">String · 선택형</div></div>
+        </div>
+        <div class="flex items-center gap-3 p-3.5 bg-slate-50 rounded-xl border border-slate-100">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#cbd5e1" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+          <div class="flex-1"><div class="text-sm text-slate-700 font-medium">address</div><div class="text-xs text-slate-400">String</div></div>
+        </div>
+      </div>
+
+      <!-- 필드 추가 바텀시트 모달 -->
+      <div class="absolute inset-0 z-40" style="background:rgba(15,23,42,0.4);">
+        <div class="absolute bottom-0 left-0 right-0 bg-white rounded-t-2xl overflow-hidden">
+          <div class="flex flex-col items-center pt-3 pb-2 border-b border-slate-100">
+            <div class="w-9 h-1 bg-slate-200 rounded-full mb-3"></div>
+            <div class="w-full flex items-center justify-between px-5">
+              <span class="text-sm font-bold text-slate-900">필드 추가</span>
+              <button><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--color-text-muted)" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+            </div>
+          </div>
+          <div class="px-5 py-4 space-y-3">
+            <div>
+              <label class="text-xs text-slate-400 mb-1 block">필드명 <span class="text-red-400">*</span></label>
+              <div class="flex items-center bg-slate-50 border border-slate-200 rounded-xl px-3 py-2.5">
+                <span class="text-sm text-slate-300 flex-1">column_name</span>
+              </div>
+            </div>
+            <div>
+              <label class="text-xs text-slate-400 mb-1 block">별칭 <span class="text-slate-300">(표시 이름)</span></label>
+              <div class="flex items-center bg-slate-50 border border-slate-200 rounded-xl px-3 py-2.5">
+                <span class="text-sm text-slate-300 flex-1">표시할 이름</span>
+              </div>
+            </div>
+            <div>
+              <label class="text-xs text-slate-400 mb-1.5 block">데이터 타입</label>
+              <div class="flex gap-1.5 flex-wrap">
+                <span class="px-2.5 py-1 rounded-lg text-xs font-medium bg-brand-500 text-white">String</span>
+                <span class="px-2.5 py-1 rounded-lg text-xs font-medium bg-slate-100 text-slate-500">Integer</span>
+                <span class="px-2.5 py-1 rounded-lg text-xs font-medium bg-slate-100 text-slate-500">Double</span>
+                <span class="px-2.5 py-1 rounded-lg text-xs font-medium bg-slate-100 text-slate-500">Boolean</span>
+                <span class="px-2.5 py-1 rounded-lg text-xs font-medium bg-slate-100 text-slate-500">Date</span>
+              </div>
+            </div>
+            <div>
+              <label class="text-xs text-slate-400 mb-1.5 block">허용값</label>
+              <div class="flex rounded-xl overflow-hidden border border-slate-200 text-xs font-medium">
+                <div class="flex-1 py-2 text-center bg-brand-500 text-white">제한 없음</div>
+                <div class="flex-1 py-2 text-center bg-slate-100 text-slate-400">목록 지정</div>
+              </div>
+            </div>
+            <div class="flex items-center justify-between py-0.5">
+              <div>
+                <div class="text-xs font-medium text-slate-700">필수 입력</div>
+                <div class="text-xs text-slate-400 mt-0.5">저장 시 반드시 값이 있어야 함</div>
+              </div>
+              <div class="w-10 h-6 bg-slate-200 rounded-full relative flex-shrink-0">
+                <div class="w-5 h-5 bg-white rounded-full absolute top-0.5 left-0.5 shadow-sm"></div>
+              </div>
+            </div>
+          </div>
+          <div class="px-5 pb-8 pt-3 border-t border-slate-100 flex gap-3">
+            <button class="flex-1 py-3 rounded-2xl border border-slate-200 text-sm text-slate-500 font-medium">취소</button>
+            <button class="flex-1 py-3 rounded-2xl bg-gradient-to-r from-brand-500 to-brand-700 text-white text-sm font-bold shadow-md shadow-brand-500/25">추가</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="home-indicator" style="background:rgba(0,0,0,0.15)"></div>
+    </div>
+  </div>
+  <div class="screen-label-bottom">Dataset Col Add<span>필드 추가 모달</span></div>
 </div>
 
 <!-- ==================== 19. MEMBER MANAGE ==================== -->
-<div class="relative" data-screen="member-mgmt" style="position:absolute;left:3000px;top:1050px;">
-  <div class="screen-label">14. Member Manage</div>
+<div class="relative" data-screen="member-mgmt" style="position:absolute;left:3600px;top:1050px;">
+  <div class="screen-label">15. Member Manage</div>
   <div class="phone">
     <div class="notch"></div>
     <div class="w-full h-full bg-slate-50 relative overflow-hidden">
@@ -3765,8 +3961,8 @@ tailwind.config = {
 </div>
 
 <!-- ==================== 20. MY PAGE ==================== -->
-<div class="relative" data-screen="my-page" style="position:absolute;left:3600px;top:1050px;">
-  <div class="screen-label">15. My Page</div>
+<div class="relative" data-screen="my-page" style="position:absolute;left:4200px;top:1050px;">
+  <div class="screen-label">16. My Page</div>
   <div class="phone">
     <div class="notch"></div>
     <div class="w-full h-full bg-slate-50 relative overflow-hidden">
@@ -3860,7 +4056,7 @@ tailwind.config = {
 
 <!-- ==================== 21. EDIT HISTORY ==================== -->
 <div class="relative" data-screen="edit-history" style="position:absolute;left:6000px;top:2100px;">
-  <div class="screen-label">26. Edit History</div>
+  <div class="screen-label">29. Edit History</div>
   <div class="phone">
     <div class="notch"></div>
     <div class="w-full h-full bg-slate-50 relative overflow-hidden">
@@ -4019,7 +4215,7 @@ tailwind.config = {
 
 <!-- ==================== 22. FEATURE INFO POPUP ==================== -->
 <div class="relative" data-screen="feat-info" style="position:absolute;left:5400px;top:2100px;">
-  <div class="screen-label">25. Feature Info</div>
+  <div class="screen-label">28. Feature Info</div>
   <div class="phone">
     <div class="notch"></div>
     <div class="w-full h-full relative overflow-hidden">
@@ -4288,7 +4484,7 @@ tailwind.config = {
 
 <!-- ==================== 25. EMPTY STATES ==================== -->
 <div class="relative" data-screen="empty-states" style="position:absolute;left:3600px;top:4200px;">
-  <div class="screen-label">44. Empty / Error States</div>
+  <div class="screen-label">47. Empty / Error States</div>
   <div class="phone">
     <div class="notch"></div>
     <div class="w-full h-full bg-slate-50 relative overflow-hidden">
@@ -4350,7 +4546,7 @@ tailwind.config = {
 
 <!-- ==================== 26. CONFIRM DIALOG & TOAST ==================== -->
 <div class="relative" data-screen="dialog-toast" style="position:absolute;left:4200px;top:4200px;">
-  <div class="screen-label">45. Dialog & Toast</div>
+  <div class="screen-label">48. Dialog & Toast</div>
   <div class="phone">
     <div class="notch"></div>
     <div class="w-full h-full relative overflow-hidden">
@@ -4399,7 +4595,7 @@ tailwind.config = {
 
 <!-- ==================== 46. OFFLINE MAP VIEW ==================== -->
 <div class="relative" data-screen="offline-map-view" style="position:absolute;left:4800px;top:4200px;">
-  <div class="screen-label">46. Offline Map View</div>
+  <div class="screen-label">49. Offline Map View</div>
   <div class="phone">
     <div class="notch"></div>
     <div class="w-full h-full relative overflow-hidden">
@@ -4556,7 +4752,7 @@ tailwind.config = {
         <!-- Columns Section -->
         <div class="bg-white rounded-2xl p-4 border border-slate-100">
           <div class="flex items-center justify-between mb-3">
-            <span class="text-xs font-semibold text-slate-400 uppercase tracking-wider">컬럼 (3)</span>
+            <span class="text-xs font-semibold text-slate-400 uppercase tracking-wider">필드 (3)</span>
           </div>
 
           <div class="space-y-2">
@@ -4597,7 +4793,7 @@ tailwind.config = {
           <!-- Add Column Button -->
           <button class="mt-3 w-full py-2.5 text-sm font-medium text-brand-600 bg-white rounded-xl border-2 border-dashed border-brand-300 flex items-center justify-center gap-1.5">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
-            컬럼 추가
+            필드 추가
           </button>
         </div>
 
@@ -4612,7 +4808,7 @@ tailwind.config = {
       <div class="home-indicator" style="background:rgba(0,0,0,0.15)"></div>
     </div>
   </div>
-  <div class="screen-label-bottom">Dataset Add<span>데이터셋 추가 · 제목/설명/타입/컬럼</span></div>
+  <div class="screen-label-bottom">Dataset Add<span>데이터셋 추가 · 제목/설명/타입/필드</span></div>
 </div>
 
 <!-- ==================== 29. DATASET INFO ==================== -->
@@ -4677,7 +4873,7 @@ tailwind.config = {
         <div class="bg-white rounded-2xl border border-slate-100 overflow-hidden">
           <div class="p-4 flex items-center gap-2 border-b border-slate-100">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--color-text-muted)" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
-            <span class="text-sm font-semibold text-slate-700">컬럼 목록</span>
+            <span class="text-sm font-semibold text-slate-700">필드 목록</span>
             <span class="ml-auto text-xs text-slate-400">5개</span>
           </div>
 
@@ -4861,7 +5057,7 @@ tailwind.config = {
 
 <!-- ==================== 32. REFERENCE LAYER ==================== -->
 <div class="relative" data-screen="ref-layer" style="position:absolute;left:2400px;top:3150px;">
-  <div class="screen-label">31. Reference Layer</div>
+  <div class="screen-label">34. Reference Layer</div>
   <div class="phone">
     <div class="notch"></div>
     <div class="w-full h-full bg-slate-50 relative overflow-hidden">
@@ -4957,7 +5153,7 @@ tailwind.config = {
 
 <!-- ==================== 33. SELECT AREA ==================== -->
 <div class="relative" data-screen="select-area" style="position:absolute;left:3000px;top:4200px;">
-  <div class="screen-label">43. Select Area</div>
+  <div class="screen-label">46. Select Area</div>
   <div class="phone">
     <div class="notch"></div>
     <div class="w-full h-full relative overflow-hidden">
@@ -5048,8 +5244,8 @@ tailwind.config = {
 </div>
 
 <!-- ==================== 35. PROJECT MEMBERSHIP ==================== -->
-<div class="relative" data-screen="proj-membership" style="position:absolute;left:4200px;top:1050px;">
-  <div class="screen-label">16. Project Membership</div>
+<div class="relative" data-screen="proj-membership" style="position:absolute;left:4800px;top:1050px;">
+  <div class="screen-label">17. Project Membership</div>
   <div class="phone">
     <div class="notch"></div>
     <div class="w-full h-full bg-slate-50 relative overflow-hidden">
@@ -5135,6 +5331,534 @@ tailwind.config = {
     </div>
   </div>
   <div class="screen-label-bottom">Project Membership<span>초대 수락/거절 + 참여 프로젝트 관리</span></div>
+</div>
+
+<!-- ==================== 16b. PROJ MEMBERSHIP (참여중 탭) ==================== -->
+<div class="relative" data-screen="proj-membership-part" style="position:absolute;left:5400px;top:1050px;">
+  <div class="screen-label">18. Proj Membership Part</div>
+  <div class="phone">
+    <div class="notch"></div>
+    <div class="w-full h-full bg-slate-50 relative overflow-hidden">
+      <div class="status-bar text-slate-800"><span>9:41</span><div class="flex gap-1.5 items-center opacity-60"><svg width="16" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12.55a11 11 0 0 1 14.08 0"/></svg><svg width="16" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="6" width="18" height="12" rx="2"/></svg></div></div>
+
+      <!-- Header -->
+      <div class="bg-white px-5 pt-2 pb-4 border-b border-slate-100">
+        <div class="flex items-center justify-between mb-3">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--color-text-main)" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+          <h1 class="text-lg font-bold text-slate-900">프로젝트 참여</h1>
+          <div class="w-6"></div>
+        </div>
+        <!-- Tabs -->
+        <div class="flex gap-1 bg-slate-100 rounded-xl p-1">
+          <div class="flex-1 text-center py-2 rounded-lg text-sm text-slate-500">초대 (2)</div>
+          <div class="flex-1 text-center py-2 rounded-lg bg-white text-sm font-semibold text-brand-600 shadow-sm">참여중 (3)</div>
+        </div>
+      </div>
+
+      <div class="px-5 pt-4 space-y-3">
+
+        <!-- Part Item 1 -->
+        <div class="bg-white rounded-2xl border border-slate-100 p-4">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-xl bg-brand-50 flex items-center justify-center flex-shrink-0">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-brand)" stroke-width="1.8"><polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6"/></svg>
+            </div>
+            <div class="flex-1">
+              <div class="font-semibold text-slate-800 text-sm">수질 모니터링 프로젝트</div>
+              <div class="text-xs text-slate-400">김혁진 · 멤버 8명</div>
+            </div>
+            <span class="px-2 py-0.5 bg-brand-50 text-brand-600 text-xs font-medium rounded-lg">편집자</span>
+          </div>
+          <div class="text-xs text-slate-500 bg-slate-50 rounded-lg p-2.5 mt-3">하천 수질 데이터를 수집하고 현장 정보를 기록하는 프로젝트입니다.</div>
+          <div class="mt-3 flex gap-2">
+            <button class="flex-1 py-2.5 text-sm font-medium text-slate-600 bg-slate-100 rounded-xl flex items-center justify-center gap-1">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+              정보보기
+            </button>
+            <button class="flex-1 py-2.5 text-sm font-medium text-red-400 bg-red-50 rounded-xl flex items-center justify-center gap-1">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>
+              탈퇴
+            </button>
+          </div>
+        </div>
+
+        <!-- Part Item 2 -->
+        <div class="bg-white rounded-2xl border border-slate-100 p-4">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-xl bg-emerald-50 flex items-center justify-center flex-shrink-0">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-success)" stroke-width="1.8"><polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6"/></svg>
+            </div>
+            <div class="flex-1">
+              <div class="font-semibold text-slate-800 text-sm">도시계획 현장조사</div>
+              <div class="text-xs text-slate-400">박지수 · 멤버 4명</div>
+            </div>
+            <span class="px-2 py-0.5 bg-slate-100 text-slate-500 text-xs font-medium rounded-lg">뷰어</span>
+          </div>
+          <div class="text-xs text-slate-500 bg-slate-50 rounded-lg p-2.5 mt-3">도시계획 기초 데이터 현장 수집에 참여해주세요.</div>
+          <div class="mt-3 flex gap-2">
+            <button class="flex-1 py-2.5 text-sm font-medium text-slate-600 bg-slate-100 rounded-xl flex items-center justify-center gap-1">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+              정보보기
+            </button>
+            <button class="flex-1 py-2.5 text-sm font-medium text-red-400 bg-red-50 rounded-xl flex items-center justify-center gap-1">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>
+              탈퇴
+            </button>
+          </div>
+        </div>
+
+        <!-- Part Item 3 -->
+        <div class="bg-white rounded-2xl border border-slate-100 p-4">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-xl bg-violet-50 flex items-center justify-center flex-shrink-0">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#8b5cf6" stroke-width="1.8"><polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6"/></svg>
+            </div>
+            <div class="flex-1">
+              <div class="font-semibold text-slate-800 text-sm">생태 자원 조사</div>
+              <div class="text-xs text-slate-400">이민준 · 멤버 12명</div>
+            </div>
+            <span class="px-2 py-0.5 bg-brand-50 text-brand-600 text-xs font-medium rounded-lg">편집자</span>
+          </div>
+          <div class="text-xs text-slate-500 bg-slate-50 rounded-lg p-2.5 mt-3">하천 주변 생태 자원의 분포 및 상태를 조사합니다.</div>
+          <div class="mt-3 flex gap-2">
+            <button class="flex-1 py-2.5 text-sm font-medium text-slate-600 bg-slate-100 rounded-xl flex items-center justify-center gap-1">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+              정보보기
+            </button>
+            <button class="flex-1 py-2.5 text-sm font-medium text-red-400 bg-red-50 rounded-xl flex items-center justify-center gap-1">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>
+              탈퇴
+            </button>
+          </div>
+        </div>
+
+      </div>
+      <div class="home-indicator" style="background:rgba(0,0,0,0.15)"></div>
+    </div>
+  </div>
+  <div class="screen-label-bottom">Project Membership — 참여중<span>참여 중인 프로젝트 목록 · 탈퇴</span></div>
+</div>
+
+<!-- ==================== 50. GPS TRACKING SETTINGS ==================== -->
+<div class="relative" data-screen="gps-tracking-settings" style="position:absolute;left:0px;top:5250px;">
+  <div class="screen-label">50. GPS Tracking Settings</div>
+  <div class="phone">
+    <div class="notch"></div>
+    <div class="w-full h-full bg-slate-50 relative overflow-hidden">
+      <div class="status-bar text-slate-800"><span>9:41</span><div class="flex gap-1.5 items-center opacity-60"><svg width="16" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12.55a11 11 0 0 1 14.08 0"/></svg></div></div>
+
+      <!-- Header -->
+      <div class="bg-white px-5 pt-2 pb-4 border-b border-slate-100">
+        <div class="flex items-center justify-between mb-1">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--color-text-main)" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+          <h1 class="text-lg font-bold text-slate-900">트래킹 설정</h1>
+          <div class="w-6"></div>
+        </div>
+        <p class="text-xs text-slate-400 text-center">GPS 트래킹 옵션 구성</p>
+      </div>
+
+      <div class="px-5 pt-4">
+        <!-- Settings card -->
+        <div class="bg-white rounded-2xl border border-slate-100 p-4">
+          <div class="flex items-center gap-2 mb-4">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--color-brand-dark)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="19" r="2"/><circle cx="18" cy="5" r="2"/><path d="M8 19h6a4 4 0 0 0 4-4V7"/></svg>
+            <span class="text-base font-bold text-slate-900">트래킹 설정</span>
+          </div>
+
+          <!-- 트래킹 레이어 선택 -->
+          <div class="mb-4">
+            <label class="block text-[11px] font-medium text-slate-500 mb-1.5">선분 데이터셋 선택</label>
+            <div class="flex items-center px-3 py-2.5 bg-white border border-slate-200 rounded-lg">
+              <span class="text-sm text-slate-800 flex-1">가상 레이어</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-text-muted)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+            </div>
+          </div>
+
+          <!-- 정확도 -->
+          <div class="mb-1.5">
+            <label class="block text-[11px] font-medium text-slate-500 mb-1.5">정확도</label>
+            <div class="flex items-center px-3 py-2.5 bg-white border border-slate-200 rounded-lg">
+              <span class="text-sm text-slate-800 flex-1">높음</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-text-muted)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+            </div>
+          </div>
+          <p class="text-[11px] text-slate-400 mb-4">정확도가 높을수록 배터리 소모가 증가합니다.</p>
+
+          <!-- 거리 필터 + 인터벌 -->
+          <div class="flex gap-3 mb-1.5">
+            <div class="flex-1">
+              <label class="block text-[11px] font-medium text-slate-500 mb-1.5">거리 필터 (m)</label>
+              <input type="text" value="5" class="w-full px-3 py-2.5 bg-white border border-slate-200 rounded-lg text-sm text-slate-800 outline-none" />
+            </div>
+            <div class="flex-1">
+              <label class="block text-[11px] font-medium text-slate-500 mb-1.5">인터벌 (초)</label>
+              <input type="text" value="1" class="w-full px-3 py-2.5 bg-white border border-slate-200 rounded-lg text-sm text-slate-800 outline-none" />
+            </div>
+          </div>
+          <p class="text-[11px] text-slate-400 mb-5">최소 이동 거리 / 위치 갱신 주기</p>
+
+          <!-- 활성화 button -->
+          <div class="flex justify-end">
+            <button class="flex items-center gap-1.5 px-5 py-2.5 text-sm font-semibold rounded-xl btn-cta btn-cta--primary">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="white" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+              활성화
+            </button>
+          </div>
+        </div>
+
+        <!-- Info note -->
+        <div class="mt-3 flex items-start gap-2 px-3 py-2.5 bg-brand-50 rounded-xl border border-brand-100">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--color-brand-dark)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="shrink-0 mt-0.5"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+          <span class="text-[11px] text-brand-700 leading-relaxed">트래킹을 시작하면 백그라운드에서 위치 정보가 기록됩니다.</span>
+        </div>
+      </div>
+
+      <div class="home-indicator" style="background:rgba(0,0,0,0.15)"></div>
+    </div>
+  </div>
+  <div class="screen-label-bottom">GPS Tracking Settings<span>레이어 · 정확도 · 필터 · 인터벌</span></div>
+</div>
+
+<!-- ==================== 51. PROJECT GPKG DOWNLOAD ==================== -->
+<div class="relative" data-screen="proj-gpkg-download" style="position:absolute;left:600px;top:5250px;">
+  <div class="screen-label">51. Project GPKG Download</div>
+  <div class="phone">
+    <div class="notch"></div>
+    <div class="w-full h-full bg-slate-50 relative overflow-hidden">
+      <div class="status-bar text-slate-800"><span>9:41</span><div class="flex gap-1.5 items-center opacity-60"><svg width="16" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12.55a11 11 0 0 1 14.08 0"/></svg></div></div>
+
+      <!-- Header -->
+      <div class="bg-white px-5 pt-2 pb-4">
+        <div class="flex items-center justify-between mb-1">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--color-text-main)" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+          <h1 class="text-lg font-bold text-slate-900">프로젝트 GPKG</h1>
+          <div class="w-6"></div>
+        </div>
+        <p class="text-xs text-slate-400 text-center">서버에 등록된 GeoPackage</p>
+        <!-- Project filter -->
+        <div class="mt-3 flex items-center gap-2 px-3 py-2 bg-slate-50 rounded-xl border border-slate-100">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--color-text-muted)" stroke-width="2"><polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"/></svg>
+          <span class="text-xs text-slate-600 font-medium flex-1">하천 유역 현장조사</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--color-text-muted)" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+        </div>
+      </div>
+
+      <div class="px-5 pt-3 space-y-2.5">
+        <!-- Item 1: collapsed, active -->
+        <div class="bg-white rounded-2xl border border-slate-100 px-4 py-3.5 shadow-sm">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-xl bg-brand-50 flex items-center justify-center shrink-0">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--color-brand-dark)" stroke-width="1.8"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+            </div>
+            <div class="flex-1 min-w-0">
+              <div class="text-sm font-semibold text-slate-800 truncate">하천조사_서울_2026.gpkg</div>
+              <div class="text-[11px] text-slate-400 mt-0.5">12.4 MB · 03.25</div>
+            </div>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--color-text-muted)" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+          </div>
+        </div>
+
+        <!-- Item 2: EXPANDED, active -->
+        <div class="bg-white rounded-2xl border border-brand-200 px-4 py-3.5 shadow-sm">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-xl bg-brand-100 flex items-center justify-center shrink-0">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--color-brand-dark)" stroke-width="1.8"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+            </div>
+            <div class="flex-1 min-w-0">
+              <div class="text-sm font-semibold text-slate-900 truncate">도로시설물_경기.gpkg</div>
+              <div class="text-[11px] text-slate-400 mt-0.5">8.7 MB · 03.22</div>
+            </div>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--color-brand-dark)" stroke-width="2"><polyline points="18 15 12 9 6 15"/></svg>
+          </div>
+          <!-- Action grid -->
+          <div class="grid grid-cols-4 gap-2 mt-3 pt-3 border-t border-slate-100">
+            <button class="flex flex-col items-center gap-1 py-2 rounded-lg bg-slate-50">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-text-sub)" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+              <span class="text-[10px] text-slate-600 font-medium">정보보기</span>
+            </button>
+            <button class="flex flex-col items-center gap-1 py-2 rounded-lg bg-slate-50">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-text-sub)" stroke-width="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+              <span class="text-[10px] text-slate-600 font-medium">이름수정</span>
+            </button>
+            <button class="flex flex-col items-center gap-1 py-2 rounded-lg bg-red-50">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-danger)" stroke-width="2"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>
+              <span class="text-[10px] text-red-500 font-medium">삭제</span>
+            </button>
+            <button class="flex flex-col items-center gap-1 py-2 rounded-lg bg-brand-50">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-brand-dark)" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              <span class="text-[10px] text-brand-700 font-medium">다운로드</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Item 3: pending -->
+        <div class="bg-white rounded-2xl border border-slate-100 px-4 py-3.5 shadow-sm">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-xl bg-amber-100 flex items-center justify-center shrink-0">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--color-amber-dark)" stroke-width="1.8"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+            </div>
+            <div class="flex-1 min-w-0">
+              <div class="text-sm font-semibold text-slate-700 truncate">건축물_테스트.gpkg</div>
+              <div class="text-[11px] text-slate-400 mt-0.5">2.1 MB · 03.10</div>
+            </div>
+            <span class="text-[10px] font-semibold px-2 py-0.5 rounded-full bg-amber-50 text-amber-600 border border-amber-200">대기중</span>
+          </div>
+        </div>
+
+        <!-- Item 4: inactive -->
+        <div class="bg-white rounded-2xl border border-slate-100 px-4 py-3.5 shadow-sm opacity-60">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-xl bg-slate-100 flex items-center justify-center shrink-0">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--color-text-muted)" stroke-width="1.8"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+            </div>
+            <div class="flex-1 min-w-0">
+              <div class="text-sm font-semibold text-slate-600 truncate">산림_강원.gpkg</div>
+              <div class="text-[11px] text-slate-400 mt-0.5">5.3 MB · 02.18</div>
+            </div>
+            <span class="text-[10px] font-semibold px-2 py-0.5 rounded-full bg-red-50 text-red-500 border border-red-200">비활성</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Refresh FAB -->
+      <div class="absolute bottom-10 right-5 z-30">
+        <button class="w-12 h-12 rounded-full bg-white shadow-lg border border-slate-100 flex items-center justify-center">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-text-sub)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 4 23 10 17 10"/><polyline points="1 20 1 14 7 14"/><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/></svg>
+        </button>
+      </div>
+
+      <div class="home-indicator" style="background:rgba(0,0,0,0.15)"></div>
+    </div>
+  </div>
+  <div class="screen-label-bottom">Project GPKG Download<span>서버 GPKG · 다운로드 · 새로고침</span></div>
+</div>
+
+<!-- ==================== 52. APP INFO ==================== -->
+<div class="relative" data-screen="app-info" style="position:absolute;left:1200px;top:5250px;">
+  <div class="screen-label">52. App Info</div>
+  <div class="phone">
+    <div class="notch"></div>
+    <div class="w-full h-full bg-slate-50 relative overflow-hidden">
+      <div class="status-bar text-slate-800"><span>9:41</span><div class="flex gap-1.5 items-center opacity-60"><svg width="16" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12.55a11 11 0 0 1 14.08 0"/></svg></div></div>
+
+      <!-- Header -->
+      <div class="bg-white px-5 pt-2 pb-3 border-b border-slate-100">
+        <div class="flex items-center justify-between">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--color-text-main)" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+          <h1 class="text-lg font-bold text-slate-900">앱 정보</h1>
+          <div class="w-6"></div>
+        </div>
+      </div>
+
+      <div class="px-5 pt-4 pb-6 overflow-y-auto" style="height: calc(100% - 64px);">
+        <!-- App identity card -->
+        <div class="bg-white rounded-2xl border border-slate-100 py-6 px-5 flex flex-col items-center text-center">
+          <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-brand-400 to-brand-600 flex items-center justify-center shadow-md">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <div class="text-xl font-bold text-slate-900 mt-3">gPocket</div>
+          <div class="text-xs text-slate-400 mt-1">v 3.0.0</div>
+          <div class="text-[11px] text-slate-500 mt-2">필드 GIS 데이터 수집 도구</div>
+        </div>
+
+        <!-- Copyright / contact -->
+        <div class="bg-white rounded-2xl border border-slate-100 p-4 mt-3">
+          <p class="text-[11px] leading-relaxed text-slate-500">ⓒ MangoSystem. All rights reserved.</p>
+          <p class="text-[11px] leading-relaxed text-slate-500 mt-1.5">본 앱은 오픈소스 소프트웨어(OSS)를 사용합니다.</p>
+          <div class="flex items-center gap-1.5 mt-2.5">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--color-brand-dark)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="22 6 12 13 2 6"/></svg>
+            <span class="text-[11px] text-brand-700 font-medium">mango@mangosystem.com</span>
+          </div>
+        </div>
+
+        <!-- Section header -->
+        <div class="flex items-center gap-2 mt-5 mb-2 px-1">
+          <span class="text-[10px] font-semibold text-slate-500 uppercase tracking-wider">사용된 오픈소스</span>
+          <div class="flex-1 h-px bg-slate-200"></div>
+        </div>
+
+        <!-- License cards -->
+        <div class="space-y-2">
+          <div class="bg-white rounded-xl border border-slate-100 p-3.5">
+            <div class="text-[13px] font-bold text-slate-800">Flutter</div>
+            <div class="text-[11px] text-brand-600 mt-0.5">https://flutter.dev/</div>
+            <div class="text-[10px] text-slate-400 mt-1 leading-snug">Copyright 2014 The Flutter Authors. BSD License</div>
+          </div>
+          <div class="bg-white rounded-xl border border-slate-100 p-3.5">
+            <div class="text-[13px] font-bold text-slate-800">flutter_riverpod</div>
+            <div class="text-[11px] text-brand-600 mt-0.5">https://pub.dev/packages/flutter_riverpod</div>
+            <div class="text-[10px] text-slate-400 mt-1 leading-snug">Copyright 2020 Remi Rousselet. MIT License</div>
+          </div>
+          <div class="bg-white rounded-xl border border-slate-100 p-3.5">
+            <div class="text-[13px] font-bold text-slate-800">flutter_map</div>
+            <div class="text-[11px] text-brand-600 mt-0.5">https://pub.dev/packages/flutter_map</div>
+            <div class="text-[10px] text-slate-400 mt-1 leading-snug">flutter_map authors &amp; contributors. BSD-3-Clause License</div>
+          </div>
+          <div class="bg-white rounded-xl border border-slate-100 p-3.5">
+            <div class="text-[13px] font-bold text-slate-800">geolocator</div>
+            <div class="text-[11px] text-brand-600 mt-0.5">https://pub.dev/packages/geolocator</div>
+            <div class="text-[10px] text-slate-400 mt-1 leading-snug">Baseflow. MIT License</div>
+          </div>
+          <div class="bg-white rounded-xl border border-slate-100 p-3.5">
+            <div class="text-[13px] font-bold text-slate-800">go_router</div>
+            <div class="text-[11px] text-brand-600 mt-0.5">https://pub.dev/packages/go_router</div>
+            <div class="text-[10px] text-slate-400 mt-1 leading-snug">Copyright 2013 The Flutter Authors. BSD-3-Clause License</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="home-indicator" style="background:rgba(0,0,0,0.15)"></div>
+    </div>
+  </div>
+  <div class="screen-label-bottom">App Info<span>버전 · 라이선스 · 오픈소스</span></div>
+</div>
+
+<!-- ==================== 53. OFFLINE GPKG INFO ==================== -->
+<div class="relative" data-screen="off-gpkg-info" style="position:absolute;left:1800px;top:5250px;">
+  <div class="screen-label">53. Offline GPKG Info</div>
+  <div class="phone">
+    <div class="notch"></div>
+    <div class="w-full h-full bg-slate-50 relative overflow-hidden">
+      <div class="status-bar text-slate-800"><span>9:41</span><div class="flex gap-1.5 items-center opacity-60"><svg width="16" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12.55a11 11 0 0 1 14.08 0"/></svg></div></div>
+
+      <!-- Header -->
+      <div class="bg-white border-b border-slate-100 px-4 pt-2 pb-3">
+        <div class="flex items-center gap-2">
+          <button class="w-8 h-8 flex items-center justify-center -ml-1 text-slate-700">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+          </button>
+          <h1 class="text-base font-semibold text-slate-900 flex-1">정보 보기</h1>
+          <div class="w-6"></div>
+        </div>
+        <div class="text-[11px] text-slate-400 pl-9 -mt-0.5">GeoPackage 메타데이터</div>
+      </div>
+
+      <!-- Scrollable content -->
+      <div class="px-4 pt-3 pb-20 space-y-2.5 overflow-y-auto" style="height: calc(100% - 84px);">
+
+        <!-- File name card -->
+        <div class="bg-white rounded-xl border border-slate-100 p-4">
+          <div class="flex items-center gap-2">
+            <div class="flex-1 min-w-0">
+              <div class="text-base font-bold text-slate-900 truncate">도로시설물_경기.gpkg</div>
+            </div>
+            <span class="shrink-0 text-[10px] font-semibold tracking-wide px-2 py-0.5 rounded-md bg-emerald-50 text-emerald-600 border border-emerald-100">GPKG</span>
+          </div>
+        </div>
+
+        <!-- 파일 크기 -->
+        <div class="bg-white rounded-xl border border-slate-100 px-4 py-3.5">
+          <div class="flex items-center">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#333333" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+            <span class="ml-2.5 text-sm text-slate-700">파일 크기</span>
+            <span class="ml-auto text-sm text-slate-500">12.4 MB</span>
+          </div>
+        </div>
+
+        <!-- 수정일 -->
+        <div class="bg-white rounded-xl border border-slate-100 px-4 py-3.5">
+          <div class="flex items-center">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#333333" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+            <span class="ml-2.5 text-sm text-slate-700">수정일</span>
+            <span class="ml-auto text-sm text-slate-500">2026-03-25 14:32</span>
+          </div>
+        </div>
+
+        <!-- 파일 경로 -->
+        <div class="bg-white rounded-xl border border-slate-100 px-4 py-3.5">
+          <div class="flex items-start">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#333333" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="shrink-0 mt-0.5"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+            <span class="ml-2.5 text-sm text-slate-700 shrink-0">파일 경로</span>
+            <span class="ml-2.5 flex-1 text-[11px] leading-snug text-slate-500 text-right break-all">/storage/emulated/0/Android/data/com.mangosystem.gpocket/files/gpkg/도로시설물_경기.gpkg</span>
+          </div>
+        </div>
+
+        <!-- 줌 레벨 -->
+        <div class="bg-white rounded-xl border border-slate-100 px-4 py-3.5">
+          <div class="flex items-center">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#333333" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+            <span class="ml-2.5 text-sm text-slate-700">줌 레벨</span>
+            <span class="ml-auto text-sm text-slate-500">10 - 17</span>
+          </div>
+        </div>
+
+        <!-- 배경지도 -->
+        <div class="bg-white rounded-xl border border-slate-100 px-4 py-3.5">
+          <div class="flex items-center">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#333333" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6"/><line x1="8" y1="2" x2="8" y2="18"/><line x1="16" y1="6" x2="16" y2="22"/></svg>
+            <span class="ml-2.5 text-sm text-slate-700">배경지도</span>
+            <span class="ml-auto text-sm text-slate-500">OSM Standard</span>
+          </div>
+        </div>
+
+        <!-- 데이터셋 section -->
+        <div class="bg-white rounded-xl border border-slate-100 px-4 py-3.5">
+          <div class="flex items-center">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#333333" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>
+            <span class="ml-2.5 text-sm font-semibold text-slate-700">데이터셋</span>
+            <span class="ml-auto text-[11px] text-slate-400">3개</span>
+          </div>
+          <div class="h-px bg-slate-100 my-3"></div>
+          <div class="space-y-0">
+            <div class="text-sm text-slate-500 py-2">도로_차선</div>
+            <div class="h-px bg-slate-100/80"></div>
+            <div class="text-sm text-slate-500 py-2">도로_표지판</div>
+            <div class="h-px bg-slate-100/80"></div>
+            <div class="text-sm text-slate-500 py-2">도로_시설물</div>
+          </div>
+        </div>
+
+        <!-- 참조레이어 section -->
+        <div class="bg-white rounded-xl border border-slate-100 px-4 py-3.5">
+          <div class="flex items-center">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#333333" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+            <span class="ml-2.5 text-sm font-semibold text-slate-700">참조레이어</span>
+            <span class="ml-auto text-[11px] text-slate-400">2개</span>
+          </div>
+          <div class="h-px bg-slate-100 my-3"></div>
+          <div class="space-y-0">
+            <div class="text-sm text-slate-500 py-2">행정경계_경기도</div>
+            <div class="h-px bg-slate-100/80"></div>
+            <div class="text-sm text-slate-500 py-2">도로망_KSDI</div>
+          </div>
+        </div>
+
+        <!-- GPKG 속성 section -->
+        <div class="bg-white rounded-xl border border-slate-100 px-4 py-3.5">
+          <div class="flex items-center">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#333333" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+            <span class="ml-2.5 text-sm font-semibold text-slate-700">GPKG 속성</span>
+          </div>
+          <div class="h-px bg-slate-100 my-3"></div>
+          <div class="space-y-0">
+            <div class="flex items-start py-2">
+              <div class="w-[37.5%] text-sm font-semibold text-slate-700">버전</div>
+              <div class="flex-1 text-[13px] text-slate-500 text-right">1.3.1</div>
+            </div>
+            <div class="h-px bg-slate-100/80"></div>
+            <div class="flex items-start py-2">
+              <div class="w-[37.5%] text-sm font-semibold text-slate-700">생성자</div>
+              <div class="flex-1 text-[13px] text-slate-500 text-right">gPocket Mobile</div>
+            </div>
+            <div class="h-px bg-slate-100/80"></div>
+            <div class="flex items-start py-2">
+              <div class="w-[37.5%] text-sm font-semibold text-slate-700">좌표계</div>
+              <div class="flex-1 text-[13px] text-slate-500 text-right">EPSG:4326</div>
+            </div>
+            <div class="h-px bg-slate-100/80"></div>
+            <div class="flex items-start py-2">
+              <div class="w-[37.5%] text-sm font-semibold text-slate-700">타일 형식</div>
+              <div class="flex-1 text-[13px] text-slate-500 text-right">PNG</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="home-indicator" style="background:rgba(0,0,0,0.15)"></div>
+    </div>
+  </div>
+  <div class="screen-label-bottom">Offline GPKG Info<span>GPKG 정보 보기 · 메타데이터</span></div>
 </div>
 
 </div></div><!-- end canvas -->
@@ -5270,7 +5994,7 @@ tailwind.config = {
       ['edit_line.png','라인 편집'],
       ['edit_form.png','속성 폼'],
       ['edit_form_simple.png','속성 폼(간단)'],
-      ['geometryEdit.png','형상 편집'],
+      ['geometryEdit.png','지오메트리 편집'],
       ['add_feature.png','피처 추가'],
       ['add_polygon.png','폴리곤 추가'],
       ['form_entry.png','폼 진입'],
@@ -5285,7 +6009,7 @@ tailwind.config = {
       ['cql_filter.png','CQL 필터'],
       ['cql_filter_empty.png','CQL 빈 상태'],
       ['cql_filtered.png','CQL 적용됨'],
-      ['column_list.png','컬럼 목록']
+      ['column_list.png','필드 목록']
     ]},
     { title: 'GPS 트래킹', items: [
       ['gps_tracking.png','GPS 트래킹'],
